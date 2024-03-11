@@ -33,7 +33,7 @@ namespace GlobalData
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabctrl_main = new System.Windows.Forms.TabControl();
             this.tab_great_circle = new System.Windows.Forms.TabPage();
-            this.btn_compute_bearing = new System.Windows.Forms.Button();
+            this.btn_compute_initial_bearing = new System.Windows.Forms.Button();
             this.rchtxbx_output = new System.Windows.Forms.RichTextBox();
             this.txtbx_dest_latitude = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@ namespace GlobalData
             this.btn_gc_clear = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_compute_final_bearing = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -83,10 +84,11 @@ namespace GlobalData
             // 
             // tab_great_circle
             // 
+            this.tab_great_circle.Controls.Add(this.btn_compute_final_bearing);
             this.tab_great_circle.Controls.Add(this.btn_gc_clear);
             this.tab_great_circle.Controls.Add(this.btn_compute_midpoint);
             this.tab_great_circle.Controls.Add(this.btn_compute_distance);
-            this.tab_great_circle.Controls.Add(this.btn_compute_bearing);
+            this.tab_great_circle.Controls.Add(this.btn_compute_initial_bearing);
             this.tab_great_circle.Controls.Add(this.rchtxbx_output);
             this.tab_great_circle.Controls.Add(this.txtbx_dest_latitude);
             this.tab_great_circle.Controls.Add(this.label3);
@@ -104,15 +106,15 @@ namespace GlobalData
             this.tab_great_circle.Text = "Great Circle";
             this.tab_great_circle.UseVisualStyleBackColor = true;
             // 
-            // btn_compute_bearing
+            // btn_compute_initial_bearing
             // 
-            this.btn_compute_bearing.Location = new System.Drawing.Point(630, 108);
-            this.btn_compute_bearing.Name = "btn_compute_bearing";
-            this.btn_compute_bearing.Size = new System.Drawing.Size(119, 57);
-            this.btn_compute_bearing.TabIndex = 10;
-            this.btn_compute_bearing.Text = "Compute Bearing";
-            this.btn_compute_bearing.UseVisualStyleBackColor = true;
-            this.btn_compute_bearing.Click += new System.EventHandler(this.btn_bearing_Click);
+            this.btn_compute_initial_bearing.Location = new System.Drawing.Point(630, 108);
+            this.btn_compute_initial_bearing.Name = "btn_compute_initial_bearing";
+            this.btn_compute_initial_bearing.Size = new System.Drawing.Size(119, 57);
+            this.btn_compute_initial_bearing.TabIndex = 10;
+            this.btn_compute_initial_bearing.Text = "Compute Initial Bearing";
+            this.btn_compute_initial_bearing.UseVisualStyleBackColor = true;
+            this.btn_compute_initial_bearing.Click += new System.EventHandler(this.btn_initial_bearing_Click);
             // 
             // rchtxbx_output
             // 
@@ -249,6 +251,16 @@ namespace GlobalData
             this.panel1.Size = new System.Drawing.Size(1094, 74);
             this.panel1.TabIndex = 1;
             // 
+            // btn_compute_final_bearing
+            // 
+            this.btn_compute_final_bearing.Location = new System.Drawing.Point(630, 171);
+            this.btn_compute_final_bearing.Name = "btn_compute_final_bearing";
+            this.btn_compute_final_bearing.Size = new System.Drawing.Size(119, 57);
+            this.btn_compute_final_bearing.TabIndex = 14;
+            this.btn_compute_final_bearing.Text = "Compute Final Bearing";
+            this.btn_compute_final_bearing.UseVisualStyleBackColor = true;
+            this.btn_compute_final_bearing.Click += new System.EventHandler(this.btn_compute_final_bearing_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -283,12 +295,13 @@ namespace GlobalData
         private System.Windows.Forms.TextBox txtbx_origin_longitude;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btn_compute_bearing;
+        private System.Windows.Forms.Button btn_compute_initial_bearing;
         private System.Windows.Forms.Button btn_compute_distance;
         private System.Windows.Forms.Button btn_compute_midpoint;
         private System.Windows.Forms.Button btn_gc_clear;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_compute_final_bearing;
     }
 }
 

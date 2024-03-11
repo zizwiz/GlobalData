@@ -27,6 +27,9 @@ namespace GlobalData.libraries
 
     class GreatCircle
     {
+
+        /// <summary>
+        /// Returns the distance along the surface of the earth from ‘this’ point to destination point.
         /*
          * This uses the ‘haversine’ formula to calculate the great-circle distance between two points
          * – that is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance
@@ -42,9 +45,22 @@ namespace GlobalData.libraries
                 λ is longitude, 
                 R is earth’s radius (mean radius = 6,371km);
             note that angles need to be in radians
+        
+            @example
+        const p1 = new LatLon(52.205, 0.119);
+        const p2 = new LatLon(48.857, 2.351);
+        const d = p1.distanceTo(p2);       // 404.3×10³ m
+        const m = p1.distanceTo(p2, 3959); // 251.2 miles
          */
+
+        /// </summary>
+        /// <param name="origin_longitude"></param>
+        /// <param name="origin_latitude"></param>
+        /// <param name="destination_longitude"></param>
+        /// <param name="destination_latitude"></param>
+        /// <returns></returns>
         public static double Distance(string origin_longitude, string origin_latitude,
-            string destination_longitude, string destination_latitude)
+                    string destination_longitude, string destination_latitude)
         {
             double earthsRadius = 6371000;     //earth’s radius in m (mean radius = 6371km)
 
@@ -58,14 +74,14 @@ namespace GlobalData.libraries
             double a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2) + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
             double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
-           return earthsRadius * c; // in metres
+            return earthsRadius * c; // in metres
         }
 
 
 
 
-
-
+        /// <summary>
+        ///  Returns the initial bearing from ‘this’ point to destination point.
         /*
          * In general, your current heading will vary as you follow a great circle path (orthodrome); the final
          * heading will differ from the initial heading by varying degrees according to distance and latitude
@@ -81,16 +97,27 @@ namespace GlobalData.libraries
          * For final bearing, simply take the initial bearing from the end point to the start point and reverse it
          * using θ = (θ+180) % 360
          */
-        public static (double, double) Bearing(string origin_longitude, string origin_latitude,
+
+        // example
+        // const p1 = new LatLon(52.205, 0.119);
+        // const p2 = new LatLon(48.857, 2.351);
+        // const b1 = p1.initialBearingTo(p2); // 156.2°
+        /// </summary>
+        /// <param name="origin_longitude"></param>
+        /// <param name="origin_latitude"></param>
+        /// <param name="destination_longitude"></param>
+        /// <param name="destination_latitude"></param>
+        /// <returns></returns>
+        public static (double, double) InitialBearing(string origin_longitude, string origin_latitude,
             string destination_longitude, string destination_latitude)
         {
             //latitudes
-            double φ1 = Convertion.toRadians(origin_latitude); 
+            double φ1 = Convertion.toRadians(origin_latitude);
             double φ2 = Convertion.toRadians(destination_latitude);
 
             //longitudes
-            double λ1 = Convertion.toRadians(origin_longitude); 
-            double λ2 = Convertion.toRadians(destination_longitude); 
+            double λ1 = Convertion.toRadians(origin_longitude);
+            double λ2 = Convertion.toRadians(destination_longitude);
 
             double y = Math.Sin(λ2 - λ1) * Math.Cos(φ2);
             double x = Math.Cos(φ1) * Math.Sin(φ2) - Math.Sin(φ1) * Math.Cos(φ2) * Math.Cos(λ2 - λ1);
@@ -99,10 +126,27 @@ namespace GlobalData.libraries
             double fbearing = (θ * 180 / Math.PI + 360) % 360; // forward bearing in degrees
             double rbearing = (fbearing + 180) % 360; // reverse bearing in degrees
 
-            return (fbearing, rbearing);
+            return (fbearing, rbearing); 
         }
 
-
+        /// <summary>
+        /// /**
+        /// * Returns the midpoint between ‘this’ point and destination point.
+        /// *
+        /// * @param   {LatLon} point - Latitude/longitude of destination point.
+        /// * @returns {LatLon} Midpoint between this point and destination point.
+        /// *
+        /// * @example
+        /// *   p1 = new LatLon(52.205, 0.119);
+        /// *   p2 = new LatLon(48.857, 2.351);
+        /// *   pMid = p1.midpointTo(p2); // 50.5363°N, 001.2746°E
+        /// */
+        /// </summary>
+        /// <param name="origin_longitude"></param>
+        /// <param name="origin_latitude"></param>
+        /// <param name="destination_longitude"></param>
+        /// <param name="destination_latitude"></param>
+        /// <returns></returns>
         public static (double, double) MidPoint(string origin_longitude, string origin_latitude,
             string destination_longitude, string destination_latitude)
         {
@@ -112,16 +156,16 @@ namespace GlobalData.libraries
 
             //longitudes
             double λ1 = Convertion.toRadians(origin_longitude);
-          
+
             //difference in long and lat
             double Δλ = Convertion.toRadians(destination_longitude, origin_longitude);
 
             // get cartesian coordinates for the two points
-            double[] A = {Math.Cos(φ1), 0, Math.Sin(φ1)}; // place point A on prime meridian y=0
-            double[] B = {Math.Cos(φ2) * Math.Cos(Δλ), Math.Cos(φ2) * Math.Sin(Δλ), Math.Sin(φ2) };
+            double[] A = { Math.Cos(φ1), 0, Math.Sin(φ1) }; // place point A on prime meridian y=0
+            double[] B = { Math.Cos(φ2) * Math.Cos(Δλ), Math.Cos(φ2) * Math.Sin(Δλ), Math.Sin(φ2) };
 
             // vector to midpoint is sum of vectors to two points (no need to normalise)
-            double[] C = { A[0] + B[0], A[1] + B[1], A[2] + B[2]};
+            double[] C = { A[0] + B[0], A[1] + B[1], A[2] + B[2] };
 
             double φm = Math.Atan2(C[2], Math.Sqrt(C[0] * C[0] + C[1] * C[1]));
             double λm = λ1 + Math.Atan2(C[1], C[0]);

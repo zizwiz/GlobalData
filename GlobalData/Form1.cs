@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Math = System.Math;
 using GlobalData.libraries;
+using GlobalData.Utils;
 
 namespace GlobalData
 {
@@ -33,20 +34,30 @@ namespace GlobalData
             Double result = GreatCircle.Distance(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
                 txtbx_dest_longitude.Text, txtbx_dest_latitude.Text);
 
-            rchtxbx_output.AppendText("\r" + Math.Round(result, 4) + "m");
-            rchtxbx_output.AppendText("\r" + Math.Round(result/1000, 4) + "km\r");
+            rchtxbx_output.AppendText("\rDistance = " + Math.Round(result, 4) + "m");
+            rchtxbx_output.AppendText("\rDistance = " + Math.Round(result/1000, 4) + "km\r");
+            rchtxbx_output.AppendText("\rDistance = " + Math.Round(Convertion.toMiles(result), 4) + " miles\r");
+            rchtxbx_output.AppendText("Distance = " + Math.Round(Convertion.toNauticalMiles(result), 4) + " nautical miles");
         }
 
-        private void btn_bearing_Click(object sender, EventArgs e)
+        private void btn_initial_bearing_Click(object sender, EventArgs e)
         {
             
-            var results = GreatCircle.Bearing(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
+            var results = GreatCircle.InitialBearing(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
                 txtbx_dest_longitude.Text, txtbx_dest_latitude.Text);
 
 
             rchtxbx_output.AppendText("\rForward bearing = " + Math.Round(results.Item1, 4) + "°");
             rchtxbx_output.AppendText("\rReverse bearing = " + Math.Round(results.Item2, 4) + "°\r");
         }
+
+
+        private void btn_compute_final_bearing_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
 
         private void btn_compute_midpoint_Click(object sender, EventArgs e)
         {
