@@ -49,7 +49,6 @@ namespace GlobalData
             this.btn_gc_clear = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_compute_final_bearing = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -84,7 +83,6 @@ namespace GlobalData
             // 
             // tab_great_circle
             // 
-            this.tab_great_circle.Controls.Add(this.btn_compute_final_bearing);
             this.tab_great_circle.Controls.Add(this.btn_gc_clear);
             this.tab_great_circle.Controls.Add(this.btn_compute_midpoint);
             this.tab_great_circle.Controls.Add(this.btn_compute_distance);
@@ -251,16 +249,6 @@ namespace GlobalData
             this.panel1.Size = new System.Drawing.Size(1094, 74);
             this.panel1.TabIndex = 1;
             // 
-            // btn_compute_final_bearing
-            // 
-            this.btn_compute_final_bearing.Location = new System.Drawing.Point(630, 171);
-            this.btn_compute_final_bearing.Name = "btn_compute_final_bearing";
-            this.btn_compute_final_bearing.Size = new System.Drawing.Size(119, 57);
-            this.btn_compute_final_bearing.TabIndex = 14;
-            this.btn_compute_final_bearing.Text = "Compute Final Bearing";
-            this.btn_compute_final_bearing.UseVisualStyleBackColor = true;
-            this.btn_compute_final_bearing.Click += new System.EventHandler(this.btn_compute_final_bearing_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -301,7 +289,6 @@ namespace GlobalData
         private System.Windows.Forms.Button btn_gc_clear;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_close;
-        private System.Windows.Forms.Button btn_compute_final_bearing;
     }
 }
 

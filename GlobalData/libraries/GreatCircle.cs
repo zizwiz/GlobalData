@@ -178,6 +178,28 @@ namespace GlobalData.libraries
 
 
 
+       /// <summary>
+        /// Constrain degrees to range 0..360 (for bearings); e.g. -1 => 359, 361 => 1.
+        ///
+        /// </summary>
+        /// <param name="decimalDegrees"></param>
+        /// <returns>degrees within range 0..360 as double</returns>
+
+        public static double wrap360(double myDegrees)
+        {
+            if (0 <= myDegrees && myDegrees < 360) return myDegrees; // avoid rounding due to arithmetic ops if within range
+
+            // bearing wrapping requires a sawtooth wave function with a vertical offset equal to the
+            // amplitude and a corresponding phase shift; this changes the general sawtooth wave function from
+            //     f(x) = (2ax/p - p/2) % p - a
+            // to
+            //     f(x) = (2ax/p) % p
+            // where a = amplitude, p = period, % = modulo; however, JavaScript '%' is a remainder operator
+            // not a modulo operator - for modulo, replace 'x%n' with '((x%n)+n)%n'
+            double x = myDegrees, a = 180, p = 360;
+            return (((2 * a * x / p) % p) + p) % p;
+        }
+
         //Calculate settings for altitude at destination
         /*
          * var values = MyFunction();
