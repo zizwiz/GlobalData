@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 using GlobalData.Properties;
-using GlobalData.Utils;
+using help_about;
 
 namespace GlobalData
 {
@@ -32,9 +32,10 @@ namespace GlobalData
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_help_about_Click(object sender, EventArgs e)
         {
-            lbl_cardinal.Text = Convertion.toCardinalPointsFromDecimalDegrees(double.Parse(txtbx_bearing.Text));
+            var f1 = new Help_Form();
+            f1.ShowDialog();
         }
     }
 }

@@ -106,7 +106,7 @@ namespace GlobalData.libraries
         /// <param name="destination_longitude"></param>
         /// <param name="destination_latitude"></param>
         /// <returns></returns>
-        public static (double, double) InitialBearing(string origin_longitude, string origin_latitude,
+        public static (double, string, double, string) InitialBearing(string origin_longitude, string origin_latitude,
             string destination_longitude, string destination_latitude)
         {
             //latitudes
@@ -124,7 +124,8 @@ namespace GlobalData.libraries
             double fbearing = (θ * 180 / Math.PI + 360) % 360; // forward bearing in degrees
             double rbearing = (fbearing + 180) % 360; // reverse bearing in degrees
 
-            return (fbearing, rbearing); 
+            return (fbearing, HelpfulFunctions.getCardinalPointsFromDecimalDegrees(fbearing), 
+                rbearing, HelpfulFunctions.getCardinalPointsFromDecimalDegrees(rbearing)); 
         }
 
         /// <summary>
@@ -176,27 +177,7 @@ namespace GlobalData.libraries
 
 
 
-       /// <summary>
-        /// Constrain degrees to range 0..360 (for bearings); e.g. -1 => 359, 361 => 1.
-        ///
-        /// </summary>
-        /// <param name="decimalDegrees"></param>
-        /// <returns>degrees within range 0..360 as double</returns>
-
-        public static double UnWrap360(double myDegrees)
-        {
-            if (0 <= myDegrees && myDegrees < 360) return myDegrees; // avoid rounding due to arithmetic ops if within range
-
-            // bearing wrapping requires a sawtooth wave function with a vertical offset equal to the
-            // amplitude and a corresponding phase shift; this changes the general sawtooth wave function from
-            //     f(x) = (2ax/p - p/2) % p - a
-            // to
-            //     f(x) = (2ax/p) % p
-            // where a = amplitude, p = period, % = modulo; however, JavaScript '%' is a remainder operator
-            // not a modulo operator - for modulo, replace 'x%n' with '((x%n)+n)%n'
-            double x = myDegrees, a = 180, p = 360;
-            return (((2 * a * x / p) % p) + p) % p;
-        }
+       
 
         //Calculate settings for altitude at destination
         /*

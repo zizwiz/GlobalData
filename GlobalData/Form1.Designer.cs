@@ -109,12 +109,10 @@ namespace GlobalData
             this.rchtxbx_findDestination_output = new System.Windows.Forms.RichTextBox();
             this.btn_GC_find_destination = new System.Windows.Forms.Button();
             this.tab_CTD = new System.Windows.Forms.TabPage();
-            this.txtbx_bearing = new System.Windows.Forms.TextBox();
-            this.lbl_cardinal = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
+            this.btn_help_about = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -139,7 +137,6 @@ namespace GlobalData
             this.grpbx_FD_latitude.SuspendLayout();
             this.grpbx_FD_bearing.SuspendLayout();
             this.grpbx_FD_distance.SuspendLayout();
-            this.tab_CTD.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -954,41 +951,12 @@ namespace GlobalData
             // 
             // tab_CTD
             // 
-            this.tab_CTD.Controls.Add(this.txtbx_bearing);
-            this.tab_CTD.Controls.Add(this.lbl_cardinal);
-            this.tab_CTD.Controls.Add(this.button1);
             this.tab_CTD.Location = new System.Drawing.Point(28, 4);
             this.tab_CTD.Name = "tab_CTD";
             this.tab_CTD.Size = new System.Drawing.Size(1048, 532);
             this.tab_CTD.TabIndex = 2;
             this.tab_CTD.Text = "Cross-Track Distance";
             this.tab_CTD.UseVisualStyleBackColor = true;
-            // 
-            // txtbx_bearing
-            // 
-            this.txtbx_bearing.Location = new System.Drawing.Point(123, 145);
-            this.txtbx_bearing.Name = "txtbx_bearing";
-            this.txtbx_bearing.Size = new System.Drawing.Size(151, 26);
-            this.txtbx_bearing.TabIndex = 3;
-            // 
-            // lbl_cardinal
-            // 
-            this.lbl_cardinal.AutoSize = true;
-            this.lbl_cardinal.Location = new System.Drawing.Point(519, 151);
-            this.lbl_cardinal.Name = "lbl_cardinal";
-            this.lbl_cardinal.Size = new System.Drawing.Size(51, 20);
-            this.lbl_cardinal.TabIndex = 1;
-            this.lbl_cardinal.Text = "label5";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(325, 135);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
@@ -1002,6 +970,7 @@ namespace GlobalData
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_help_about);
             this.panel1.Controls.Add(this.btn_close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 588);
@@ -1018,6 +987,16 @@ namespace GlobalData
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // btn_help_about
+            // 
+            this.btn_help_about.Location = new System.Drawing.Point(9, 8);
+            this.btn_help_about.Name = "btn_help_about";
+            this.btn_help_about.Size = new System.Drawing.Size(119, 57);
+            this.btn_help_about.TabIndex = 15;
+            this.btn_help_about.Text = "Help About";
+            this.btn_help_about.UseVisualStyleBackColor = true;
+            this.btn_help_about.Click += new System.EventHandler(this.btn_help_about_Click);
             // 
             // Form1
             // 
@@ -1066,8 +1045,6 @@ namespace GlobalData
             this.grpbx_FD_bearing.PerformLayout();
             this.grpbx_FD_distance.ResumeLayout(false);
             this.grpbx_FD_distance.PerformLayout();
-            this.tab_CTD.ResumeLayout(false);
-            this.tab_CTD.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1157,9 +1134,7 @@ namespace GlobalData
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdo_FD_results_format_DMS;
         private System.Windows.Forms.RadioButton rdo_FD_results_format_decimal_degrees;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lbl_cardinal;
-        private System.Windows.Forms.TextBox txtbx_bearing;
+        private System.Windows.Forms.Button btn_help_about;
     }
 }
 

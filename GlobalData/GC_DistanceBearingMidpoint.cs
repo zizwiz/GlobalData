@@ -29,11 +29,11 @@ namespace GlobalData
             var results = GreatCircle.InitialBearing(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
                 txtbx_dest_longitude.Text, txtbx_dest_latitude.Text);
 
-            rchtxbx_output.AppendText("\rForward bearing decimal = " + Math.Round(results.Item1, 4) + "°");
-            rchtxbx_output.AppendText("\rForward bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(results.Item1.ToString()) + "\r");
+            rchtxbx_output.AppendText("\rForward bearing decimal = " + Math.Round(results.Item1, 4) + "° " + results.Item2);
+            rchtxbx_output.AppendText("\rForward bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(results.Item1.ToString()) + " " + results.Item2 + "\r");
 
-            rchtxbx_output.AppendText("\rReverse bearing decimal = " + GreatCircle.UnWrap360(Math.Round(results.Item2, 4)) + "°");
-            rchtxbx_output.AppendText("\rReverse bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(GreatCircle.UnWrap360(Math.Round(results.Item2, 4)).ToString()) + "\r");
+            rchtxbx_output.AppendText("\rReverse bearing decimal = " + HelpfulFunctions.UnWrap360(Math.Round(results.Item3, 4)) + "° " + results.Item4);
+            rchtxbx_output.AppendText("\rReverse bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(HelpfulFunctions.UnWrap360(Math.Round(results.Item3, 4)).ToString()) + " " + results.Item4 + "\r");
         }
 
         private void btn_compute_midpoint_Click(object sender, EventArgs e)
