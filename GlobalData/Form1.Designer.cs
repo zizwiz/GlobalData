@@ -37,29 +37,41 @@ namespace GlobalData
             this.tab_DBM = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_compute_distance = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.rchtxbx_output = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_gc_clear = new System.Windows.Forms.Button();
+            this.btn_compute_distance = new System.Windows.Forms.Button();
             this.btn_compute_initial_bearing = new System.Windows.Forms.Button();
             this.btn_compute_midpoint = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.rchtxbx_output = new System.Windows.Forms.RichTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txtbx_origin_longitude = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtbx_dest_longitude = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_origin_latitude = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_origin_longitude = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.txtbx_origin_latitude = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_dest_latitude = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.txtbx_dest_latitude = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_dest_longitude = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdo_GC_DBM_destination_decimal_degrees = new System.Windows.Forms.RadioButton();
+            this.rdo_GC_DBM_destination_DMS = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdo_GC_DBM_origin_decimal_degrees = new System.Windows.Forms.RadioButton();
+            this.rdo_GC_DBM_origin_DMS = new System.Windows.Forms.RadioButton();
             this.tab_destination = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -111,8 +123,9 @@ namespace GlobalData
             this.tab_CTD = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_close = new System.Windows.Forms.Button();
             this.btn_help_about = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -120,8 +133,9 @@ namespace GlobalData
             this.tab_DBM.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -130,6 +144,9 @@ namespace GlobalData
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tab_destination.SuspendLayout();
             this.panel13.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -138,6 +155,7 @@ namespace GlobalData
             this.grpbx_FD_bearing.SuspendLayout();
             this.grpbx_FD_distance.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -214,18 +232,14 @@ namespace GlobalData
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.panel3, 6, 4);
-            this.tableLayoutPanel2.Controls.Add(this.btn_gc_clear, 6, 10);
-            this.tableLayoutPanel2.Controls.Add(this.btn_compute_initial_bearing, 6, 6);
-            this.tableLayoutPanel2.Controls.Add(this.btn_compute_midpoint, 6, 8);
-            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 4);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel6, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel7, 2, 0);
@@ -234,13 +248,17 @@ namespace GlobalData
             this.tableLayoutPanel2.Controls.Add(this.panel10, 4, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel11, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel12, 6, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.panel14, 4, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 11;
+            this.tableLayoutPanel2.RowCount = 13;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
@@ -252,43 +270,96 @@ namespace GlobalData
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1042, 526);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // panel3
+            // panel4
             // 
-            this.panel3.Controls.Add(this.btn_compute_distance);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(786, 93);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 99);
-            this.panel3.TabIndex = 0;
+            this.tableLayoutPanel2.SetColumnSpan(this.panel4, 7);
+            this.panel4.Controls.Add(this.tableLayoutPanel3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 178);
+            this.panel4.Name = "panel4";
+            this.tableLayoutPanel2.SetRowSpan(this.panel4, 7);
+            this.panel4.Size = new System.Drawing.Size(1036, 345);
+            this.panel4.TabIndex = 14;
             // 
-            // btn_compute_distance
+            // tableLayoutPanel3
             // 
-            this.btn_compute_distance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_compute_distance.Location = new System.Drawing.Point(0, 0);
-            this.btn_compute_distance.Name = "btn_compute_distance";
-            this.btn_compute_distance.Size = new System.Drawing.Size(253, 99);
-            this.btn_compute_distance.TabIndex = 11;
-            this.btn_compute_distance.Text = "Compute Distance";
-            this.btn_compute_distance.UseVisualStyleBackColor = true;
-            this.btn_compute_distance.Click += new System.EventHandler(this.btn_compute_distance_Click);
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel3.Controls.Add(this.rchtxbx_output, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1036, 345);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // rchtxbx_output
+            // 
+            this.rchtxbx_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxbx_output.Location = new System.Drawing.Point(3, 3);
+            this.rchtxbx_output.Name = "rchtxbx_output";
+            this.rchtxbx_output.Size = new System.Drawing.Size(905, 339);
+            this.rchtxbx_output.TabIndex = 9;
+            this.rchtxbx_output.Text = "";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.btn_gc_clear, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.btn_compute_distance, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btn_compute_initial_bearing, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.btn_compute_midpoint, 0, 4);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(919, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 9;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(114, 339);
+            this.tableLayoutPanel4.TabIndex = 10;
             // 
             // btn_gc_clear
             // 
             this.btn_gc_clear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_gc_clear.Location = new System.Drawing.Point(786, 423);
+            this.btn_gc_clear.Location = new System.Drawing.Point(3, 258);
             this.btn_gc_clear.Name = "btn_gc_clear";
-            this.btn_gc_clear.Size = new System.Drawing.Size(253, 100);
+            this.btn_gc_clear.Size = new System.Drawing.Size(108, 74);
             this.btn_gc_clear.TabIndex = 13;
             this.btn_gc_clear.Text = "Clear";
             this.btn_gc_clear.UseVisualStyleBackColor = true;
             this.btn_gc_clear.Click += new System.EventHandler(this.btn_gc_clear_Click);
             // 
+            // btn_compute_distance
+            // 
+            this.btn_compute_distance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_compute_distance.Location = new System.Drawing.Point(3, 3);
+            this.btn_compute_distance.Name = "btn_compute_distance";
+            this.btn_compute_distance.Size = new System.Drawing.Size(108, 74);
+            this.btn_compute_distance.TabIndex = 11;
+            this.btn_compute_distance.Text = "Compute Distance";
+            this.btn_compute_distance.UseVisualStyleBackColor = true;
+            this.btn_compute_distance.Click += new System.EventHandler(this.btn_compute_distance_Click);
+            // 
             // btn_compute_initial_bearing
             // 
             this.btn_compute_initial_bearing.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_compute_initial_bearing.Location = new System.Drawing.Point(786, 203);
+            this.btn_compute_initial_bearing.Location = new System.Drawing.Point(3, 88);
             this.btn_compute_initial_bearing.Name = "btn_compute_initial_bearing";
-            this.btn_compute_initial_bearing.Size = new System.Drawing.Size(253, 99);
+            this.btn_compute_initial_bearing.Size = new System.Drawing.Size(108, 74);
             this.btn_compute_initial_bearing.TabIndex = 10;
             this.btn_compute_initial_bearing.Text = "Compute Initial Bearing";
             this.btn_compute_initial_bearing.UseVisualStyleBackColor = true;
@@ -297,177 +368,269 @@ namespace GlobalData
             // btn_compute_midpoint
             // 
             this.btn_compute_midpoint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_compute_midpoint.Location = new System.Drawing.Point(786, 313);
+            this.btn_compute_midpoint.Location = new System.Drawing.Point(3, 173);
             this.btn_compute_midpoint.Name = "btn_compute_midpoint";
-            this.btn_compute_midpoint.Size = new System.Drawing.Size(253, 99);
+            this.btn_compute_midpoint.Size = new System.Drawing.Size(108, 74);
             this.btn_compute_midpoint.TabIndex = 12;
             this.btn_compute_midpoint.Text = "Compute Midpoint";
             this.btn_compute_midpoint.UseVisualStyleBackColor = true;
             this.btn_compute_midpoint.Click += new System.EventHandler(this.btn_compute_midpoint_Click);
             // 
-            // panel4
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.panel4, 5);
-            this.panel4.Controls.Add(this.rchtxbx_output);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 93);
-            this.panel4.Name = "panel4";
-            this.tableLayoutPanel2.SetRowSpan(this.panel4, 7);
-            this.panel4.Size = new System.Drawing.Size(772, 430);
-            this.panel4.TabIndex = 14;
-            // 
-            // rchtxbx_output
-            // 
-            this.rchtxbx_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxbx_output.Location = new System.Drawing.Point(0, 0);
-            this.rchtxbx_output.Name = "rchtxbx_output";
-            this.rchtxbx_output.Size = new System.Drawing.Size(772, 430);
-            this.rchtxbx_output.TabIndex = 9;
-            this.rchtxbx_output.Text = "";
-            // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(250, 34);
+            this.panel5.Size = new System.Drawing.Size(144, 34);
             this.panel5.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Longitude Origin";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 48);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 34);
-            this.panel6.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Longitude Destination";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.txtbx_origin_longitude);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(264, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(250, 34);
-            this.panel7.TabIndex = 17;
-            // 
-            // txtbx_origin_longitude
-            // 
-            this.txtbx_origin_longitude.Location = new System.Drawing.Point(0, 4);
-            this.txtbx_origin_longitude.Name = "txtbx_origin_longitude";
-            this.txtbx_origin_longitude.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_origin_longitude.TabIndex = 1;
-            this.txtbx_origin_longitude.Text = "0.12318499799890262";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.txtbx_dest_longitude);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(264, 48);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(250, 34);
-            this.panel8.TabIndex = 18;
-            // 
-            // txtbx_dest_longitude
-            // 
-            this.txtbx_dest_longitude.Location = new System.Drawing.Point(3, 4);
-            this.txtbx_dest_longitude.Name = "txtbx_dest_longitude";
-            this.txtbx_dest_longitude.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_dest_longitude.TabIndex = 5;
-            this.txtbx_dest_longitude.Text = "-0.24141672862936847";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(525, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(250, 34);
-            this.panel9.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 3);
+            this.label2.Location = new System.Drawing.Point(29, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Latitude Origin";
             // 
-            // panel10
+            // panel6
             // 
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(525, 48);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(250, 34);
-            this.panel10.TabIndex = 20;
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 48);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(144, 34);
+            this.panel6.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Longitude Origin";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(158, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(342, 34);
+            this.panel7.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(190, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "°";
+            // 
+            // txtbx_GC_DBM_origin_latitude
+            // 
+            this.txtbx_GC_DBM_origin_latitude.Location = new System.Drawing.Point(0, 4);
+            this.txtbx_GC_DBM_origin_latitude.Name = "txtbx_GC_DBM_origin_latitude";
+            this.txtbx_GC_DBM_origin_latitude.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_origin_latitude.TabIndex = 3;
+            this.txtbx_GC_DBM_origin_latitude.Text = "52.22931415150747";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(158, 48);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(342, 34);
+            this.panel8.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(190, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "°";
+            // 
+            // txtbx_GC_DBM_origin_longitude
+            // 
+            this.txtbx_GC_DBM_origin_longitude.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_origin_longitude.Name = "txtbx_GC_DBM_origin_longitude";
+            this.txtbx_GC_DBM_origin_longitude.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_origin_longitude.TabIndex = 1;
+            this.txtbx_GC_DBM_origin_longitude.Text = "0.12318499799890262";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(511, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(174, 34);
+            this.panel9.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 6);
+            this.label3.Location = new System.Drawing.Point(19, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Latitude Destination";
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(511, 48);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(174, 34);
+            this.panel10.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Longitude Destination";
+            // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.txtbx_origin_latitude);
+            this.panel11.Controls.Add(this.label7);
+            this.panel11.Controls.Add(this.txtbx_GC_DBM_dest_latitude);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(786, 3);
+            this.panel11.Location = new System.Drawing.Point(696, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(253, 34);
+            this.panel11.Size = new System.Drawing.Size(343, 34);
             this.panel11.TabIndex = 21;
             // 
-            // txtbx_origin_latitude
+            // label7
             // 
-            this.txtbx_origin_latitude.Location = new System.Drawing.Point(3, 4);
-            this.txtbx_origin_latitude.Name = "txtbx_origin_latitude";
-            this.txtbx_origin_latitude.Size = new System.Drawing.Size(157, 26);
-            this.txtbx_origin_latitude.TabIndex = 3;
-            this.txtbx_origin_latitude.Text = "52.22931415150747";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(193, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "°";
+            // 
+            // txtbx_GC_DBM_dest_latitude
+            // 
+            this.txtbx_GC_DBM_dest_latitude.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_dest_latitude.Name = "txtbx_GC_DBM_dest_latitude";
+            this.txtbx_GC_DBM_dest_latitude.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_dest_latitude.TabIndex = 7;
+            this.txtbx_GC_DBM_dest_latitude.Text = "52.13020137607176";
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.txtbx_dest_latitude);
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Controls.Add(this.txtbx_GC_DBM_dest_longitude);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(786, 48);
+            this.panel12.Location = new System.Drawing.Point(696, 48);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(253, 34);
+            this.panel12.Size = new System.Drawing.Size(343, 34);
             this.panel12.TabIndex = 22;
             // 
-            // txtbx_dest_latitude
+            // label8
             // 
-            this.txtbx_dest_latitude.Location = new System.Drawing.Point(3, 4);
-            this.txtbx_dest_latitude.Name = "txtbx_dest_latitude";
-            this.txtbx_dest_latitude.Size = new System.Drawing.Size(157, 26);
-            this.txtbx_dest_latitude.TabIndex = 7;
-            this.txtbx_dest_latitude.Text = "52.13020137607176";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(193, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(14, 20);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "°";
+            // 
+            // txtbx_GC_DBM_dest_longitude
+            // 
+            this.txtbx_GC_DBM_dest_longitude.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_dest_longitude.Name = "txtbx_GC_DBM_dest_longitude";
+            this.txtbx_GC_DBM_dest_longitude.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_dest_longitude.TabIndex = 5;
+            this.txtbx_GC_DBM_dest_longitude.Text = "-0.24141672862936847";
+            // 
+            // panel3
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.panel3, 3);
+            this.panel3.Controls.Add(this.groupBox2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 93);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(497, 74);
+            this.panel3.TabIndex = 23;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdo_GC_DBM_destination_decimal_degrees);
+            this.groupBox3.Controls.Add(this.rdo_GC_DBM_destination_DMS);
+            this.groupBox3.Location = new System.Drawing.Point(34, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(447, 67);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Destination Input Format";
+            // 
+            // rdo_GC_DBM_destination_decimal_degrees
+            // 
+            this.rdo_GC_DBM_destination_decimal_degrees.AutoSize = true;
+            this.rdo_GC_DBM_destination_decimal_degrees.Location = new System.Drawing.Point(31, 26);
+            this.rdo_GC_DBM_destination_decimal_degrees.Name = "rdo_GC_DBM_destination_decimal_degrees";
+            this.rdo_GC_DBM_destination_decimal_degrees.Size = new System.Drawing.Size(156, 24);
+            this.rdo_GC_DBM_destination_decimal_degrees.TabIndex = 3;
+            this.rdo_GC_DBM_destination_decimal_degrees.Text = "Decimal Degrees";
+            this.rdo_GC_DBM_destination_decimal_degrees.UseVisualStyleBackColor = true;
+            // 
+            // rdo_GC_DBM_destination_DMS
+            // 
+            this.rdo_GC_DBM_destination_DMS.AutoSize = true;
+            this.rdo_GC_DBM_destination_DMS.Location = new System.Drawing.Point(207, 26);
+            this.rdo_GC_DBM_destination_DMS.Name = "rdo_GC_DBM_destination_DMS";
+            this.rdo_GC_DBM_destination_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdo_GC_DBM_destination_DMS.TabIndex = 2;
+            this.rdo_GC_DBM_destination_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdo_GC_DBM_destination_DMS.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdo_GC_DBM_origin_decimal_degrees);
+            this.groupBox2.Controls.Add(this.rdo_GC_DBM_origin_DMS);
+            this.groupBox2.Location = new System.Drawing.Point(32, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(447, 67);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Origin Input Format";
+            // 
+            // rdo_GC_DBM_origin_decimal_degrees
+            // 
+            this.rdo_GC_DBM_origin_decimal_degrees.AutoSize = true;
+            this.rdo_GC_DBM_origin_decimal_degrees.Location = new System.Drawing.Point(31, 26);
+            this.rdo_GC_DBM_origin_decimal_degrees.Name = "rdo_GC_DBM_origin_decimal_degrees";
+            this.rdo_GC_DBM_origin_decimal_degrees.Size = new System.Drawing.Size(156, 24);
+            this.rdo_GC_DBM_origin_decimal_degrees.TabIndex = 3;
+            this.rdo_GC_DBM_origin_decimal_degrees.Text = "Decimal Degrees";
+            this.rdo_GC_DBM_origin_decimal_degrees.UseVisualStyleBackColor = true;
+            // 
+            // rdo_GC_DBM_origin_DMS
+            // 
+            this.rdo_GC_DBM_origin_DMS.AutoSize = true;
+            this.rdo_GC_DBM_origin_DMS.Location = new System.Drawing.Point(207, 26);
+            this.rdo_GC_DBM_origin_DMS.Name = "rdo_GC_DBM_origin_DMS";
+            this.rdo_GC_DBM_origin_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdo_GC_DBM_origin_DMS.TabIndex = 2;
+            this.rdo_GC_DBM_origin_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdo_GC_DBM_origin_DMS.UseVisualStyleBackColor = true;
             // 
             // tab_destination
             // 
@@ -978,6 +1141,16 @@ namespace GlobalData
             this.panel1.Size = new System.Drawing.Size(1094, 74);
             this.panel1.TabIndex = 1;
             // 
+            // btn_help_about
+            // 
+            this.btn_help_about.Location = new System.Drawing.Point(9, 8);
+            this.btn_help_about.Name = "btn_help_about";
+            this.btn_help_about.Size = new System.Drawing.Size(119, 57);
+            this.btn_help_about.TabIndex = 15;
+            this.btn_help_about.Text = "Help About";
+            this.btn_help_about.UseVisualStyleBackColor = true;
+            this.btn_help_about.Click += new System.EventHandler(this.btn_help_about_Click);
+            // 
             // btn_close
             // 
             this.btn_close.Location = new System.Drawing.Point(966, 8);
@@ -988,15 +1161,15 @@ namespace GlobalData
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // btn_help_about
+            // panel14
             // 
-            this.btn_help_about.Location = new System.Drawing.Point(9, 8);
-            this.btn_help_about.Name = "btn_help_about";
-            this.btn_help_about.Size = new System.Drawing.Size(119, 57);
-            this.btn_help_about.TabIndex = 15;
-            this.btn_help_about.Text = "Help About";
-            this.btn_help_about.UseVisualStyleBackColor = true;
-            this.btn_help_about.Click += new System.EventHandler(this.btn_help_about_Click);
+            this.tableLayoutPanel2.SetColumnSpan(this.panel14, 3);
+            this.panel14.Controls.Add(this.groupBox3);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(511, 93);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(528, 74);
+            this.panel14.TabIndex = 24;
             // 
             // Form1
             // 
@@ -1015,8 +1188,9 @@ namespace GlobalData
             this.tab_DBM.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1033,6 +1207,11 @@ namespace GlobalData
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tab_destination.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1046,6 +1225,7 @@ namespace GlobalData
             this.grpbx_FD_distance.ResumeLayout(false);
             this.grpbx_FD_distance.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1056,13 +1236,13 @@ namespace GlobalData
         private System.Windows.Forms.TabControl tabctrl_main;
         private System.Windows.Forms.TabPage tab_great_circle;
         private System.Windows.Forms.RichTextBox rchtxbx_output;
-        private System.Windows.Forms.TextBox txtbx_dest_latitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_dest_latitude;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtbx_dest_longitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_dest_longitude;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtbx_origin_latitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_latitude;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtbx_origin_longitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_longitude;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_compute_initial_bearing;
@@ -1075,7 +1255,6 @@ namespace GlobalData
         private System.Windows.Forms.TabPage tab_DBM;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TabPage tab_destination;
         private System.Windows.Forms.TabPage tab_CTD;
@@ -1135,6 +1314,20 @@ namespace GlobalData
         private System.Windows.Forms.RadioButton rdo_FD_results_format_DMS;
         private System.Windows.Forms.RadioButton rdo_FD_results_format_decimal_degrees;
         private System.Windows.Forms.Button btn_help_about;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rdo_GC_DBM_destination_decimal_degrees;
+        private System.Windows.Forms.RadioButton rdo_GC_DBM_destination_DMS;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdo_GC_DBM_origin_decimal_degrees;
+        private System.Windows.Forms.RadioButton rdo_GC_DBM_origin_DMS;
+        private System.Windows.Forms.Panel panel14;
     }
 }
 

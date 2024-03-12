@@ -19,6 +19,10 @@ namespace GlobalData
         {
             Text += " : v" + Assembly.GetExecutingAssembly().GetName().Version; // put in the version number
 
+            //Set up the Great Circle Distance, Bearing and midpoint tab
+            rdo_GC_DBM_origin_decimal_degrees.Checked = true;
+            rdo_GC_DBM_destination_DMS.Checked = true;
+
             //Set up the Great Circle Find Distance tab
             rdo_FD_origin_longitude_decimal_degrees.Checked = true;
             rdo_FD_origin_latitude_decimal_degrees.Checked = true;
@@ -37,5 +41,7 @@ namespace GlobalData
             var f1 = new Help_Form();
             f1.ShowDialog();
         }
+
+      
     }
 }

@@ -62,6 +62,7 @@ namespace help_about
             Close();
         }
 
+        //use this to fit teh page to the browser control size.
         private void wbrHelp_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             if (IsHorizontalScrollbarPresent)

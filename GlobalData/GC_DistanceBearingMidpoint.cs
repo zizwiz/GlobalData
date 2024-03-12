@@ -14,8 +14,8 @@ namespace GlobalData
 
         private void btn_compute_distance_Click(object sender, EventArgs e)
         {
-            Double result = GreatCircle.Distance(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
-                txtbx_dest_longitude.Text, txtbx_dest_latitude.Text);
+            Double result = GreatCircle.Distance(txtbx_GC_DBM_origin_longitude.Text, txtbx_GC_DBM_origin_latitude.Text,
+                txtbx_GC_DBM_dest_longitude.Text, txtbx_GC_DBM_dest_latitude.Text);
 
             rchtxbx_output.AppendText("\rDistance = " + Math.Round(result, 4) + "m\r");
             rchtxbx_output.AppendText("Distance = " + Math.Round(result / 1000, 4) + "km\r");
@@ -26,8 +26,8 @@ namespace GlobalData
         private void btn_initial_bearing_Click(object sender, EventArgs e)
         {
 
-            var results = GreatCircle.InitialBearing(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
-                txtbx_dest_longitude.Text, txtbx_dest_latitude.Text);
+            var results = GreatCircle.InitialBearing(txtbx_GC_DBM_origin_longitude.Text, txtbx_GC_DBM_origin_latitude.Text,
+                txtbx_GC_DBM_dest_longitude.Text, txtbx_GC_DBM_dest_latitude.Text);
 
             rchtxbx_output.AppendText("\rForward bearing decimal = " + Math.Round(results.Item1, 4) + "° " + results.Item2);
             rchtxbx_output.AppendText("\rForward bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(results.Item1.ToString()) + " " + results.Item2 + "\r");
@@ -38,8 +38,8 @@ namespace GlobalData
 
         private void btn_compute_midpoint_Click(object sender, EventArgs e)
         {
-            var results = GreatCircle.MidPoint(txtbx_origin_longitude.Text, txtbx_origin_latitude.Text,
-                txtbx_dest_longitude.Text, txtbx_dest_latitude.Text);
+            var results = GreatCircle.MidPoint(txtbx_GC_DBM_origin_longitude.Text, txtbx_GC_DBM_origin_latitude.Text,
+                txtbx_GC_DBM_dest_longitude.Text, txtbx_GC_DBM_dest_latitude.Text);
 
 
             rchtxbx_output.AppendText("\rLatitude = " + Math.Round(results.Item1, 4) + "°");
