@@ -32,8 +32,8 @@ namespace GlobalData
             rchtxbx_output.AppendText("\rForward bearing decimal = " + Math.Round(results.Item1, 4) + "°");
             rchtxbx_output.AppendText("\rForward bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(results.Item1.ToString()) + "\r");
 
-            rchtxbx_output.AppendText("\rReverse bearing decimal = " + GreatCircle.wrap360(Math.Round(results.Item2, 4)) + "°");
-            rchtxbx_output.AppendText("\rReverse bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(GreatCircle.wrap360(Math.Round(results.Item2, 4)).ToString()) + "\r");
+            rchtxbx_output.AppendText("\rReverse bearing decimal = " + GreatCircle.UnWrap360(Math.Round(results.Item2, 4)) + "°");
+            rchtxbx_output.AppendText("\rReverse bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(GreatCircle.UnWrap360(Math.Round(results.Item2, 4)).ToString()) + "\r");
         }
 
         private void btn_compute_midpoint_Click(object sender, EventArgs e)

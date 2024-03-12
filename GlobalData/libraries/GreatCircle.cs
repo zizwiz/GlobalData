@@ -183,7 +183,7 @@ namespace GlobalData.libraries
         /// <param name="decimalDegrees"></param>
         /// <returns>degrees within range 0..360 as double</returns>
 
-        public static double wrap360(double myDegrees)
+        public static double UnWrap360(double myDegrees)
         {
             if (0 <= myDegrees && myDegrees < 360) return myDegrees; // avoid rounding due to arithmetic ops if within range
 

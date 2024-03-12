@@ -1,4 +1,5 @@
 ﻿using System;
+using GlobalData.libraries;
 
 namespace GlobalData.Utils
 {
@@ -113,7 +114,8 @@ namespace GlobalData.Utils
 
         public static double toDecimalDegreesFromDMS(string myDegrees, string myMinutes, string mySeconds)
         {
-            return double.Parse(myDegrees) + (double.Parse(myMinutes) / 60) + (double.Parse(mySeconds) / 3600);
+             return double.Parse(myDegrees) + (double.Parse(myMinutes) / 60) +
+                              (double.Parse(mySeconds) / 3600);
         }
 
         /// <summary>
@@ -132,8 +134,38 @@ namespace GlobalData.Utils
             return degrees + "° " + minutes + "' " + seconds + "\"";
         }
 
+        /// <summary>
+        /// Finds cardinal point of decimal degrees bearing.
+        /// </summary>
+        /// <param name="bearing"></param>
+        /// <returns>String of the cardinal point</returns>
+        public static string toCardinalPointsFromDecimalDegrees(double bearing)
+        {
+            /*
+             * We use the Meterological cardinal points. Others explained below.
+             * 1) Cardinal: with 4 cardinal points: north, south, east, west
+               2) Intercardinal: with 8 points, 4 cardinal + 4 ordinals (NE, SE, SW, NW)
+               3) Meteorological: with 16 points, 8 intercardinal + intermediate points between cardinal and ordinal points, such as north-northeast (NNE)
+               4) Mariner: has 32 points, 16 + points such as northeast by north (NEbN) between north-northeast and northeast.
+               5) "Extended" Mariner: with 128 points, extended the 32-point system with half-and quarter-points to allow 128 directions.
+             */
 
-       
+            // Metreological Cardinal points
+            // Note we have 17 items as 360° wraps to the same as 0°.
+            string[] cardinals = {
+                "N", "NNE", "NE", "ENE",
+                "E", "ESE", "SE", "SSE",
+                "S", "SSW", "SW", "WSW",
+                "W", "WNW", "NW", "NNW",
+                "N"
+            };
+
+            //unwrap the bearing in case it is more than 360°
+            string cardinal = cardinals[int.Parse(Math.Round(GreatCircle.UnWrap360(bearing) / 360 * 16).ToString())];
+
+            return cardinal;
+        }
+
 
     }
 }
