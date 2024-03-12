@@ -9,7 +9,7 @@ namespace GlobalData.Utils
         /// </summary>
         /// <param name="myData"></param>
         /// <returns>Radians as a double</returns>
-        public static double toRadians(string myData)
+        public static double toRadiansfromDecimalDegrees(string myData)
         {
           return  double.Parse(myData) * Math.PI / 180; //in radians
         }
@@ -20,7 +20,7 @@ namespace GlobalData.Utils
         /// <param name="decimalDegrees"></param>
         /// <param name="decimalDegrees"></param>
         /// <returns>Radians as a double</returns>
-        public static double toRadians(string myData1, string myData2)
+        public static double toRadiansfromDecimalDegrees(string myData1, string myData2)
         {
             return (double.Parse(myData1) - double.Parse(myData2)) * Math.PI / 180; //in radians
         }
@@ -31,7 +31,7 @@ namespace GlobalData.Utils
         /// </summary>
         /// <param name="radians"></param>
         /// <returns>Returns degrees as double</returns>
-        public static double toDegrees(double myData)
+        public static double toDegreesFromRadians(double myData)
         {
            return (myData * 180 / Math.PI + 360) % 360; // in degrees
         }
@@ -42,9 +42,19 @@ namespace GlobalData.Utils
         /// </summary>
         /// <param name="metres"></param>
         /// <returns>Miles as double</returns>
-        public static double toMiles(double myData)
+        public static double toMilesFromMetres(double myData)
         {
             return (myData * 0.00062137); // in miles
+        }
+
+        /// <summary>
+        /// Input data in miles returns in metres
+        /// </summary>
+        /// <param name="miles"></param>
+        /// <returns>Metres as double</returns>
+        public static double toMetresFromMiles(double myData)
+        {
+            return (myData * 1609.344); // in metres
         }
 
         /// <summary>
@@ -52,9 +62,19 @@ namespace GlobalData.Utils
         /// </summary>
         /// <param name="miles"></param>
         /// <returns>Kilometres as double</returns>
-        public static double toKilometres(double myData)
+        public static double toKilometresFromMiles(double myData)
         {
             return (myData * 1.609344); // in kilometres
+        }
+
+        /// <summary>
+        /// Input data in kilometres returns in miles
+        /// </summary>
+        /// <param name="kilometres"></param>
+        /// <returns>miles as double</returns>
+        public static double toMilesFromKilometres(double myData)
+        {
+            return (myData * 0.6213711); // in kilometres
         }
 
         /// <summary>
@@ -62,10 +82,26 @@ namespace GlobalData.Utils
         /// </summary>
         /// <param name="metres"></param>
         /// <returns>Nautical Miles as double</returns>
-        public static double toNauticalMiles(double myData)
+        public static double toNauticalMilesFromMetres(double myData)
         {
             return (myData * 0.00053996); // in nautical miles
         }
+
+
+        /// <summary>
+        /// Input data in nautical miles returns in metres
+        /// </summary>
+        /// <param name="nautical miles"></param>
+        /// <returns>Nautical Miles as double</returns>
+        public static double toMetresFromNauticalMiles(double myData)
+        {
+            return (myData * 1852); // in metres
+        }
+
+
+
+
+
 
         /// <summary>
         /// Converts degrees, minutes and seconds into decimal degrees
@@ -75,7 +111,7 @@ namespace GlobalData.Utils
         /// <param name="seconds"></param>
         /// <returns>Decimal degrees as double</returns>
 
-        public static double toDecimalDegrees(string myDegrees, string myMinutes, string mySeconds)
+        public static double toDecimalDegreesFromDMS(string myDegrees, string myMinutes, string mySeconds)
         {
             return double.Parse(myDegrees) + (double.Parse(myMinutes) / 60) + (double.Parse(mySeconds) / 3600);
         }
@@ -85,7 +121,7 @@ namespace GlobalData.Utils
         /// </summary>
         /// <param name="DecimalDegrees"></param>
         /// <returns>String containing degrees, minutes and seconds</returns>
-        public static string toDegreesMinutesSeconds(string myDegrees)
+        public static string toDegreesMinutesSecondsFromDecimalDegrees(string myDegrees)
         {
             int seconds = (int)Math.Round(double.Parse(myDegrees) * 3600);
             int degrees = seconds / 3600;

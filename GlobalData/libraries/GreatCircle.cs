@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GlobalData.Properties;
 using GlobalData.Utils;
 
 namespace GlobalData.libraries
@@ -62,14 +59,15 @@ namespace GlobalData.libraries
         public static double Distance(string origin_longitude, string origin_latitude,
                     string destination_longitude, string destination_latitude)
         {
-            double earthsRadius = 6371000;     //earth’s radius in m (mean radius = 6371km)
+            double earthsRadius =  Settings.Default.EarthsRadius;     //earth’s radius in m (mean radius = 6371km)
 
-            double φ1 = Convertion.toRadians(origin_latitude); //latitude in radians
-            double φ2 = Convertion.toRadians(destination_latitude); // latitude in radians
+            
+            double φ1 = Convertion.toRadiansfromDecimalDegrees(origin_latitude); //latitude in radians
+            double φ2 = Convertion.toRadiansfromDecimalDegrees(destination_latitude); // latitude in radians
 
             //difference in long and lat
-            double Δφ = Convertion.toRadians(destination_latitude, origin_latitude);
-            double Δλ = Convertion.toRadians(destination_longitude, origin_longitude);
+            double Δφ = Convertion.toRadiansfromDecimalDegrees(destination_latitude, origin_latitude);
+            double Δλ = Convertion.toRadiansfromDecimalDegrees(destination_longitude, origin_longitude);
 
             double a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2) + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
             double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
@@ -112,12 +110,12 @@ namespace GlobalData.libraries
             string destination_longitude, string destination_latitude)
         {
             //latitudes
-            double φ1 = Convertion.toRadians(origin_latitude);
-            double φ2 = Convertion.toRadians(destination_latitude);
+            double φ1 = Convertion.toRadiansfromDecimalDegrees(origin_latitude);
+            double φ2 = Convertion.toRadiansfromDecimalDegrees(destination_latitude);
 
             //longitudes
-            double λ1 = Convertion.toRadians(origin_longitude);
-            double λ2 = Convertion.toRadians(destination_longitude);
+            double λ1 = Convertion.toRadiansfromDecimalDegrees(origin_longitude);
+            double λ2 = Convertion.toRadiansfromDecimalDegrees(destination_longitude);
 
             double y = Math.Sin(λ2 - λ1) * Math.Cos(φ2);
             double x = Math.Cos(φ1) * Math.Sin(φ2) - Math.Sin(φ1) * Math.Cos(φ2) * Math.Cos(λ2 - λ1);
@@ -151,14 +149,14 @@ namespace GlobalData.libraries
             string destination_longitude, string destination_latitude)
         {
             //latitudes
-            double φ1 = Convertion.toRadians(origin_latitude);
-            double φ2 = Convertion.toRadians(destination_latitude);
+            double φ1 = Convertion.toRadiansfromDecimalDegrees(origin_latitude);
+            double φ2 = Convertion.toRadiansfromDecimalDegrees(destination_latitude);
 
             //longitudes
-            double λ1 = Convertion.toRadians(origin_longitude);
+            double λ1 = Convertion.toRadiansfromDecimalDegrees(origin_longitude);
 
             //difference in long and lat
-            double Δλ = Convertion.toRadians(destination_longitude, origin_longitude);
+            double Δλ = Convertion.toRadiansfromDecimalDegrees(destination_longitude, origin_longitude);
 
             // get cartesian coordinates for the two points
             double[] A = { Math.Cos(φ1), 0, Math.Sin(φ1) }; // place point A on prime meridian y=0
@@ -170,8 +168,8 @@ namespace GlobalData.libraries
             double φm = Math.Atan2(C[2], Math.Sqrt(C[0] * C[0] + C[1] * C[1]));
             double λm = λ1 + Math.Atan2(C[1], C[0]);
 
-            double lat = Convertion.toDegrees(φm);
-            double lon = Convertion.toDegrees(λm);
+            double lat = Convertion.toDegreesFromRadians(φm);
+            double lon = Convertion.toDegreesFromRadians(λm);
 
             return (lat, lon);
         }
