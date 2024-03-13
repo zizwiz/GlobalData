@@ -21,7 +21,7 @@ namespace GlobalData
 
             //Set up the Great Circle Distance, Bearing and midpoint tab
             rdo_GC_DBM_origin_decimal_degrees.Checked = true;
-            rdo_GC_DBM_destination_DMS.Checked = true;
+            rdo_GC_DBM_destination_decimal_degrees.Checked = true;
 
             //Set up the Great Circle Find Distance tab
             rdo_FD_origin_longitude_decimal_degrees.Checked = true;
@@ -42,6 +42,6 @@ namespace GlobalData
             f1.ShowDialog();
         }
 
-      
+       
     }
 }

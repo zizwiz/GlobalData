@@ -39,7 +39,7 @@ namespace GlobalData
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.rchtxbx_output = new System.Windows.Forms.RichTextBox();
+            this.rchtxbx_GC_DBM_output = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_gc_clear = new System.Windows.Forms.Button();
             this.btn_compute_distance = new System.Windows.Forms.Button();
@@ -50,28 +50,53 @@ namespace GlobalData
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtbx_GC_DBM_origin_latitude = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_origin_latitude_seconds = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_origin_latitude_decimal = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_origin_latitude_seconds = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_origin_latitude_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_origin_latitude_minutes = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_origin_latitude_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_origin_latitude_degrees = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_origin_latitude_minutes = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtbx_GC_DBM_origin_longitude = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_origin_longtude_seconds = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_origin_longitude_decimal = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_origin_longitude_seconds = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_origin_longitude_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_origin_longitude_minutes = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_origin_longitude_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_origin_longtude_minutes = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_origin_longitude_degrees = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtbx_GC_DBM_dest_latitude = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_destination_latitude_seconds = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_destination_latitude_decimal = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_destination_latitude_seconds = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_destination_latitude_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_destination_latitude_minutes = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_destination_latitude_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_destination_latitude_degrees = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_destination_latitude_minutes = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtbx_GC_DBM_dest_longitude = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_destination_longtude_seconds = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_destination_longitude_decimal = new System.Windows.Forms.Label();
+            this.txtbx_GC_DBM_destination_longitude_seconds = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_destination_longitude_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_destination_longitude_minutes = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_DBM_destination_longitude_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_DBM_destination_longtude_minutes = new System.Windows.Forms.Label();
+            this.lbl_GC_DBM_destination_longitude_degrees = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rdo_GC_DBM_destination_decimal_degrees = new System.Windows.Forms.RadioButton();
-            this.rdo_GC_DBM_destination_DMS = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdo_GC_DBM_origin_decimal_degrees = new System.Windows.Forms.RadioButton();
             this.rdo_GC_DBM_origin_DMS = new System.Windows.Forms.RadioButton();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdo_GC_DBM_destination_decimal_degrees = new System.Windows.Forms.RadioButton();
+            this.rdo_GC_DBM_destination_DMS = new System.Windows.Forms.RadioButton();
             this.tab_destination = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -125,7 +150,6 @@ namespace GlobalData
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_help_about = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -145,8 +169,9 @@ namespace GlobalData
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tab_destination.SuspendLayout();
             this.panel13.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -155,7 +180,6 @@ namespace GlobalData
             this.grpbx_FD_bearing.SuspendLayout();
             this.grpbx_FD_distance.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -287,7 +311,7 @@ namespace GlobalData
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel3.Controls.Add(this.rchtxbx_output, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rchtxbx_GC_DBM_output, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
@@ -297,14 +321,14 @@ namespace GlobalData
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1036, 345);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // rchtxbx_output
+            // rchtxbx_GC_DBM_output
             // 
-            this.rchtxbx_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxbx_output.Location = new System.Drawing.Point(3, 3);
-            this.rchtxbx_output.Name = "rchtxbx_output";
-            this.rchtxbx_output.Size = new System.Drawing.Size(905, 339);
-            this.rchtxbx_output.TabIndex = 9;
-            this.rchtxbx_output.Text = "";
+            this.rchtxbx_GC_DBM_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxbx_GC_DBM_output.Location = new System.Drawing.Point(3, 3);
+            this.rchtxbx_GC_DBM_output.Name = "rchtxbx_GC_DBM_output";
+            this.rchtxbx_GC_DBM_output.Size = new System.Drawing.Size(905, 339);
+            this.rchtxbx_GC_DBM_output.TabIndex = 9;
+            this.rchtxbx_GC_DBM_output.Text = "";
             // 
             // tableLayoutPanel4
             // 
@@ -352,7 +376,7 @@ namespace GlobalData
             this.btn_compute_distance.TabIndex = 11;
             this.btn_compute_distance.Text = "Compute Distance";
             this.btn_compute_distance.UseVisualStyleBackColor = true;
-            this.btn_compute_distance.Click += new System.EventHandler(this.btn_compute_distance_Click);
+            this.btn_compute_distance.Click += new System.EventHandler(this.btn_GC_compute_distance_Click);
             // 
             // btn_compute_initial_bearing
             // 
@@ -363,7 +387,7 @@ namespace GlobalData
             this.btn_compute_initial_bearing.TabIndex = 10;
             this.btn_compute_initial_bearing.Text = "Compute Initial Bearing";
             this.btn_compute_initial_bearing.UseVisualStyleBackColor = true;
-            this.btn_compute_initial_bearing.Click += new System.EventHandler(this.btn_initial_bearing_Click);
+            this.btn_compute_initial_bearing.Click += new System.EventHandler(this.btn_GC_detrmine_initial_bearing_Click);
             // 
             // btn_compute_midpoint
             // 
@@ -374,7 +398,7 @@ namespace GlobalData
             this.btn_compute_midpoint.TabIndex = 12;
             this.btn_compute_midpoint.Text = "Compute Midpoint";
             this.btn_compute_midpoint.UseVisualStyleBackColor = true;
-            this.btn_compute_midpoint.Click += new System.EventHandler(this.btn_compute_midpoint_Click);
+            this.btn_compute_midpoint.Click += new System.EventHandler(this.btn_GC_compute_midpoint_Click);
             // 
             // panel5
             // 
@@ -416,57 +440,165 @@ namespace GlobalData
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude);
+            this.panel7.Controls.Add(this.lbl_GC_DBM_origin_latitude_seconds);
+            this.panel7.Controls.Add(this.lbl_GC_DBM_origin_latitude_decimal);
+            this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude_seconds);
+            this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude_decimal);
+            this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude_minutes);
+            this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude_degrees);
+            this.panel7.Controls.Add(this.lbl_GC_DBM_origin_latitude_degrees);
+            this.panel7.Controls.Add(this.lbl_GC_DBM_origin_latitude_minutes);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(158, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(342, 34);
             this.panel7.TabIndex = 17;
             // 
-            // label5
+            // lbl_GC_DBM_origin_latitude_seconds
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(190, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "°";
+            this.lbl_GC_DBM_origin_latitude_seconds.AutoSize = true;
+            this.lbl_GC_DBM_origin_latitude_seconds.Location = new System.Drawing.Point(266, 5);
+            this.lbl_GC_DBM_origin_latitude_seconds.Name = "lbl_GC_DBM_origin_latitude_seconds";
+            this.lbl_GC_DBM_origin_latitude_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_DBM_origin_latitude_seconds.TabIndex = 27;
+            this.lbl_GC_DBM_origin_latitude_seconds.Text = "\"";
             // 
-            // txtbx_GC_DBM_origin_latitude
+            // lbl_GC_DBM_origin_latitude_decimal
             // 
-            this.txtbx_GC_DBM_origin_latitude.Location = new System.Drawing.Point(0, 4);
-            this.txtbx_GC_DBM_origin_latitude.Name = "txtbx_GC_DBM_origin_latitude";
-            this.txtbx_GC_DBM_origin_latitude.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_GC_DBM_origin_latitude.TabIndex = 3;
-            this.txtbx_GC_DBM_origin_latitude.Text = "52.22931415150747";
+            this.lbl_GC_DBM_origin_latitude_decimal.AutoSize = true;
+            this.lbl_GC_DBM_origin_latitude_decimal.Location = new System.Drawing.Point(190, 7);
+            this.lbl_GC_DBM_origin_latitude_decimal.Name = "lbl_GC_DBM_origin_latitude_decimal";
+            this.lbl_GC_DBM_origin_latitude_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_origin_latitude_decimal.TabIndex = 9;
+            this.lbl_GC_DBM_origin_latitude_decimal.Text = "°";
+            // 
+            // txtbx_GC_DBM_origin_latitude_seconds
+            // 
+            this.txtbx_GC_DBM_origin_latitude_seconds.Location = new System.Drawing.Point(189, 2);
+            this.txtbx_GC_DBM_origin_latitude_seconds.Name = "txtbx_GC_DBM_origin_latitude_seconds";
+            this.txtbx_GC_DBM_origin_latitude_seconds.Size = new System.Drawing.Size(71, 26);
+            this.txtbx_GC_DBM_origin_latitude_seconds.TabIndex = 26;
+            // 
+            // txtbx_GC_DBM_origin_latitude_decimal
+            // 
+            this.txtbx_GC_DBM_origin_latitude_decimal.Location = new System.Drawing.Point(0, 4);
+            this.txtbx_GC_DBM_origin_latitude_decimal.Name = "txtbx_GC_DBM_origin_latitude_decimal";
+            this.txtbx_GC_DBM_origin_latitude_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_origin_latitude_decimal.TabIndex = 3;
+            this.txtbx_GC_DBM_origin_latitude_decimal.Text = "52.22931415150747";
+            // 
+            // txtbx_GC_DBM_origin_latitude_minutes
+            // 
+            this.txtbx_GC_DBM_origin_latitude_minutes.Location = new System.Drawing.Point(93, 3);
+            this.txtbx_GC_DBM_origin_latitude_minutes.Name = "txtbx_GC_DBM_origin_latitude_minutes";
+            this.txtbx_GC_DBM_origin_latitude_minutes.Size = new System.Drawing.Size(70, 26);
+            this.txtbx_GC_DBM_origin_latitude_minutes.TabIndex = 24;
+            // 
+            // txtbx_GC_DBM_origin_latitude_degrees
+            // 
+            this.txtbx_GC_DBM_origin_latitude_degrees.Location = new System.Drawing.Point(3, 3);
+            this.txtbx_GC_DBM_origin_latitude_degrees.Name = "txtbx_GC_DBM_origin_latitude_degrees";
+            this.txtbx_GC_DBM_origin_latitude_degrees.Size = new System.Drawing.Size(63, 26);
+            this.txtbx_GC_DBM_origin_latitude_degrees.TabIndex = 22;
+            // 
+            // lbl_GC_DBM_origin_latitude_degrees
+            // 
+            this.lbl_GC_DBM_origin_latitude_degrees.AutoSize = true;
+            this.lbl_GC_DBM_origin_latitude_degrees.Location = new System.Drawing.Point(72, 6);
+            this.lbl_GC_DBM_origin_latitude_degrees.Name = "lbl_GC_DBM_origin_latitude_degrees";
+            this.lbl_GC_DBM_origin_latitude_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_origin_latitude_degrees.TabIndex = 23;
+            this.lbl_GC_DBM_origin_latitude_degrees.Text = "°";
+            // 
+            // lbl_GC_DBM_origin_latitude_minutes
+            // 
+            this.lbl_GC_DBM_origin_latitude_minutes.AutoSize = true;
+            this.lbl_GC_DBM_origin_latitude_minutes.Location = new System.Drawing.Point(169, 5);
+            this.lbl_GC_DBM_origin_latitude_minutes.Name = "lbl_GC_DBM_origin_latitude_minutes";
+            this.lbl_GC_DBM_origin_latitude_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_DBM_origin_latitude_minutes.TabIndex = 25;
+            this.lbl_GC_DBM_origin_latitude_minutes.Text = "\'";
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude);
+            this.panel8.Controls.Add(this.lbl_GC_DBM_origin_longtude_seconds);
+            this.panel8.Controls.Add(this.lbl_GC_DBM_origin_longitude_decimal);
+            this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude_seconds);
+            this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude_decimal);
+            this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude_minutes);
+            this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude_degrees);
+            this.panel8.Controls.Add(this.lbl_GC_DBM_origin_longtude_minutes);
+            this.panel8.Controls.Add(this.lbl_GC_DBM_origin_longitude_degrees);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(158, 48);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(342, 34);
             this.panel8.TabIndex = 18;
             // 
-            // label6
+            // lbl_GC_DBM_origin_longtude_seconds
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(190, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "°";
+            this.lbl_GC_DBM_origin_longtude_seconds.AutoSize = true;
+            this.lbl_GC_DBM_origin_longtude_seconds.Location = new System.Drawing.Point(266, 7);
+            this.lbl_GC_DBM_origin_longtude_seconds.Name = "lbl_GC_DBM_origin_longtude_seconds";
+            this.lbl_GC_DBM_origin_longtude_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_DBM_origin_longtude_seconds.TabIndex = 33;
+            this.lbl_GC_DBM_origin_longtude_seconds.Text = "\"";
             // 
-            // txtbx_GC_DBM_origin_longitude
+            // lbl_GC_DBM_origin_longitude_decimal
             // 
-            this.txtbx_GC_DBM_origin_longitude.Location = new System.Drawing.Point(3, 4);
-            this.txtbx_GC_DBM_origin_longitude.Name = "txtbx_GC_DBM_origin_longitude";
-            this.txtbx_GC_DBM_origin_longitude.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_GC_DBM_origin_longitude.TabIndex = 1;
-            this.txtbx_GC_DBM_origin_longitude.Text = "0.12318499799890262";
+            this.lbl_GC_DBM_origin_longitude_decimal.AutoSize = true;
+            this.lbl_GC_DBM_origin_longitude_decimal.Location = new System.Drawing.Point(190, 7);
+            this.lbl_GC_DBM_origin_longitude_decimal.Name = "lbl_GC_DBM_origin_longitude_decimal";
+            this.lbl_GC_DBM_origin_longitude_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_origin_longitude_decimal.TabIndex = 9;
+            this.lbl_GC_DBM_origin_longitude_decimal.Text = "°";
+            // 
+            // txtbx_GC_DBM_origin_longitude_seconds
+            // 
+            this.txtbx_GC_DBM_origin_longitude_seconds.Location = new System.Drawing.Point(189, 4);
+            this.txtbx_GC_DBM_origin_longitude_seconds.Name = "txtbx_GC_DBM_origin_longitude_seconds";
+            this.txtbx_GC_DBM_origin_longitude_seconds.Size = new System.Drawing.Size(71, 26);
+            this.txtbx_GC_DBM_origin_longitude_seconds.TabIndex = 32;
+            // 
+            // txtbx_GC_DBM_origin_longitude_decimal
+            // 
+            this.txtbx_GC_DBM_origin_longitude_decimal.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_origin_longitude_decimal.Name = "txtbx_GC_DBM_origin_longitude_decimal";
+            this.txtbx_GC_DBM_origin_longitude_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_origin_longitude_decimal.TabIndex = 1;
+            this.txtbx_GC_DBM_origin_longitude_decimal.Text = "0.12318499799890262";
+            // 
+            // txtbx_GC_DBM_origin_longitude_minutes
+            // 
+            this.txtbx_GC_DBM_origin_longitude_minutes.Location = new System.Drawing.Point(93, 5);
+            this.txtbx_GC_DBM_origin_longitude_minutes.Name = "txtbx_GC_DBM_origin_longitude_minutes";
+            this.txtbx_GC_DBM_origin_longitude_minutes.Size = new System.Drawing.Size(70, 26);
+            this.txtbx_GC_DBM_origin_longitude_minutes.TabIndex = 30;
+            // 
+            // txtbx_GC_DBM_origin_longitude_degrees
+            // 
+            this.txtbx_GC_DBM_origin_longitude_degrees.Location = new System.Drawing.Point(3, 5);
+            this.txtbx_GC_DBM_origin_longitude_degrees.Name = "txtbx_GC_DBM_origin_longitude_degrees";
+            this.txtbx_GC_DBM_origin_longitude_degrees.Size = new System.Drawing.Size(63, 26);
+            this.txtbx_GC_DBM_origin_longitude_degrees.TabIndex = 28;
+            // 
+            // lbl_GC_DBM_origin_longtude_minutes
+            // 
+            this.lbl_GC_DBM_origin_longtude_minutes.AutoSize = true;
+            this.lbl_GC_DBM_origin_longtude_minutes.Location = new System.Drawing.Point(169, 7);
+            this.lbl_GC_DBM_origin_longtude_minutes.Name = "lbl_GC_DBM_origin_longtude_minutes";
+            this.lbl_GC_DBM_origin_longtude_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_DBM_origin_longtude_minutes.TabIndex = 31;
+            this.lbl_GC_DBM_origin_longtude_minutes.Text = "\'";
+            // 
+            // lbl_GC_DBM_origin_longitude_degrees
+            // 
+            this.lbl_GC_DBM_origin_longitude_degrees.AutoSize = true;
+            this.lbl_GC_DBM_origin_longitude_degrees.Location = new System.Drawing.Point(72, 8);
+            this.lbl_GC_DBM_origin_longitude_degrees.Name = "lbl_GC_DBM_origin_longitude_degrees";
+            this.lbl_GC_DBM_origin_longitude_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_origin_longitude_degrees.TabIndex = 29;
+            this.lbl_GC_DBM_origin_longitude_degrees.Text = "°";
             // 
             // panel9
             // 
@@ -508,57 +640,165 @@ namespace GlobalData
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.label7);
-            this.panel11.Controls.Add(this.txtbx_GC_DBM_dest_latitude);
+            this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_seconds);
+            this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_decimal);
+            this.panel11.Controls.Add(this.txtbx_GC_DBM_destination_latitude_seconds);
+            this.panel11.Controls.Add(this.txtbx_GC_DBM_destination_latitude_decimal);
+            this.panel11.Controls.Add(this.txtbx_GC_DBM_destination_latitude_minutes);
+            this.panel11.Controls.Add(this.txtbx_GC_DBM_destination_latitude_degrees);
+            this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_degrees);
+            this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_minutes);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(696, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(343, 34);
             this.panel11.TabIndex = 21;
             // 
-            // label7
+            // lbl_GC_DBM_destination_latitude_seconds
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(193, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(14, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "°";
+            this.lbl_GC_DBM_destination_latitude_seconds.AutoSize = true;
+            this.lbl_GC_DBM_destination_latitude_seconds.Location = new System.Drawing.Point(266, 6);
+            this.lbl_GC_DBM_destination_latitude_seconds.Name = "lbl_GC_DBM_destination_latitude_seconds";
+            this.lbl_GC_DBM_destination_latitude_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_DBM_destination_latitude_seconds.TabIndex = 39;
+            this.lbl_GC_DBM_destination_latitude_seconds.Text = "\"";
             // 
-            // txtbx_GC_DBM_dest_latitude
+            // lbl_GC_DBM_destination_latitude_decimal
             // 
-            this.txtbx_GC_DBM_dest_latitude.Location = new System.Drawing.Point(3, 4);
-            this.txtbx_GC_DBM_dest_latitude.Name = "txtbx_GC_DBM_dest_latitude";
-            this.txtbx_GC_DBM_dest_latitude.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_GC_DBM_dest_latitude.TabIndex = 7;
-            this.txtbx_GC_DBM_dest_latitude.Text = "52.13020137607176";
+            this.lbl_GC_DBM_destination_latitude_decimal.AutoSize = true;
+            this.lbl_GC_DBM_destination_latitude_decimal.Location = new System.Drawing.Point(193, 7);
+            this.lbl_GC_DBM_destination_latitude_decimal.Name = "lbl_GC_DBM_destination_latitude_decimal";
+            this.lbl_GC_DBM_destination_latitude_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_destination_latitude_decimal.TabIndex = 10;
+            this.lbl_GC_DBM_destination_latitude_decimal.Text = "°";
+            // 
+            // txtbx_GC_DBM_destination_latitude_seconds
+            // 
+            this.txtbx_GC_DBM_destination_latitude_seconds.Location = new System.Drawing.Point(189, 3);
+            this.txtbx_GC_DBM_destination_latitude_seconds.Name = "txtbx_GC_DBM_destination_latitude_seconds";
+            this.txtbx_GC_DBM_destination_latitude_seconds.Size = new System.Drawing.Size(71, 26);
+            this.txtbx_GC_DBM_destination_latitude_seconds.TabIndex = 38;
+            // 
+            // txtbx_GC_DBM_destination_latitude_decimal
+            // 
+            this.txtbx_GC_DBM_destination_latitude_decimal.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_destination_latitude_decimal.Name = "txtbx_GC_DBM_destination_latitude_decimal";
+            this.txtbx_GC_DBM_destination_latitude_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_destination_latitude_decimal.TabIndex = 7;
+            this.txtbx_GC_DBM_destination_latitude_decimal.Text = "52.13020137607176";
+            // 
+            // txtbx_GC_DBM_destination_latitude_minutes
+            // 
+            this.txtbx_GC_DBM_destination_latitude_minutes.Location = new System.Drawing.Point(93, 4);
+            this.txtbx_GC_DBM_destination_latitude_minutes.Name = "txtbx_GC_DBM_destination_latitude_minutes";
+            this.txtbx_GC_DBM_destination_latitude_minutes.Size = new System.Drawing.Size(70, 26);
+            this.txtbx_GC_DBM_destination_latitude_minutes.TabIndex = 36;
+            // 
+            // txtbx_GC_DBM_destination_latitude_degrees
+            // 
+            this.txtbx_GC_DBM_destination_latitude_degrees.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_destination_latitude_degrees.Name = "txtbx_GC_DBM_destination_latitude_degrees";
+            this.txtbx_GC_DBM_destination_latitude_degrees.Size = new System.Drawing.Size(63, 26);
+            this.txtbx_GC_DBM_destination_latitude_degrees.TabIndex = 34;
+            // 
+            // lbl_GC_DBM_destination_latitude_degrees
+            // 
+            this.lbl_GC_DBM_destination_latitude_degrees.AutoSize = true;
+            this.lbl_GC_DBM_destination_latitude_degrees.Location = new System.Drawing.Point(72, 7);
+            this.lbl_GC_DBM_destination_latitude_degrees.Name = "lbl_GC_DBM_destination_latitude_degrees";
+            this.lbl_GC_DBM_destination_latitude_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_destination_latitude_degrees.TabIndex = 35;
+            this.lbl_GC_DBM_destination_latitude_degrees.Text = "°";
+            // 
+            // lbl_GC_DBM_destination_latitude_minutes
+            // 
+            this.lbl_GC_DBM_destination_latitude_minutes.AutoSize = true;
+            this.lbl_GC_DBM_destination_latitude_minutes.Location = new System.Drawing.Point(169, 6);
+            this.lbl_GC_DBM_destination_latitude_minutes.Name = "lbl_GC_DBM_destination_latitude_minutes";
+            this.lbl_GC_DBM_destination_latitude_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_DBM_destination_latitude_minutes.TabIndex = 37;
+            this.lbl_GC_DBM_destination_latitude_minutes.Text = "\'";
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.label8);
-            this.panel12.Controls.Add(this.txtbx_GC_DBM_dest_longitude);
+            this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longtude_seconds);
+            this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longitude_decimal);
+            this.panel12.Controls.Add(this.txtbx_GC_DBM_destination_longitude_seconds);
+            this.panel12.Controls.Add(this.txtbx_GC_DBM_destination_longitude_decimal);
+            this.panel12.Controls.Add(this.txtbx_GC_DBM_destination_longitude_minutes);
+            this.panel12.Controls.Add(this.txtbx_GC_DBM_destination_longitude_degrees);
+            this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longtude_minutes);
+            this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longitude_degrees);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(696, 48);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(343, 34);
             this.panel12.TabIndex = 22;
             // 
-            // label8
+            // lbl_GC_DBM_destination_longtude_seconds
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(193, 7);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(14, 20);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "°";
+            this.lbl_GC_DBM_destination_longtude_seconds.AutoSize = true;
+            this.lbl_GC_DBM_destination_longtude_seconds.Location = new System.Drawing.Point(266, 6);
+            this.lbl_GC_DBM_destination_longtude_seconds.Name = "lbl_GC_DBM_destination_longtude_seconds";
+            this.lbl_GC_DBM_destination_longtude_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_DBM_destination_longtude_seconds.TabIndex = 45;
+            this.lbl_GC_DBM_destination_longtude_seconds.Text = "\"";
             // 
-            // txtbx_GC_DBM_dest_longitude
+            // lbl_GC_DBM_destination_longitude_decimal
             // 
-            this.txtbx_GC_DBM_dest_longitude.Location = new System.Drawing.Point(3, 4);
-            this.txtbx_GC_DBM_dest_longitude.Name = "txtbx_GC_DBM_dest_longitude";
-            this.txtbx_GC_DBM_dest_longitude.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_GC_DBM_dest_longitude.TabIndex = 5;
-            this.txtbx_GC_DBM_dest_longitude.Text = "-0.24141672862936847";
+            this.lbl_GC_DBM_destination_longitude_decimal.AutoSize = true;
+            this.lbl_GC_DBM_destination_longitude_decimal.Location = new System.Drawing.Point(193, 7);
+            this.lbl_GC_DBM_destination_longitude_decimal.Name = "lbl_GC_DBM_destination_longitude_decimal";
+            this.lbl_GC_DBM_destination_longitude_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_destination_longitude_decimal.TabIndex = 9;
+            this.lbl_GC_DBM_destination_longitude_decimal.Text = "°";
+            // 
+            // txtbx_GC_DBM_destination_longitude_seconds
+            // 
+            this.txtbx_GC_DBM_destination_longitude_seconds.Location = new System.Drawing.Point(189, 3);
+            this.txtbx_GC_DBM_destination_longitude_seconds.Name = "txtbx_GC_DBM_destination_longitude_seconds";
+            this.txtbx_GC_DBM_destination_longitude_seconds.Size = new System.Drawing.Size(71, 26);
+            this.txtbx_GC_DBM_destination_longitude_seconds.TabIndex = 44;
+            // 
+            // txtbx_GC_DBM_destination_longitude_decimal
+            // 
+            this.txtbx_GC_DBM_destination_longitude_decimal.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_destination_longitude_decimal.Name = "txtbx_GC_DBM_destination_longitude_decimal";
+            this.txtbx_GC_DBM_destination_longitude_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_DBM_destination_longitude_decimal.TabIndex = 5;
+            this.txtbx_GC_DBM_destination_longitude_decimal.Text = "-0.24141672862936847";
+            // 
+            // txtbx_GC_DBM_destination_longitude_minutes
+            // 
+            this.txtbx_GC_DBM_destination_longitude_minutes.Location = new System.Drawing.Point(93, 4);
+            this.txtbx_GC_DBM_destination_longitude_minutes.Name = "txtbx_GC_DBM_destination_longitude_minutes";
+            this.txtbx_GC_DBM_destination_longitude_minutes.Size = new System.Drawing.Size(70, 26);
+            this.txtbx_GC_DBM_destination_longitude_minutes.TabIndex = 42;
+            // 
+            // txtbx_GC_DBM_destination_longitude_degrees
+            // 
+            this.txtbx_GC_DBM_destination_longitude_degrees.Location = new System.Drawing.Point(3, 4);
+            this.txtbx_GC_DBM_destination_longitude_degrees.Name = "txtbx_GC_DBM_destination_longitude_degrees";
+            this.txtbx_GC_DBM_destination_longitude_degrees.Size = new System.Drawing.Size(63, 26);
+            this.txtbx_GC_DBM_destination_longitude_degrees.TabIndex = 40;
+            // 
+            // lbl_GC_DBM_destination_longtude_minutes
+            // 
+            this.lbl_GC_DBM_destination_longtude_minutes.AutoSize = true;
+            this.lbl_GC_DBM_destination_longtude_minutes.Location = new System.Drawing.Point(169, 6);
+            this.lbl_GC_DBM_destination_longtude_minutes.Name = "lbl_GC_DBM_destination_longtude_minutes";
+            this.lbl_GC_DBM_destination_longtude_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_DBM_destination_longtude_minutes.TabIndex = 43;
+            this.lbl_GC_DBM_destination_longtude_minutes.Text = "\'";
+            // 
+            // lbl_GC_DBM_destination_longitude_degrees
+            // 
+            this.lbl_GC_DBM_destination_longitude_degrees.AutoSize = true;
+            this.lbl_GC_DBM_destination_longitude_degrees.Location = new System.Drawing.Point(72, 7);
+            this.lbl_GC_DBM_destination_longitude_degrees.Name = "lbl_GC_DBM_destination_longitude_degrees";
+            this.lbl_GC_DBM_destination_longitude_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_DBM_destination_longitude_degrees.TabIndex = 41;
+            this.lbl_GC_DBM_destination_longitude_degrees.Text = "°";
             // 
             // panel3
             // 
@@ -569,37 +809,6 @@ namespace GlobalData
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(497, 74);
             this.panel3.TabIndex = 23;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rdo_GC_DBM_destination_decimal_degrees);
-            this.groupBox3.Controls.Add(this.rdo_GC_DBM_destination_DMS);
-            this.groupBox3.Location = new System.Drawing.Point(34, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(447, 67);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Destination Input Format";
-            // 
-            // rdo_GC_DBM_destination_decimal_degrees
-            // 
-            this.rdo_GC_DBM_destination_decimal_degrees.AutoSize = true;
-            this.rdo_GC_DBM_destination_decimal_degrees.Location = new System.Drawing.Point(31, 26);
-            this.rdo_GC_DBM_destination_decimal_degrees.Name = "rdo_GC_DBM_destination_decimal_degrees";
-            this.rdo_GC_DBM_destination_decimal_degrees.Size = new System.Drawing.Size(156, 24);
-            this.rdo_GC_DBM_destination_decimal_degrees.TabIndex = 3;
-            this.rdo_GC_DBM_destination_decimal_degrees.Text = "Decimal Degrees";
-            this.rdo_GC_DBM_destination_decimal_degrees.UseVisualStyleBackColor = true;
-            // 
-            // rdo_GC_DBM_destination_DMS
-            // 
-            this.rdo_GC_DBM_destination_DMS.AutoSize = true;
-            this.rdo_GC_DBM_destination_DMS.Location = new System.Drawing.Point(207, 26);
-            this.rdo_GC_DBM_destination_DMS.Name = "rdo_GC_DBM_destination_DMS";
-            this.rdo_GC_DBM_destination_DMS.Size = new System.Drawing.Size(230, 24);
-            this.rdo_GC_DBM_destination_DMS.TabIndex = 2;
-            this.rdo_GC_DBM_destination_DMS.Text = "Degrees, Minutes, Seconds";
-            this.rdo_GC_DBM_destination_DMS.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -621,6 +830,7 @@ namespace GlobalData
             this.rdo_GC_DBM_origin_decimal_degrees.TabIndex = 3;
             this.rdo_GC_DBM_origin_decimal_degrees.Text = "Decimal Degrees";
             this.rdo_GC_DBM_origin_decimal_degrees.UseVisualStyleBackColor = true;
+            this.rdo_GC_DBM_origin_decimal_degrees.CheckedChanged += new System.EventHandler(this.GC_DBM_Origin_CheckChanged);
             // 
             // rdo_GC_DBM_origin_DMS
             // 
@@ -631,6 +841,50 @@ namespace GlobalData
             this.rdo_GC_DBM_origin_DMS.TabIndex = 2;
             this.rdo_GC_DBM_origin_DMS.Text = "Degrees, Minutes, Seconds";
             this.rdo_GC_DBM_origin_DMS.UseVisualStyleBackColor = true;
+            this.rdo_GC_DBM_origin_DMS.CheckedChanged += new System.EventHandler(this.GC_DBM_Origin_CheckChanged);
+            // 
+            // panel14
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.panel14, 3);
+            this.panel14.Controls.Add(this.groupBox3);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(511, 93);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(528, 74);
+            this.panel14.TabIndex = 24;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdo_GC_DBM_destination_decimal_degrees);
+            this.groupBox3.Controls.Add(this.rdo_GC_DBM_destination_DMS);
+            this.groupBox3.Location = new System.Drawing.Point(34, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(447, 67);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Destination Input Format";
+            // 
+            // rdo_GC_DBM_destination_decimal_degrees
+            // 
+            this.rdo_GC_DBM_destination_decimal_degrees.AutoSize = true;
+            this.rdo_GC_DBM_destination_decimal_degrees.Location = new System.Drawing.Point(31, 26);
+            this.rdo_GC_DBM_destination_decimal_degrees.Name = "rdo_GC_DBM_destination_decimal_degrees";
+            this.rdo_GC_DBM_destination_decimal_degrees.Size = new System.Drawing.Size(156, 24);
+            this.rdo_GC_DBM_destination_decimal_degrees.TabIndex = 3;
+            this.rdo_GC_DBM_destination_decimal_degrees.Text = "Decimal Degrees";
+            this.rdo_GC_DBM_destination_decimal_degrees.UseVisualStyleBackColor = true;
+            this.rdo_GC_DBM_destination_decimal_degrees.CheckedChanged += new System.EventHandler(this.GC_DBM_Destination_CheckChanged);
+            // 
+            // rdo_GC_DBM_destination_DMS
+            // 
+            this.rdo_GC_DBM_destination_DMS.AutoSize = true;
+            this.rdo_GC_DBM_destination_DMS.Location = new System.Drawing.Point(207, 26);
+            this.rdo_GC_DBM_destination_DMS.Name = "rdo_GC_DBM_destination_DMS";
+            this.rdo_GC_DBM_destination_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdo_GC_DBM_destination_DMS.TabIndex = 2;
+            this.rdo_GC_DBM_destination_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdo_GC_DBM_destination_DMS.UseVisualStyleBackColor = true;
+            this.rdo_GC_DBM_destination_DMS.CheckedChanged += new System.EventHandler(this.GC_DBM_Destination_CheckChanged);
             // 
             // tab_destination
             // 
@@ -1161,16 +1415,6 @@ namespace GlobalData
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // panel14
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.panel14, 3);
-            this.panel14.Controls.Add(this.groupBox3);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(511, 93);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(528, 74);
-            this.panel14.TabIndex = 24;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1208,10 +1452,11 @@ namespace GlobalData
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tab_destination.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1225,7 +1470,6 @@ namespace GlobalData
             this.grpbx_FD_distance.ResumeLayout(false);
             this.grpbx_FD_distance.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1235,14 +1479,14 @@ namespace GlobalData
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TabControl tabctrl_main;
         private System.Windows.Forms.TabPage tab_great_circle;
-        private System.Windows.Forms.RichTextBox rchtxbx_output;
-        private System.Windows.Forms.TextBox txtbx_GC_DBM_dest_latitude;
+        private System.Windows.Forms.RichTextBox rchtxbx_GC_DBM_output;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_latitude_decimal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtbx_GC_DBM_dest_longitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_longitude_decimal;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_latitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_latitude_decimal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_longitude;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_longitude_decimal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_compute_initial_bearing;
@@ -1316,10 +1560,10 @@ namespace GlobalData
         private System.Windows.Forms.Button btn_help_about;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_latitude_decimal;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_longitude_decimal;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_latitude_decimal;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_longitude_decimal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rdo_GC_DBM_destination_decimal_degrees;
@@ -1328,6 +1572,30 @@ namespace GlobalData
         private System.Windows.Forms.RadioButton rdo_GC_DBM_origin_decimal_degrees;
         private System.Windows.Forms.RadioButton rdo_GC_DBM_origin_DMS;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_latitude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_latitude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_latitude_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_latitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_latitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_latitude_minutes;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_longtude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_longitude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_longitude_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_origin_longitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_longtude_minutes;
+        private System.Windows.Forms.Label lbl_GC_DBM_origin_longitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_latitude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_latitude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_latitude_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_latitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_latitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_latitude_minutes;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_longtude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_longitude_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_longitude_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_longitude_degrees;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_longtude_minutes;
+        private System.Windows.Forms.Label lbl_GC_DBM_destination_longitude_degrees;
     }
 }
 
