@@ -111,10 +111,10 @@ namespace GlobalData.Utils
         /// <param name="seconds"></param>
         /// <returns>Decimal degrees as double</returns>
 
-        public static double toDecimalDegreesFromDMS(string myDegrees, string myMinutes, string mySeconds)
+        public static double toDecimalDegreesFromDMS(string myDegrees, string myMinutes, string mySeconds, double cardinal)
         {
-             return double.Parse(myDegrees) + (double.Parse(myMinutes) / 60) +
-                              (double.Parse(mySeconds) / 3600);
+             return (double.Parse(myDegrees) + (double.Parse(myMinutes) / 60) +
+                              (double.Parse(mySeconds) / 3600)) * cardinal;
         }
 
         /// <summary>

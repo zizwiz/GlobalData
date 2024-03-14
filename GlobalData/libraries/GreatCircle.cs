@@ -56,7 +56,7 @@ namespace GlobalData.libraries
         /// <param name="destination_longitude"></param>
         /// <param name="destination_latitude"></param>
         /// <returns></returns>
-        public static double Distance(string origin_longitude, string origin_latitude,
+        public static double Distance(string origin_longitude, string origin_latitude, 
                     string destination_longitude, string destination_latitude)
         {
             double earthsRadius =  Settings.Default.EarthsRadius;     //earth’s radius in m (mean radius = 6371km)

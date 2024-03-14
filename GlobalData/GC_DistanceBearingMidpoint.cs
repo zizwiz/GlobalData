@@ -30,7 +30,8 @@ namespace GlobalData
                         txtbx_GC_DBM_origin_latitude_seconds.Visible = lbl_GC_DBM_origin_latitude_seconds.Visible =
                             txtbx_GC_DBM_origin_longitude_degrees.Visible = lbl_GC_DBM_origin_longitude_degrees.Visible =
                                 txtbx_GC_DBM_origin_longitude_minutes.Visible = lbl_GC_DBM_origin_longtude_minutes.Visible =
-                                    txtbx_GC_DBM_origin_longitude_seconds.Visible = lbl_GC_DBM_origin_longtude_seconds.Visible = false;
+                                    txtbx_GC_DBM_origin_longitude_seconds.Visible = lbl_GC_DBM_origin_longtude_seconds.Visible =
+                                        cmbobx_GC_DBM_origin_longitude_cardinal.Visible = cmbobx_GC_DBM_origin_latitude_cardinal.Visible = false;
 
                 txtbx_GC_DBM_origin_latitude_decimal.Visible = lbl_GC_DBM_origin_latitude_decimal.Visible =
                     txtbx_GC_DBM_origin_longitude_decimal.Visible = lbl_GC_DBM_origin_longitude_decimal.Visible = true;
@@ -43,7 +44,8 @@ namespace GlobalData
                         txtbx_GC_DBM_origin_latitude_seconds.Visible = lbl_GC_DBM_origin_latitude_seconds.Visible =
                             txtbx_GC_DBM_origin_longitude_degrees.Visible = lbl_GC_DBM_origin_longitude_degrees.Visible =
                                 txtbx_GC_DBM_origin_longitude_minutes.Visible = lbl_GC_DBM_origin_longtude_minutes.Visible =
-                                    txtbx_GC_DBM_origin_longitude_seconds.Visible = lbl_GC_DBM_origin_longtude_seconds.Visible = true;
+                                    txtbx_GC_DBM_origin_longitude_seconds.Visible = lbl_GC_DBM_origin_longtude_seconds.Visible =
+                                        cmbobx_GC_DBM_origin_longitude_cardinal.Visible = cmbobx_GC_DBM_origin_latitude_cardinal.Visible = true;
 
                 txtbx_GC_DBM_origin_latitude_decimal.Visible = lbl_GC_DBM_origin_latitude_decimal.Visible =
                     txtbx_GC_DBM_origin_longitude_decimal.Visible = lbl_GC_DBM_origin_longitude_decimal.Visible = false;
@@ -65,7 +67,8 @@ namespace GlobalData
                         txtbx_GC_DBM_destination_latitude_seconds.Visible = lbl_GC_DBM_destination_latitude_seconds.Visible =
                             txtbx_GC_DBM_destination_longitude_degrees.Visible = lbl_GC_DBM_destination_longitude_degrees.Visible =
                                 txtbx_GC_DBM_destination_longitude_minutes.Visible = lbl_GC_DBM_destination_longtude_minutes.Visible =
-                                    txtbx_GC_DBM_destination_longitude_seconds.Visible = lbl_GC_DBM_destination_longtude_seconds.Visible = false;
+                                    txtbx_GC_DBM_destination_longitude_seconds.Visible = lbl_GC_DBM_destination_longtude_seconds.Visible =
+                                        cmbobx_GC_DBM_destination_longitude_cardinal.Visible = cmbobx_GC_DBM_destination_latitude_cardinal.Visible = false;
 
                 txtbx_GC_DBM_destination_latitude_decimal.Visible = lbl_GC_DBM_destination_latitude_decimal.Visible =
                     txtbx_GC_DBM_destination_longitude_decimal.Visible =
@@ -79,7 +82,8 @@ namespace GlobalData
                         txtbx_GC_DBM_destination_latitude_seconds.Visible = lbl_GC_DBM_destination_latitude_seconds.Visible =
                             txtbx_GC_DBM_destination_longitude_degrees.Visible = lbl_GC_DBM_destination_longitude_degrees.Visible =
                                 txtbx_GC_DBM_destination_longitude_minutes.Visible = lbl_GC_DBM_destination_longtude_minutes.Visible =
-                                    txtbx_GC_DBM_destination_longitude_seconds.Visible = lbl_GC_DBM_destination_longtude_seconds.Visible = true;
+                                    txtbx_GC_DBM_destination_longitude_seconds.Visible = lbl_GC_DBM_destination_longtude_seconds.Visible =
+                                        cmbobx_GC_DBM_destination_longitude_cardinal.Visible = cmbobx_GC_DBM_destination_latitude_cardinal.Visible = true;
 
                 txtbx_GC_DBM_destination_latitude_decimal.Visible = lbl_GC_DBM_destination_latitude_decimal.Visible =
                     txtbx_GC_DBM_destination_longitude_decimal.Visible =
@@ -98,6 +102,8 @@ namespace GlobalData
             string originLatitude = "0";
             string destinationLongitude = " 0";
             string destinationLatitude = "0";
+            double longCardinal = 1;
+            double latCardinal = 1;
 
             if (rdo_GC_DBM_origin_decimal_degrees.Checked)
             {
@@ -106,8 +112,11 @@ namespace GlobalData
             }
             else
             {
-                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text).ToString();
-                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text).ToString();
+                if (cmbobx_GC_DBM_origin_latitude_cardinal.Text == "S") longCardinal = -1;
+                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_origin_longitude_cardinal.Text == "W") longCardinal = -1;
+                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text, longCardinal).ToString();
             }
 
             if (rdo_GC_DBM_destination_decimal_degrees.Checked)
@@ -117,8 +126,11 @@ namespace GlobalData
             }
             else
             {
-                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text).ToString();
-                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text).ToString();
+                if (cmbobx_GC_DBM_destination_latitude_cardinal.Text == "S") longCardinal = -1;
+                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_destination_longitude_cardinal.Text == "W") longCardinal = -1;
+                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
             }
 
 
@@ -143,6 +155,8 @@ namespace GlobalData
             string originLatitude = "0";
             string destinationLongitude = " 0";
             string destinationLatitude = "0";
+            double longCardinal = 1; 
+            double latCardinal = 1;
 
             if (rdo_GC_DBM_origin_decimal_degrees.Checked)
             {
@@ -151,8 +165,11 @@ namespace GlobalData
             }
             else
             {
-                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text).ToString();
-                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text).ToString();
+                if (cmbobx_GC_DBM_origin_latitude_cardinal.Text == "S") longCardinal = -1;
+                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_origin_longitude_cardinal.Text == "W") longCardinal = -1; 
+                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text, longCardinal).ToString();
             }
 
             if (rdo_GC_DBM_destination_decimal_degrees.Checked)
@@ -162,8 +179,11 @@ namespace GlobalData
             }
             else
             {
-                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text).ToString();
-                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text).ToString();
+                if (cmbobx_GC_DBM_destination_latitude_cardinal.Text == "S") longCardinal = -1;
+                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_destination_longitude_cardinal.Text == "W") longCardinal = -1;
+                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
             }
 
             var results = GreatCircle.InitialBearing(originLongitude, originLatitude,
@@ -187,6 +207,8 @@ namespace GlobalData
             string originLatitude = "0";
             string destinationLongitude = " 0";
             string destinationLatitude = "0";
+            double longCardinal = 1; 
+            double latCardinal = 1;
 
             if (rdo_GC_DBM_origin_decimal_degrees.Checked)
             {
@@ -195,8 +217,11 @@ namespace GlobalData
             }
             else
             {
-                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text).ToString();
-                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text).ToString();
+                if (cmbobx_GC_DBM_origin_latitude_cardinal.Text == "S") longCardinal = -1;
+                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_origin_longitude_cardinal.Text == "W") longCardinal = -1;
+                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text, longCardinal).ToString();
             }
 
             if (rdo_GC_DBM_destination_decimal_degrees.Checked)
@@ -206,8 +231,11 @@ namespace GlobalData
             }
             else
             {
-                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text).ToString();
-                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text).ToString();
+                if (cmbobx_GC_DBM_destination_latitude_cardinal.Text == "S") longCardinal = -1;
+                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_destination_longitude_cardinal.Text == "W") longCardinal = -1;
+                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
             }
 
             var results = GreatCircle.MidPoint(originLongitude, originLatitude,

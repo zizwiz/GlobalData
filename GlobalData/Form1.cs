@@ -22,6 +22,10 @@ namespace GlobalData
             //Set up the Great Circle Distance, Bearing and midpoint tab
             rdo_GC_DBM_origin_decimal_degrees.Checked = true;
             rdo_GC_DBM_destination_decimal_degrees.Checked = true;
+            cmbobx_GC_DBM_destination_longitude_cardinal.SelectedIndex = 0;
+            cmbobx_GC_DBM_origin_longitude_cardinal.SelectedIndex = 0;
+            cmbobx_GC_DBM_destination_latitude_cardinal.SelectedIndex = 0;
+            cmbobx_GC_DBM_origin_latitude_cardinal.SelectedIndex = 0;
 
             //Set up the Great Circle Find Distance tab
             rdo_FD_origin_longitude_decimal_degrees.Checked = true;
@@ -29,6 +33,8 @@ namespace GlobalData
             rdo_FD_bearing_decimal_degrees.Checked = true;
             rdobtn_FD_metres.Checked = true;
             rdo_FD_results_format_decimal_degrees.Checked = true;
+            cmbobx_FD_origin_longitude_cardinal.SelectedIndex = 0;
+            cmbobx_FD_origin_latitude_cardinal.SelectedIndex = 0;
         }
 
         private void btn_close_Click(object sender, EventArgs e)

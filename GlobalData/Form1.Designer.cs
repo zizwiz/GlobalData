@@ -50,6 +50,7 @@ namespace GlobalData
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cmbobx_GC_DBM_origin_latitude_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_GC_DBM_origin_latitude_seconds = new System.Windows.Forms.Label();
             this.lbl_GC_DBM_origin_latitude_decimal = new System.Windows.Forms.Label();
             this.txtbx_GC_DBM_origin_latitude_seconds = new System.Windows.Forms.TextBox();
@@ -59,6 +60,7 @@ namespace GlobalData
             this.lbl_GC_DBM_origin_latitude_degrees = new System.Windows.Forms.Label();
             this.lbl_GC_DBM_origin_latitude_minutes = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.cmbobx_GC_DBM_origin_longitude_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_GC_DBM_origin_longtude_seconds = new System.Windows.Forms.Label();
             this.lbl_GC_DBM_origin_longitude_decimal = new System.Windows.Forms.Label();
             this.txtbx_GC_DBM_origin_longitude_seconds = new System.Windows.Forms.TextBox();
@@ -72,6 +74,7 @@ namespace GlobalData
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.cmbobx_GC_DBM_destination_latitude_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_GC_DBM_destination_latitude_seconds = new System.Windows.Forms.Label();
             this.lbl_GC_DBM_destination_latitude_decimal = new System.Windows.Forms.Label();
             this.txtbx_GC_DBM_destination_latitude_seconds = new System.Windows.Forms.TextBox();
@@ -81,6 +84,7 @@ namespace GlobalData
             this.lbl_GC_DBM_destination_latitude_degrees = new System.Windows.Forms.Label();
             this.lbl_GC_DBM_destination_latitude_minutes = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.cmbobx_GC_DBM_destination_longitude_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_GC_DBM_destination_longtude_seconds = new System.Windows.Forms.Label();
             this.lbl_GC_DBM_destination_longitude_decimal = new System.Windows.Forms.Label();
             this.txtbx_GC_DBM_destination_longitude_seconds = new System.Windows.Forms.TextBox();
@@ -103,6 +107,7 @@ namespace GlobalData
             this.rdo_FD_results_format_DMS = new System.Windows.Forms.RadioButton();
             this.rdo_FD_results_format_decimal_degrees = new System.Windows.Forms.RadioButton();
             this.grpbx_FD_longitude = new System.Windows.Forms.GroupBox();
+            this.cmbobx_FD_origin_longitude_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_FD_origin_longitude_decimaldegree = new System.Windows.Forms.Label();
             this.rdo_FD_origin_longitude_decimal_degrees = new System.Windows.Forms.RadioButton();
             this.rdo_FD_origin_longitude_DMS = new System.Windows.Forms.RadioButton();
@@ -150,6 +155,7 @@ namespace GlobalData
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_help_about = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
+            this.cmbobx_FD_origin_latitude_cardinal = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -194,7 +200,7 @@ namespace GlobalData
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1100, 665);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1133, 665);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabctrl_main
@@ -205,7 +211,7 @@ namespace GlobalData
             this.tabctrl_main.Location = new System.Drawing.Point(3, 3);
             this.tabctrl_main.Name = "tabctrl_main";
             this.tabctrl_main.SelectedIndex = 0;
-            this.tabctrl_main.Size = new System.Drawing.Size(1094, 579);
+            this.tabctrl_main.Size = new System.Drawing.Size(1127, 579);
             this.tabctrl_main.TabIndex = 0;
             // 
             // tab_great_circle
@@ -214,7 +220,7 @@ namespace GlobalData
             this.tab_great_circle.Location = new System.Drawing.Point(4, 29);
             this.tab_great_circle.Name = "tab_great_circle";
             this.tab_great_circle.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_great_circle.Size = new System.Drawing.Size(1086, 546);
+            this.tab_great_circle.Size = new System.Drawing.Size(1119, 546);
             this.tab_great_circle.TabIndex = 0;
             this.tab_great_circle.Text = "Great Circle";
             this.tab_great_circle.UseVisualStyleBackColor = true;
@@ -230,7 +236,7 @@ namespace GlobalData
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1080, 540);
+            this.tabControl1.Size = new System.Drawing.Size(1113, 540);
             this.tabControl1.TabIndex = 14;
             // 
             // tab_DBM
@@ -239,7 +245,7 @@ namespace GlobalData
             this.tab_DBM.Location = new System.Drawing.Point(28, 4);
             this.tab_DBM.Name = "tab_DBM";
             this.tab_DBM.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DBM.Size = new System.Drawing.Size(1048, 532);
+            this.tab_DBM.Size = new System.Drawing.Size(1081, 532);
             this.tab_DBM.TabIndex = 0;
             this.tab_DBM.Text = "Distance, Bearing and Midpoint";
             this.tab_DBM.UseVisualStyleBackColor = true;
@@ -250,7 +256,7 @@ namespace GlobalData
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1042, 526);
+            this.panel2.Size = new System.Drawing.Size(1075, 526);
             this.panel2.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -291,7 +297,7 @@ namespace GlobalData
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1042, 526);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1075, 526);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel4
@@ -302,7 +308,7 @@ namespace GlobalData
             this.panel4.Location = new System.Drawing.Point(3, 178);
             this.panel4.Name = "panel4";
             this.tableLayoutPanel2.SetRowSpan(this.panel4, 7);
-            this.panel4.Size = new System.Drawing.Size(1036, 345);
+            this.panel4.Size = new System.Drawing.Size(1069, 345);
             this.panel4.TabIndex = 14;
             // 
             // tableLayoutPanel3
@@ -318,7 +324,7 @@ namespace GlobalData
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1036, 345);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1069, 345);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // rchtxbx_GC_DBM_output
@@ -326,7 +332,7 @@ namespace GlobalData
             this.rchtxbx_GC_DBM_output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rchtxbx_GC_DBM_output.Location = new System.Drawing.Point(3, 3);
             this.rchtxbx_GC_DBM_output.Name = "rchtxbx_GC_DBM_output";
-            this.rchtxbx_GC_DBM_output.Size = new System.Drawing.Size(905, 339);
+            this.rchtxbx_GC_DBM_output.Size = new System.Drawing.Size(938, 339);
             this.rchtxbx_GC_DBM_output.TabIndex = 9;
             this.rchtxbx_GC_DBM_output.Text = "";
             // 
@@ -339,7 +345,7 @@ namespace GlobalData
             this.tableLayoutPanel4.Controls.Add(this.btn_compute_initial_bearing, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.btn_compute_midpoint, 0, 4);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(919, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(952, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 9;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
@@ -440,6 +446,7 @@ namespace GlobalData
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.cmbobx_GC_DBM_origin_latitude_cardinal);
             this.panel7.Controls.Add(this.lbl_GC_DBM_origin_latitude_seconds);
             this.panel7.Controls.Add(this.lbl_GC_DBM_origin_latitude_decimal);
             this.panel7.Controls.Add(this.txtbx_GC_DBM_origin_latitude_seconds);
@@ -451,8 +458,19 @@ namespace GlobalData
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(158, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(342, 34);
+            this.panel7.Size = new System.Drawing.Size(359, 34);
             this.panel7.TabIndex = 17;
+            // 
+            // cmbobx_GC_DBM_origin_latitude_cardinal
+            // 
+            this.cmbobx_GC_DBM_origin_latitude_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_DBM_origin_latitude_cardinal.Items.AddRange(new object[] {
+            "N",
+            "S"});
+            this.cmbobx_GC_DBM_origin_latitude_cardinal.Location = new System.Drawing.Point(287, 2);
+            this.cmbobx_GC_DBM_origin_latitude_cardinal.Name = "cmbobx_GC_DBM_origin_latitude_cardinal";
+            this.cmbobx_GC_DBM_origin_latitude_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_DBM_origin_latitude_cardinal.TabIndex = 34;
             // 
             // lbl_GC_DBM_origin_latitude_seconds
             // 
@@ -521,6 +539,7 @@ namespace GlobalData
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.cmbobx_GC_DBM_origin_longitude_cardinal);
             this.panel8.Controls.Add(this.lbl_GC_DBM_origin_longtude_seconds);
             this.panel8.Controls.Add(this.lbl_GC_DBM_origin_longitude_decimal);
             this.panel8.Controls.Add(this.txtbx_GC_DBM_origin_longitude_seconds);
@@ -532,8 +551,19 @@ namespace GlobalData
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(158, 48);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(342, 34);
+            this.panel8.Size = new System.Drawing.Size(359, 34);
             this.panel8.TabIndex = 18;
+            // 
+            // cmbobx_GC_DBM_origin_longitude_cardinal
+            // 
+            this.cmbobx_GC_DBM_origin_longitude_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_DBM_origin_longitude_cardinal.Items.AddRange(new object[] {
+            "E",
+            "W"});
+            this.cmbobx_GC_DBM_origin_longitude_cardinal.Location = new System.Drawing.Point(287, 3);
+            this.cmbobx_GC_DBM_origin_longitude_cardinal.Name = "cmbobx_GC_DBM_origin_longitude_cardinal";
+            this.cmbobx_GC_DBM_origin_longitude_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_DBM_origin_longitude_cardinal.TabIndex = 16;
             // 
             // lbl_GC_DBM_origin_longtude_seconds
             // 
@@ -604,7 +634,7 @@ namespace GlobalData
             // 
             this.panel9.Controls.Add(this.label3);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(511, 3);
+            this.panel9.Location = new System.Drawing.Point(528, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(174, 34);
             this.panel9.TabIndex = 19;
@@ -623,7 +653,7 @@ namespace GlobalData
             // 
             this.panel10.Controls.Add(this.label4);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(511, 48);
+            this.panel10.Location = new System.Drawing.Point(528, 48);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(174, 34);
             this.panel10.TabIndex = 20;
@@ -640,6 +670,7 @@ namespace GlobalData
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.cmbobx_GC_DBM_destination_latitude_cardinal);
             this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_seconds);
             this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_decimal);
             this.panel11.Controls.Add(this.txtbx_GC_DBM_destination_latitude_seconds);
@@ -649,10 +680,21 @@ namespace GlobalData
             this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_degrees);
             this.panel11.Controls.Add(this.lbl_GC_DBM_destination_latitude_minutes);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(696, 3);
+            this.panel11.Location = new System.Drawing.Point(713, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(343, 34);
+            this.panel11.Size = new System.Drawing.Size(359, 34);
             this.panel11.TabIndex = 21;
+            // 
+            // cmbobx_GC_DBM_destination_latitude_cardinal
+            // 
+            this.cmbobx_GC_DBM_destination_latitude_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_DBM_destination_latitude_cardinal.Items.AddRange(new object[] {
+            "N",
+            "S"});
+            this.cmbobx_GC_DBM_destination_latitude_cardinal.Location = new System.Drawing.Point(285, 4);
+            this.cmbobx_GC_DBM_destination_latitude_cardinal.Name = "cmbobx_GC_DBM_destination_latitude_cardinal";
+            this.cmbobx_GC_DBM_destination_latitude_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_DBM_destination_latitude_cardinal.TabIndex = 35;
             // 
             // lbl_GC_DBM_destination_latitude_seconds
             // 
@@ -721,6 +763,7 @@ namespace GlobalData
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.cmbobx_GC_DBM_destination_longitude_cardinal);
             this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longtude_seconds);
             this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longitude_decimal);
             this.panel12.Controls.Add(this.txtbx_GC_DBM_destination_longitude_seconds);
@@ -730,10 +773,21 @@ namespace GlobalData
             this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longtude_minutes);
             this.panel12.Controls.Add(this.lbl_GC_DBM_destination_longitude_degrees);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(696, 48);
+            this.panel12.Location = new System.Drawing.Point(713, 48);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(343, 34);
+            this.panel12.Size = new System.Drawing.Size(359, 34);
             this.panel12.TabIndex = 22;
+            // 
+            // cmbobx_GC_DBM_destination_longitude_cardinal
+            // 
+            this.cmbobx_GC_DBM_destination_longitude_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_DBM_destination_longitude_cardinal.Items.AddRange(new object[] {
+            "E",
+            "W"});
+            this.cmbobx_GC_DBM_destination_longitude_cardinal.Location = new System.Drawing.Point(285, 5);
+            this.cmbobx_GC_DBM_destination_longitude_cardinal.Name = "cmbobx_GC_DBM_destination_longitude_cardinal";
+            this.cmbobx_GC_DBM_destination_longitude_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_DBM_destination_longitude_cardinal.TabIndex = 28;
             // 
             // lbl_GC_DBM_destination_longtude_seconds
             // 
@@ -807,7 +861,7 @@ namespace GlobalData
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 93);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(497, 74);
+            this.panel3.Size = new System.Drawing.Size(514, 74);
             this.panel3.TabIndex = 23;
             // 
             // groupBox2
@@ -848,9 +902,9 @@ namespace GlobalData
             this.tableLayoutPanel2.SetColumnSpan(this.panel14, 3);
             this.panel14.Controls.Add(this.groupBox3);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(511, 93);
+            this.panel14.Location = new System.Drawing.Point(528, 93);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(528, 74);
+            this.panel14.Size = new System.Drawing.Size(544, 74);
             this.panel14.TabIndex = 24;
             // 
             // groupBox3
@@ -892,7 +946,7 @@ namespace GlobalData
             this.tab_destination.Location = new System.Drawing.Point(28, 4);
             this.tab_destination.Name = "tab_destination";
             this.tab_destination.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_destination.Size = new System.Drawing.Size(1048, 532);
+            this.tab_destination.Size = new System.Drawing.Size(1081, 532);
             this.tab_destination.TabIndex = 1;
             this.tab_destination.Text = "Find Destination";
             this.tab_destination.UseVisualStyleBackColor = true;
@@ -910,7 +964,7 @@ namespace GlobalData
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(3, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1042, 526);
+            this.panel13.Size = new System.Drawing.Size(1075, 526);
             this.panel13.TabIndex = 0;
             // 
             // groupBox1
@@ -946,6 +1000,7 @@ namespace GlobalData
             // 
             // grpbx_FD_longitude
             // 
+            this.grpbx_FD_longitude.Controls.Add(this.cmbobx_FD_origin_longitude_cardinal);
             this.grpbx_FD_longitude.Controls.Add(this.lbl_FD_origin_longitude_decimaldegree);
             this.grpbx_FD_longitude.Controls.Add(this.rdo_FD_origin_longitude_decimal_degrees);
             this.grpbx_FD_longitude.Controls.Add(this.rdo_FD_origin_longitude_DMS);
@@ -958,10 +1013,21 @@ namespace GlobalData
             this.grpbx_FD_longitude.Controls.Add(this.txtbx_FD_origin_longitude_degrees);
             this.grpbx_FD_longitude.Location = new System.Drawing.Point(32, 43);
             this.grpbx_FD_longitude.Name = "grpbx_FD_longitude";
-            this.grpbx_FD_longitude.Size = new System.Drawing.Size(426, 103);
+            this.grpbx_FD_longitude.Size = new System.Drawing.Size(475, 103);
             this.grpbx_FD_longitude.TabIndex = 20;
             this.grpbx_FD_longitude.TabStop = false;
             this.grpbx_FD_longitude.Text = "Origin Longitude";
+            // 
+            // cmbobx_FD_origin_longitude_cardinal
+            // 
+            this.cmbobx_FD_origin_longitude_cardinal.FormattingEnabled = true;
+            this.cmbobx_FD_origin_longitude_cardinal.Items.AddRange(new object[] {
+            "E",
+            "W"});
+            this.cmbobx_FD_origin_longitude_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_FD_origin_longitude_cardinal.Name = "cmbobx_FD_origin_longitude_cardinal";
+            this.cmbobx_FD_origin_longitude_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_FD_origin_longitude_cardinal.TabIndex = 17;
             // 
             // lbl_FD_origin_longitude_decimaldegree
             // 
@@ -1052,6 +1118,7 @@ namespace GlobalData
             // 
             // grpbx_FD_latitude
             // 
+            this.grpbx_FD_latitude.Controls.Add(this.cmbobx_FD_origin_latitude_cardinal);
             this.grpbx_FD_latitude.Controls.Add(this.rdo_FD_origin_latitude_decimal_degrees);
             this.grpbx_FD_latitude.Controls.Add(this.rdo_FD_origin_latitude_DMS);
             this.grpbx_FD_latitude.Controls.Add(this.lbl_FD_origin_latitude_seconds);
@@ -1064,7 +1131,7 @@ namespace GlobalData
             this.grpbx_FD_latitude.Controls.Add(this.txtbx_FD_origin_latitude_decimal_degrees);
             this.grpbx_FD_latitude.Location = new System.Drawing.Point(32, 152);
             this.grpbx_FD_latitude.Name = "grpbx_FD_latitude";
-            this.grpbx_FD_latitude.Size = new System.Drawing.Size(426, 106);
+            this.grpbx_FD_latitude.Size = new System.Drawing.Size(475, 106);
             this.grpbx_FD_latitude.TabIndex = 19;
             this.grpbx_FD_latitude.TabStop = false;
             this.grpbx_FD_latitude.Text = "Origin Latitude";
@@ -1370,7 +1437,7 @@ namespace GlobalData
             // 
             this.tab_CTD.Location = new System.Drawing.Point(28, 4);
             this.tab_CTD.Name = "tab_CTD";
-            this.tab_CTD.Size = new System.Drawing.Size(1048, 532);
+            this.tab_CTD.Size = new System.Drawing.Size(1081, 532);
             this.tab_CTD.TabIndex = 2;
             this.tab_CTD.Text = "Cross-Track Distance";
             this.tab_CTD.UseVisualStyleBackColor = true;
@@ -1380,7 +1447,7 @@ namespace GlobalData
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1086, 546);
+            this.tabPage2.Size = new System.Drawing.Size(1119, 546);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1392,7 +1459,7 @@ namespace GlobalData
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 588);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1094, 74);
+            this.panel1.Size = new System.Drawing.Size(1127, 74);
             this.panel1.TabIndex = 1;
             // 
             // btn_help_about
@@ -1415,13 +1482,25 @@ namespace GlobalData
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // cmbobx_FD_origin_latitude_cardinal
+            // 
+            this.cmbobx_FD_origin_latitude_cardinal.FormattingEnabled = true;
+            this.cmbobx_FD_origin_latitude_cardinal.Items.AddRange(new object[] {
+            "N",
+            "S"});
+            this.cmbobx_FD_origin_latitude_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_FD_origin_latitude_cardinal.Name = "cmbobx_FD_origin_latitude_cardinal";
+            this.cmbobx_FD_origin_latitude_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_FD_origin_latitude_cardinal.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 665);
+            this.ClientSize = new System.Drawing.Size(1133, 665);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1155, 721);
             this.Name = "Form1";
             this.Text = "Global Data";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1596,6 +1675,12 @@ namespace GlobalData
         private System.Windows.Forms.TextBox txtbx_GC_DBM_destination_longitude_degrees;
         private System.Windows.Forms.Label lbl_GC_DBM_destination_longtude_minutes;
         private System.Windows.Forms.Label lbl_GC_DBM_destination_longitude_degrees;
+        private System.Windows.Forms.ComboBox cmbobx_GC_DBM_origin_longitude_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_DBM_destination_longitude_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_DBM_origin_latitude_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_DBM_destination_latitude_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_FD_origin_longitude_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_FD_origin_latitude_cardinal;
     }
 }
 

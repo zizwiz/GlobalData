@@ -59,7 +59,7 @@ namespace GlobalData
             {
                 txtbx_FD_origin_latitude_degrees.Visible = lbl_FD_origin_latitude_degree.Visible = txtbx_FD_origin_latitude_minutes.Visible =
                     lbl_FD_origin_latitude_minutes.Visible = txtbx_FD_origin_latitude_seconds.Visible =
-                        lbl_FD_origin_latitude_seconds.Visible = false;
+                        lbl_FD_origin_latitude_seconds.Visible = cmbobx_FD_origin_latitude_cardinal.Visible = false;
 
                 txtbx_FD_origin_latitude_decimal_degrees.Visible = lbl_FD_origin_latitude_decimaldegree.Visible = true;
 
@@ -68,7 +68,7 @@ namespace GlobalData
             {
                 txtbx_FD_origin_latitude_degrees.Visible = lbl_FD_origin_latitude_degree.Visible = txtbx_FD_origin_latitude_minutes.Visible =
                     lbl_FD_origin_latitude_minutes.Visible = txtbx_FD_origin_latitude_seconds.Visible =
-                        lbl_FD_origin_latitude_seconds.Visible = true;
+                        lbl_FD_origin_latitude_seconds.Visible = cmbobx_FD_origin_latitude_cardinal.Visible = true;
 
                 txtbx_FD_origin_latitude_decimal_degrees.Visible = lbl_FD_origin_latitude_decimaldegree.Visible = false;
             }
@@ -80,7 +80,7 @@ namespace GlobalData
             {
                 txtbx_FD_origin_longitude_degrees.Visible = lbl_FD_origin_longitude_degree.Visible = txtbx_FD_origin_longitude_minutes.Visible =
                     lbl_FD_origin_longitude_minutes.Visible = txtbx_FD_origin_longitude_seconds.Visible =
-                        lbl_FD_origin_longitude_seconds.Visible = false;
+                        lbl_FD_origin_longitude_seconds.Visible = cmbobx_FD_origin_longitude_cardinal.Visible = false ;
 
                 txtbx_FD_origin_longitude_decimal_degrees.Visible = lbl_FD_origin_longitude_decimaldegree.Visible = true;
 
@@ -89,7 +89,7 @@ namespace GlobalData
             {
                 txtbx_FD_origin_longitude_degrees.Visible = lbl_FD_origin_longitude_degree.Visible = txtbx_FD_origin_longitude_minutes.Visible =
                     lbl_FD_origin_longitude_minutes.Visible = txtbx_FD_origin_longitude_seconds.Visible =
-                        lbl_FD_origin_longitude_seconds.Visible = true;
+                        lbl_FD_origin_longitude_seconds.Visible = cmbobx_FD_origin_longitude_cardinal.Visible = true;
 
                 txtbx_FD_origin_longitude_decimal_degrees.Visible = lbl_FD_origin_longitude_decimaldegree.Visible = false;
             }
@@ -100,6 +100,8 @@ namespace GlobalData
         {
             //Get distance and assume at this stage it is in metres
             double distance = double.Parse(txtbx_distance.Text);
+            double longCardinal = 1;
+            double latCardinal = 1;
 
             //check to see if it is in metres and if not apply multiplier
             if (rdobtn_FD_kilometres.Checked)
@@ -125,7 +127,7 @@ namespace GlobalData
             {
                 θ = Convertion.toRadiansfromDecimalDegrees(
                     Convertion.toDecimalDegreesFromDMS(txtbx_FD_bearing_degrees.Text,
-                        txtbx_FD_bearing_minutes.Text, txtbx_FD_bearing_seconds.Text).ToString());
+                        txtbx_FD_bearing_minutes.Text, txtbx_FD_bearing_seconds.Text, longCardinal).ToString());
             }
 
             // Get the origin latitude into radians
@@ -136,9 +138,13 @@ namespace GlobalData
             }
             else if (rdo_FD_origin_latitude_DMS.Checked)
             {
+
+                if (cmbobx_FD_origin_latitude_cardinal.Text == "S") latCardinal = -1;
+
                 φ1 = Convertion.toRadiansfromDecimalDegrees(
                     Convertion.toDecimalDegreesFromDMS(txtbx_FD_origin_latitude_degrees.Text,
-                        txtbx_FD_origin_latitude_minutes.Text, txtbx_FD_origin_latitude_seconds.Text).ToString());
+                        txtbx_FD_origin_latitude_minutes.Text, txtbx_FD_origin_latitude_seconds.Text,
+                        latCardinal).ToString());
             }
 
             // Get the origin longitude into radians
@@ -149,9 +155,12 @@ namespace GlobalData
             }
             else if (rdo_FD_origin_longitude_DMS.Checked)
             {
+                if (cmbobx_FD_origin_longitude_cardinal.Text == "W") longCardinal = -1;
+
                 λ1 = Convertion.toRadiansfromDecimalDegrees(
                     Convertion.toDecimalDegreesFromDMS(txtbx_FD_origin_longitude_degrees.Text,
-                        txtbx_FD_origin_longitude_minutes.Text, txtbx_FD_origin_longitude_seconds.Text).ToString());
+                        txtbx_FD_origin_longitude_minutes.Text, txtbx_FD_origin_longitude_seconds.Text,
+                        longCardinal).ToString());
             }
             
             //Get the angular distance in radians
