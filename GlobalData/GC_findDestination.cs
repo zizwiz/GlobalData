@@ -187,8 +187,8 @@ namespace GlobalData
                 MsgBox.Show("Please Choose a Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            rchtxbx_GC_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
-            rchtxbx_GC_DBM_output.AppendText("\rDestination Co-Ordinates\r");
+            rchtxbx_findDestination_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_findDestination_output.AppendText("\rDestination Co-Ordinates\r");
             rchtxbx_findDestination_output.AppendText("Destination Latitude = " + lat + "\rDestination Longitude = " + lon + "\r");
         }
 

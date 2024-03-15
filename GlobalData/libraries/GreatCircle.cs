@@ -4,58 +4,54 @@ using GlobalData.Utils;
 
 namespace GlobalData.libraries
 {
-    /*
-     * This is my c# WinForms implementation of the work done by Chris Veness under MIT licence as shown below
-     * For fuller explanations please do visit his websites shown below
-     */
-    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-    /* Latitude/longitude spherical geodesy tools                         (c) Chris Veness 2002-2021  */
-    /*                                                                                   MIT Licence  */
-    /* www.movable-type.co.uk/scripts/latlong.html                                                    */
-    /* www.movable-type.co.uk/scripts/geodesy-library.html#latlon-spherical                           */
-    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-    /*
-     * Consistency rules
-     * use
-     *      lat/lon for lati­tude/longi­tude in degrees
-     *      φ/λ for lati­tude/longi­tude in radians
-     */
+    /* ===============================================================================================*/
+    /* This is my c# WinForms implementation of the work done by Chris Veness under MIT license       */
+    /* and Ed Williams see links below                                                                */
+    /* For fuller explanations please do visit his websites shown below                               */
+    /*                                                                                                */
+    /*   Chris Veness                                                                                 */
+    /*   https://www.movable-type.co.uk/scripts/latlong.html                                          */
+    /*   https://www.movable-type.co.uk/scripts/geodesy-library.html#latlon-spherical                 */
+    /*                                                                                                */
+    /*   Ed Williams                                                                                  */
+    /*   https://www.edwilliams.org/                                                                  */
+    /*   https://www.edwilliams.org/avform147.htm                                                     */
+    /*                                                                                                */
+    /* Consistency rules:                                                                             */
+    /*                                                                                                */
+    /* use lat/lon for lati­tude/longi­tude in degrees                                                  */
+    /* use  φ/λ for lati­tude/longi­tude in radians                                                     */
+    /*                                                                                                */
+    /* North latitudes and West longitudes are used as positive.                                      */
+    /* South latitudes and East longitudes are used as negative.                                      */
+    /*                                                                                                */
+    /* ===============================================================================================*/
 
     class GreatCircle
     {
 
         /// <summary>
-        /// Returns the distance along the surface of the earth from ‘this’ point to destination point.
-        /*
-         * This uses the ‘haversine’ formula to calculate the great-circle distance between two points
-         * – that is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance
-         * between the points (ignoring any hills they fly over, of course).
-           
-           Haversine formula:
-                                a = sin²(Δφ/2) + cos φ1 ⋅ cos φ2 ⋅ sin²(Δλ/2)
-                                c = 2 ⋅ atan2( √a, √(1−a) )
-                                d = R ⋅ c
-           
-            where	
-                φ is latitude, 
-                λ is longitude, 
-                R is earth’s radius (mean radius = 6,371km);
-            note that angles need to be in radians
-        
-            @example
-        const p1 = new LatLon(52.205, 0.119);
-        const p2 = new LatLon(48.857, 2.351);
-        const d = p1.distanceTo(p2);       // 404.3×10³ m
-        const m = p1.distanceTo(p2, 3959); // 251.2 miles
-         */
-
+        /// This uses the ‘Haversine’ formula to calculate the great-circle distance between two points
+        /// That is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance
+        /// between the points (ignoring any vertical obstructions like hills that they may need to fly over).
+        /// 
+        /// Haversine formula:
+        /// a = sin²(Δφ/2) + cos φ1 * cos φ2 * sin²(Δλ/2) 
+        /// d = R * (2 * atan2( √a, √(1−a)))
+        ///
+        /// Where:
+        /// φ is latitude,
+        /// λ is longitude,
+        /// R is earth’s radius (mean radius = 6371m),
+        /// d is resulting distance,
+        /// All angles need to be in radians
+        /// 
         /// </summary>
         /// <param name="origin_longitude"></param>
         /// <param name="origin_latitude"></param>
         /// <param name="destination_longitude"></param>
         /// <param name="destination_latitude"></param>
-        /// <returns></returns>
+        /// <returns>Distance between the two points in metres.</returns>
         public static double Distance(string origin_longitude, string origin_latitude,
                     string destination_longitude, string destination_latitude)
         {
@@ -79,33 +75,22 @@ namespace GlobalData.libraries
 
 
         /// <summary>
-        ///  Returns the initial bearing from ‘this’ point to destination point.
-        /*
-         * In general, your current heading will vary as you follow a great circle path (orthodrome); the final
-         * heading will differ from the initial heading by varying degrees according to distance and latitude
-         * (if you were to go from say 35°N,45°E (≈ Baghdad) to 35°N,135°E (≈ Osaka), you would start on a heading
-         * of 60° and end up on a heading of 120°).
-         *
-         * This formula is for the initial bearing (sometimes referred to as forward azimuth) which if followed in a
-         * straight line along a great-circle arc will take you from the start point to the end point:1
-         *
-         * Formula:	θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
-         * where	φ1,λ1 is the start point, φ2,λ2 the end point (Δλ is the difference in longitude)
-         *
-         * For final bearing, simply take the initial bearing from the end point to the start point and reverse it
-         * using θ = (θ+180) % 360
-         */
-
-        // example
-        // const p1 = new LatLon(52.205, 0.119);
-        // const p2 = new LatLon(48.857, 2.351);
-        // const b1 = p1.initialBearingTo(p2); // 156.2°
+        /// This formula is for the initial bearing (sometimes referred to as forward azimuth) which if
+        /// followed in a straight line along a great-circle arc will take you from the start point to the
+        /// end point.
+        /// 
+        /// Formula:	θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
+        ///
+        /// where:
+        /// φ1,λ1 is the start point,
+        /// φ2,λ2 the end point,
+        /// Δλ is the difference in longitude
         /// </summary>
         /// <param name="origin_longitude"></param>
         /// <param name="origin_latitude"></param>
         /// <param name="destination_longitude"></param>
         /// <param name="destination_latitude"></param>
-        /// <returns></returns>
+        /// <returns>Returns the bearing and its cardinal point for the route starting in both directions</returns>
         public static (double, string, double, string) InitialBearing(string origin_longitude, string origin_latitude,
             string destination_longitude, string destination_latitude)
         {
@@ -129,17 +114,15 @@ namespace GlobalData.libraries
         }
 
         /// <summary>
-        /// /**
-        /// * Returns the midpoint between ‘this’ point and destination point.
-        /// *
-        /// * @param   {LatLon} point - Latitude/longitude of destination point.
-        /// * @returns {LatLon} Midpoint between this point and destination point.
-        /// *
-        /// * @example
-        /// *   p1 = new LatLon(52.205, 0.119);
-        /// *   p2 = new LatLon(48.857, 2.351);
-        /// *   pMid = p1.midpointTo(p2); // 50.5363°N, 001.2746°E
-        /// */
+        /// This is the half-way point along a great circle path between the two points.
+        /// 
+        /// Formula:
+        /// Bx = cos φ2 ⋅ cos Δλ
+        /// By = cos φ2 ⋅ sin Δλ
+        /// φm = atan2( sin φ1 + sin φ2, √(cos φ1 + Bx)² + By² )
+        /// λm = λ1 + atan2(By, cos(φ1)+Bx)
+        ///
+        /// The midpoint may not be located half-way between latitudes/longitudes
         /// </summary>
         /// <param name="origin_longitude"></param>
         /// <param name="origin_latitude"></param>
@@ -177,7 +160,17 @@ namespace GlobalData.libraries
 
 
         /// <summary>
-        /// Find a destination co-ordinates from start co-ordinates, bearing and distance
+        /// Find a destination co-ordinates from start co-ordinates, bearing and distance.
+        /// Formula:	φ2 = asin( sin φ1 ⋅ cos δ + cos φ1 ⋅ sin δ ⋅ cos θ )
+        ///             λ2 = λ1 + atan2( sin θ ⋅ sin δ ⋅ cos φ1, cos δ − sin φ1 ⋅ sin φ2 )
+        /// where
+        /// φ is latitude,
+        /// λ is longitude,
+        /// θ is the bearing (clockwise from north), 
+        /// d being the distance traveled,
+        /// R the earth’s radius
+        /// δ is the angular distance d/R,
+        /// 
         /// </summary>
         /// <param name="originLongitude"></param>
         /// <param name="originLatitude"></param>
@@ -186,7 +179,6 @@ namespace GlobalData.libraries
         /// <returns>Destination as tuple double of latitude and longitude</returns>
         public static (double, double) FindDestination(double originLongitude, double originLatitude, double bearing, double distance)
         {
-
             double λ1 = originLongitude;
             double φ1 = originLatitude;
             double θ = bearing;
@@ -196,7 +188,6 @@ namespace GlobalData.libraries
 
             double sinφ2 = Math.Sin(φ1) * Math.Cos(δ) + Math.Cos(φ1) * Math.Sin(δ) * Math.Cos(θ);
             double φ2 = Math.Asin(sinφ2);
-
 
             double y = Math.Sin(θ) * Math.Sin(δ) * Math.Cos(φ1);
             double x = Math.Cos(δ) - Math.Sin(φ1) * sinφ2;
