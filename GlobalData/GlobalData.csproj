@@ -56,6 +56,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GC_CrossTrackDistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GC_DistanceBearingMidpoint.cs">
       <SubType>Form</SubType>
     </Compile>

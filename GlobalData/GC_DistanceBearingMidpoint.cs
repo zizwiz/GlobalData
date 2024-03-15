@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using GlobalData.libraries;
 using GlobalData.Utils;
 
@@ -138,7 +139,10 @@ namespace GlobalData
             Double result = GreatCircle.Distance(originLongitude, originLatitude,
                 destinationLongitude, destinationLatitude);
 
-            rchtxbx_GC_DBM_output.AppendText("\rDistance = " + Math.Round(result, 4) + "m\r");
+            rchtxbx_GC_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_DBM_output.AppendText("\rDistance\r");
+
+            rchtxbx_GC_DBM_output.AppendText("Distance = " + Math.Round(result, 4) + "m\r");
             rchtxbx_GC_DBM_output.AppendText("Distance = " + Math.Round(result / 1000, 4) + "km\r");
             rchtxbx_GC_DBM_output.AppendText("Distance = " + Math.Round(Convertion.toMilesFromMetres(result), 4) + " miles\r");
             rchtxbx_GC_DBM_output.AppendText("Distance = " + Math.Round(Convertion.toNauticalMilesFromMetres(result), 4) + " nautical miles\r");
@@ -189,7 +193,10 @@ namespace GlobalData
             var results = GreatCircle.InitialBearing(originLongitude, originLatitude,
                 destinationLongitude, destinationLatitude);
 
-            rchtxbx_GC_DBM_output.AppendText("\rForward bearing decimal = " + Math.Round(results.Item1, 4) + "° " + results.Item2);
+            rchtxbx_GC_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_DBM_output.AppendText("\rBearing\r");
+
+            rchtxbx_GC_DBM_output.AppendText("Forward bearing decimal = " + Math.Round(results.Item1, 4) + "° " + results.Item2);
             rchtxbx_GC_DBM_output.AppendText("\rForward bearing dms = " + Convertion.toDegreesMinutesSecondsFromDecimalDegrees(results.Item1.ToString()) + " " + results.Item2 + "\r");
 
             rchtxbx_GC_DBM_output.AppendText("\rReverse bearing decimal = " + HelpfulFunctions.UnWrap360(Math.Round(results.Item3, 4)) + "° " + results.Item4);
@@ -241,8 +248,10 @@ namespace GlobalData
             var results = GreatCircle.MidPoint(originLongitude, originLatitude,
                 destinationLongitude, destinationLatitude);
 
+            rchtxbx_GC_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_DBM_output.AppendText("\rMidpoint\r");
 
-            rchtxbx_GC_DBM_output.AppendText("\rLatitude = " + Math.Round(results.Item1, 4) + "°");
+            rchtxbx_GC_DBM_output.AppendText("Latitude = " + Math.Round(results.Item1, 4) + "°");
             rchtxbx_GC_DBM_output.AppendText("\rLongitude = " + Math.Round(results.Item2, 4) + "°\r");
         }
 

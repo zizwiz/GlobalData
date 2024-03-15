@@ -1,18 +1,20 @@
 ﻿
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using CenteredMessagebox;
+using GlobalData.libraries;
 using GlobalData.Utils;
 
 namespace GlobalData
 {
     public partial class Form1
     {
-        private void btn_clear_findDestination_output_Click(object sender, EventArgs e)
+        private void btn_GC_clear_findDestination_output_Click(object sender, EventArgs e)
         {
             rchtxbx_findDestination_output.Text = "";
         }
-        private void FD_dstance_rdobtn_changed(object sender, EventArgs e)
+        private void GC_FD_dstance_rdobtn_changed(object sender, EventArgs e)
         {
             if (rdobtn_FD_metres.Checked)
             {
@@ -32,7 +34,7 @@ namespace GlobalData
             }
         }
         
-        private void FD_bearing_rdobtn_changed(object sender, EventArgs e)
+        private void GC_FD_bearing_rdobtn_changed(object sender, EventArgs e)
         {
             if (rdo_FD_bearing_decimal_degrees.Checked)
             {
@@ -53,7 +55,7 @@ namespace GlobalData
             }
         }
 
-        private void FD_origin_latitude_rdobtn_changed(object sender, EventArgs e)
+        private void GC_FD_origin_latitude_rdobtn_changed(object sender, EventArgs e)
         {
             if (rdo_FD_origin_latitude_decimal_degrees.Checked)
             {
@@ -74,7 +76,7 @@ namespace GlobalData
             }
         }
 
-        private void FD_origin_longitude_rdobtn_changed(object sender, EventArgs e)
+        private void GC_FD_origin_longitude_rdobtn_changed(object sender, EventArgs e)
         {
             if (rdo_FD_origin_longitude_decimal_degrees.Checked)
             {
@@ -102,6 +104,8 @@ namespace GlobalData
             double distance = double.Parse(txtbx_distance.Text);
             double longCardinal = 1;
             double latCardinal = 1;
+            string lat = "0";
+            string lon = "0";
 
             //check to see if it is in metres and if not apply multiplier
             if (rdobtn_FD_kilometres.Checked)
@@ -162,20 +166,11 @@ namespace GlobalData
                         txtbx_FD_origin_longitude_minutes.Text, txtbx_FD_origin_longitude_seconds.Text,
                         longCardinal).ToString());
             }
-            
-            //Get the angular distance in radians
-            double δ = distance / _settings.EarthsRadius; // Earth radius set in settings
-            
-            double sinφ2 = Math.Sin(φ1) * Math.Cos(δ) + Math.Cos(φ1) * Math.Sin(δ) * Math.Cos(θ);
-            double φ2 = Math.Asin(sinφ2);
 
+            var result = GreatCircle.FindDestination(λ1, φ1, θ, distance);
 
-            double y = Math.Sin(θ) * Math.Sin(δ) * Math.Cos(φ1);
-            double x = Math.Cos(δ) - Math.Sin(φ1) * sinφ2;
-            double λ2 = λ1 + Math.Atan2(y, x);
-
-            string lat = "0";
-            string lon = "0";
+            double φ2 = result.Item1;
+            double λ2 = result.Item2;
 
             if (rdo_FD_results_format_decimal_degrees.Checked)
             {
@@ -192,6 +187,8 @@ namespace GlobalData
                 MsgBox.Show("Please Choose a Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            rchtxbx_GC_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_DBM_output.AppendText("\rDestination Co-Ordinates\r");
             rchtxbx_findDestination_output.AppendText("Destination Latitude = " + lat + "\rDestination Longitude = " + lon + "\r");
         }
 

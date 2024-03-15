@@ -56,12 +56,12 @@ namespace GlobalData.libraries
         /// <param name="destination_longitude"></param>
         /// <param name="destination_latitude"></param>
         /// <returns></returns>
-        public static double Distance(string origin_longitude, string origin_latitude, 
+        public static double Distance(string origin_longitude, string origin_latitude,
                     string destination_longitude, string destination_latitude)
         {
-            double earthsRadius =  Settings.Default.EarthsRadius;     //earth’s radius in m (mean radius = 6371km)
+            double earthsRadius = Settings.Default.EarthsRadius;     //earth’s radius in m (mean radius = 6371km)
 
-            
+
             double φ1 = Convertion.toRadiansfromDecimalDegrees(origin_latitude); //latitude in radians
             double φ2 = Convertion.toRadiansfromDecimalDegrees(destination_latitude); // latitude in radians
 
@@ -124,8 +124,8 @@ namespace GlobalData.libraries
             double fbearing = (θ * 180 / Math.PI + 360) % 360; // forward bearing in degrees
             double rbearing = (fbearing + 180) % 360; // reverse bearing in degrees
 
-            return (fbearing, HelpfulFunctions.getCardinalPointsFromDecimalDegrees(fbearing), 
-                rbearing, HelpfulFunctions.getCardinalPointsFromDecimalDegrees(rbearing)); 
+            return (fbearing, HelpfulFunctions.getCardinalPointsFromDecimalDegrees(fbearing),
+                rbearing, HelpfulFunctions.getCardinalPointsFromDecimalDegrees(rbearing));
         }
 
         /// <summary>
@@ -176,8 +176,38 @@ namespace GlobalData.libraries
         }
 
 
+        /// <summary>
+        /// Find a destination co-ordinates from start co-ordinates, bearing and distance
+        /// </summary>
+        /// <param name="originLongitude"></param>
+        /// <param name="originLatitude"></param>
+        /// <param name="bearing"></param>
+        /// <param name="distance"></param>
+        /// <returns>Destination as tuple double of latitude and longitude</returns>
+        public static (double, double) FindDestination(double originLongitude, double originLatitude, double bearing, double distance)
+        {
 
-       
+            double λ1 = originLongitude;
+            double φ1 = originLatitude;
+            double θ = bearing;
+
+            //Get the angular distance in radians
+            double δ = distance / Settings.Default.EarthsRadius; // Earth radius set in settings
+
+            double sinφ2 = Math.Sin(φ1) * Math.Cos(δ) + Math.Cos(φ1) * Math.Sin(δ) * Math.Cos(θ);
+            double φ2 = Math.Asin(sinφ2);
+
+
+            double y = Math.Sin(θ) * Math.Sin(δ) * Math.Cos(φ1);
+            double x = Math.Cos(δ) - Math.Sin(φ1) * sinφ2;
+            double λ2 = λ1 + Math.Atan2(y, x);
+
+            return (φ2, λ2);
+        }
+
+
+
+
 
         //Calculate settings for altitude at destination
         /*
