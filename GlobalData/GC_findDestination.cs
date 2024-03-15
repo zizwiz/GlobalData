@@ -12,7 +12,7 @@ namespace GlobalData
     {
         private void btn_GC_clear_findDestination_output_Click(object sender, EventArgs e)
         {
-            rchtxbx_findDestination_output.Text = "";
+            rchtxbx_GC_findDestination_output.Text = "";
         }
         private void GC_FD_dstance_rdobtn_changed(object sender, EventArgs e)
         {
@@ -187,9 +187,9 @@ namespace GlobalData
                 MsgBox.Show("Please Choose a Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            rchtxbx_findDestination_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
-            rchtxbx_findDestination_output.AppendText("\rDestination Co-Ordinates\r");
-            rchtxbx_findDestination_output.AppendText("Destination Latitude = " + lat + "\rDestination Longitude = " + lon + "\r");
+            rchtxbx_GC_findDestination_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_findDestination_output.AppendText("\rDestination Co-Ordinates\r");
+            rchtxbx_GC_findDestination_output.AppendText("Destination Latitude = " + lat + "\rDestination Longitude = " + lon + "\r");
         }
 
 

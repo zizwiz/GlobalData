@@ -35,6 +35,18 @@ namespace GlobalData
             rdo_FD_results_format_decimal_degrees.Checked = true;
             cmbobx_FD_origin_longitude_cardinal.SelectedIndex = 0;
             cmbobx_FD_origin_latitude_cardinal.SelectedIndex = 0;
+
+            //Set up the Great Circle Cross-Track Distance
+            rdobtn_GC_CTD_longitude1_decimal.Checked = true;
+            rdobtn_GC_CTD_latitude1_decimal.Checked = true;
+            rdobtn_GC_CTD_bearing1_decimal.Checked = true;
+            rdobtn_GC_CTD_longitude2_decimal.Checked = true;
+            rdobtn_GC_CTD_latitude2_decimal.Checked = true;
+            rdobtn_GC_CTD_bearing2_decimal.Checked = true;
+            cmbobx_GC_CTD_longitude1_DSM_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_latitude1_DSM_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_longitude2_DSM_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_latitude2_DSM_cardinal.SelectedIndex = 0;
         }
 
         private void btn_close_Click(object sender, EventArgs e)

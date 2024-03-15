@@ -155,87 +155,88 @@ namespace GlobalData
             this.rdo_FD_results_format_DMS = new System.Windows.Forms.RadioButton();
             this.rdo_FD_results_format_decimal_degrees = new System.Windows.Forms.RadioButton();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.rchtxbx_findDestination_output = new System.Windows.Forms.RichTextBox();
+            this.rchtxbx_GC_findDestination_output = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_GC_find_destination = new System.Windows.Forms.Button();
+            this.btn_clear_findDestination_output = new System.Windows.Forms.Button();
             this.tab_CTD = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btn_GC_CTD_clear_output = new System.Windows.Forms.Button();
+            this.rchtxbx_GC_CTD_output = new System.Windows.Forms.RichTextBox();
             this.btn_GC_CTD_compute_intersection = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.lbl_GC_CTD_longitude2_decimal = new System.Windows.Forms.Label();
+            this.rdobtn_GC_CTD_longitude2_decimal = new System.Windows.Forms.RadioButton();
+            this.rdobtn_GC_CTD_longitude2_DMS = new System.Windows.Forms.RadioButton();
+            this.lbl_GC_CTD_longitude2_seconds = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude2_seconds = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_longitude2_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude2_minutes = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_longitude2_degrees = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude2_degrees = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_longitude2_decimal = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.rdobtn_GC_CTD_latitude2_decimal = new System.Windows.Forms.RadioButton();
+            this.rdobtn_GC_CTD_latitude2_DMS = new System.Windows.Forms.RadioButton();
+            this.lbl_GC_CTD_latitude2_seconds = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_latitude2_minutes = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_latitude2_degrees = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_latitude2_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_latitude2_minutes = new System.Windows.Forms.Label();
+            this.lbl_GC_CTD_latitude2_decimal = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_latitude2_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_latitude2_seconds = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.lbl_GC_CTD_longitude1_decimal = new System.Windows.Forms.Label();
+            this.rdobtn_GC_CTD_longitude1_decimal = new System.Windows.Forms.RadioButton();
+            this.rdobtn_GC_CTD_longitude1_DMS = new System.Windows.Forms.RadioButton();
+            this.lbl_GC_CTD_longitude1_seconds = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude1_seconds = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_longitude1_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude1_minutes = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_longitude1_degrees = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude1_degrees = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_longitude1_decimal = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing2_decimal = new System.Windows.Forms.Label();
+            this.rdobtn_GC_CTD_bearing2_decimal = new System.Windows.Forms.RadioButton();
+            this.rdobtn_GC_CTD_bearing2_DMS = new System.Windows.Forms.RadioButton();
+            this.lbl_GC_CTD_bearing2_seconds = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing2_seconds = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing2_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing2_minutes = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing2_degrees = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing2_degrees = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_bearing2_decimal = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.rdobtn_GC_CTD_latitude1_decimal = new System.Windows.Forms.RadioButton();
+            this.rdobtn_GC_CTD_latitude1_DMS = new System.Windows.Forms.RadioButton();
+            this.lbl_GC_CTD_latitude1_seconds = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_latitude1_minutes = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_latitude1_degrees = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_latitude1_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_latitude1_minutes = new System.Windows.Forms.Label();
+            this.lbl_GC_CTD_latitude1_decimal = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_latitude1_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_latitude1_seconds = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing1_decimal = new System.Windows.Forms.Label();
+            this.rdobtn_GC_CTD_bearing1_decimal = new System.Windows.Forms.RadioButton();
+            this.rdobtn_GC_CTD_bearing1_DMS = new System.Windows.Forms.RadioButton();
+            this.lbl_GC_CTD_bearing1_seconds = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing1_seconds = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing1_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing1_minutes = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing1_degrees = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing1_degrees = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_bearing1_decimal = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_help_about = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
-            this.btn_GC_find_destination = new System.Windows.Forms.Button();
-            this.btn_clear_findDestination_output = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -272,6 +273,7 @@ namespace GlobalData
             this.panel19.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tab_CTD.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -280,7 +282,6 @@ namespace GlobalData
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1064,7 +1065,7 @@ namespace GlobalData
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.21089F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.21089F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel5.Controls.Add(this.panel15, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.panel16, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.panel17, 1, 5);
@@ -1094,7 +1095,7 @@ namespace GlobalData
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(8, 8);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(473, 119);
+            this.panel15.Size = new System.Drawing.Size(472, 119);
             this.panel15.TabIndex = 0;
             // 
             // grpbx_FD_longitude
@@ -1113,7 +1114,7 @@ namespace GlobalData
             this.grpbx_FD_longitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_longitude.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_longitude.Name = "grpbx_FD_longitude";
-            this.grpbx_FD_longitude.Size = new System.Drawing.Size(473, 119);
+            this.grpbx_FD_longitude.Size = new System.Drawing.Size(472, 119);
             this.grpbx_FD_longitude.TabIndex = 20;
             this.grpbx_FD_longitude.TabStop = false;
             this.grpbx_FD_longitude.Text = "Origin Longitude";
@@ -1233,7 +1234,7 @@ namespace GlobalData
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(8, 138);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(473, 119);
+            this.panel16.Size = new System.Drawing.Size(472, 119);
             this.panel16.TabIndex = 1;
             // 
             // grpbx_FD_latitude
@@ -1252,7 +1253,7 @@ namespace GlobalData
             this.grpbx_FD_latitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_latitude.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_latitude.Name = "grpbx_FD_latitude";
-            this.grpbx_FD_latitude.Size = new System.Drawing.Size(473, 119);
+            this.grpbx_FD_latitude.Size = new System.Drawing.Size(472, 119);
             this.grpbx_FD_latitude.TabIndex = 19;
             this.grpbx_FD_latitude.TabStop = false;
             this.grpbx_FD_latitude.Text = "Origin Latitude";
@@ -1372,7 +1373,7 @@ namespace GlobalData
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(8, 268);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(473, 119);
+            this.panel17.Size = new System.Drawing.Size(472, 119);
             this.panel17.TabIndex = 2;
             // 
             // grpbx_FD_bearing
@@ -1390,7 +1391,7 @@ namespace GlobalData
             this.grpbx_FD_bearing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_bearing.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_bearing.Name = "grpbx_FD_bearing";
-            this.grpbx_FD_bearing.Size = new System.Drawing.Size(473, 119);
+            this.grpbx_FD_bearing.Size = new System.Drawing.Size(472, 119);
             this.grpbx_FD_bearing.TabIndex = 18;
             this.grpbx_FD_bearing.TabStop = false;
             this.grpbx_FD_bearing.Text = "Bearing";
@@ -1498,7 +1499,7 @@ namespace GlobalData
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(8, 398);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(473, 119);
+            this.panel18.Size = new System.Drawing.Size(472, 119);
             this.panel18.TabIndex = 3;
             // 
             // grpbx_FD_distance
@@ -1512,7 +1513,7 @@ namespace GlobalData
             this.grpbx_FD_distance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_distance.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_distance.Name = "grpbx_FD_distance";
-            this.grpbx_FD_distance.Size = new System.Drawing.Size(473, 119);
+            this.grpbx_FD_distance.Size = new System.Drawing.Size(472, 119);
             this.grpbx_FD_distance.TabIndex = 16;
             this.grpbx_FD_distance.TabStop = false;
             this.grpbx_FD_distance.Text = "Distance";
@@ -1588,9 +1589,9 @@ namespace GlobalData
             // 
             this.panel19.Controls.Add(this.groupBox1);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(492, 398);
+            this.panel19.Location = new System.Drawing.Point(491, 398);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(280, 119);
+            this.panel19.Size = new System.Drawing.Size(279, 119);
             this.panel19.TabIndex = 4;
             // 
             // groupBox1
@@ -1600,7 +1601,7 @@ namespace GlobalData
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(280, 119);
+            this.groupBox1.Size = new System.Drawing.Size(279, 119);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Display Results Format";
@@ -1609,7 +1610,7 @@ namespace GlobalData
             // 
             this.rdo_FD_results_format_DMS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_results_format_DMS.AutoSize = true;
-            this.rdo_FD_results_format_DMS.Location = new System.Drawing.Point(25, 66);
+            this.rdo_FD_results_format_DMS.Location = new System.Drawing.Point(24, 66);
             this.rdo_FD_results_format_DMS.Name = "rdo_FD_results_format_DMS";
             this.rdo_FD_results_format_DMS.Size = new System.Drawing.Size(230, 24);
             this.rdo_FD_results_format_DMS.TabIndex = 3;
@@ -1620,7 +1621,7 @@ namespace GlobalData
             // 
             this.rdo_FD_results_format_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_results_format_decimal_degrees.AutoSize = true;
-            this.rdo_FD_results_format_decimal_degrees.Location = new System.Drawing.Point(25, 28);
+            this.rdo_FD_results_format_decimal_degrees.Location = new System.Drawing.Point(24, 28);
             this.rdo_FD_results_format_decimal_degrees.Name = "rdo_FD_results_format_decimal_degrees";
             this.rdo_FD_results_format_decimal_degrees.Size = new System.Drawing.Size(156, 24);
             this.rdo_FD_results_format_decimal_degrees.TabIndex = 2;
@@ -1630,26 +1631,69 @@ namespace GlobalData
             // panel20
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.panel20, 3);
-            this.panel20.Controls.Add(this.rchtxbx_findDestination_output);
+            this.panel20.Controls.Add(this.rchtxbx_GC_findDestination_output);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(492, 8);
+            this.panel20.Location = new System.Drawing.Point(491, 8);
             this.panel20.Name = "panel20";
             this.tableLayoutPanel5.SetRowSpan(this.panel20, 5);
-            this.panel20.Size = new System.Drawing.Size(571, 379);
+            this.panel20.Size = new System.Drawing.Size(569, 379);
             this.panel20.TabIndex = 6;
             // 
-            // rchtxbx_findDestination_output
+            // rchtxbx_GC_findDestination_output
             // 
-            this.rchtxbx_findDestination_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rchtxbx_findDestination_output.Location = new System.Drawing.Point(0, 0);
-            this.rchtxbx_findDestination_output.Name = "rchtxbx_findDestination_output";
-            this.rchtxbx_findDestination_output.Size = new System.Drawing.Size(571, 379);
-            this.rchtxbx_findDestination_output.TabIndex = 11;
-            this.rchtxbx_findDestination_output.Text = "";
+            this.rchtxbx_GC_findDestination_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchtxbx_GC_findDestination_output.Location = new System.Drawing.Point(0, 0);
+            this.rchtxbx_GC_findDestination_output.Name = "rchtxbx_GC_findDestination_output";
+            this.rchtxbx_GC_findDestination_output.Size = new System.Drawing.Size(569, 379);
+            this.rchtxbx_GC_findDestination_output.TabIndex = 11;
+            this.rchtxbx_GC_findDestination_output.Text = "";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 5;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.btn_GC_find_destination, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.btn_clear_findDestination_output, 3, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(781, 398);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 3;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(279, 119);
+            this.tableLayoutPanel6.TabIndex = 7;
+            // 
+            // btn_GC_find_destination
+            // 
+            this.btn_GC_find_destination.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_GC_find_destination.Location = new System.Drawing.Point(20, 8);
+            this.btn_GC_find_destination.Name = "btn_GC_find_destination";
+            this.btn_GC_find_destination.Size = new System.Drawing.Size(114, 114);
+            this.btn_GC_find_destination.TabIndex = 10;
+            this.btn_GC_find_destination.Text = "Find Destination";
+            this.btn_GC_find_destination.UseVisualStyleBackColor = true;
+            this.btn_GC_find_destination.Click += new System.EventHandler(this.btn_GC_find_destination_Click);
+            // 
+            // btn_clear_findDestination_output
+            // 
+            this.btn_clear_findDestination_output.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_clear_findDestination_output.Location = new System.Drawing.Point(145, 8);
+            this.btn_clear_findDestination_output.Name = "btn_clear_findDestination_output";
+            this.btn_clear_findDestination_output.Size = new System.Drawing.Size(114, 114);
+            this.btn_clear_findDestination_output.TabIndex = 17;
+            this.btn_clear_findDestination_output.Text = "Clear";
+            this.btn_clear_findDestination_output.UseVisualStyleBackColor = true;
+            this.btn_clear_findDestination_output.Click += new System.EventHandler(this.btn_GC_clear_findDestination_output_Click);
             // 
             // tab_CTD
             // 
-            this.tab_CTD.Controls.Add(this.richTextBox1);
+            this.tab_CTD.Controls.Add(this.btn_GC_CTD_clear_output);
+            this.tab_CTD.Controls.Add(this.rchtxbx_GC_CTD_output);
             this.tab_CTD.Controls.Add(this.btn_GC_CTD_compute_intersection);
             this.tab_CTD.Controls.Add(this.groupBox7);
             this.tab_CTD.Controls.Add(this.groupBox8);
@@ -1664,17 +1708,26 @@ namespace GlobalData
             this.tab_CTD.Text = "Cross-Track Distance";
             this.tab_CTD.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // btn_GC_CTD_clear_output
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(21, 382);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(692, 132);
-            this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = "";
+            this.btn_GC_CTD_clear_output.Location = new System.Drawing.Point(890, 417);
+            this.btn_GC_CTD_clear_output.Name = "btn_GC_CTD_clear_output";
+            this.btn_GC_CTD_clear_output.Size = new System.Drawing.Size(121, 61);
+            this.btn_GC_CTD_clear_output.TabIndex = 26;
+            this.btn_GC_CTD_clear_output.Text = "Clear";
+            this.btn_GC_CTD_clear_output.UseVisualStyleBackColor = true;
+            // 
+            // rchtxbx_GC_CTD_output
+            // 
+            this.rchtxbx_GC_CTD_output.Location = new System.Drawing.Point(21, 382);
+            this.rchtxbx_GC_CTD_output.Name = "rchtxbx_GC_CTD_output";
+            this.rchtxbx_GC_CTD_output.Size = new System.Drawing.Size(692, 132);
+            this.rchtxbx_GC_CTD_output.TabIndex = 25;
+            this.rchtxbx_GC_CTD_output.Text = "";
             // 
             // btn_GC_CTD_compute_intersection
             // 
-            this.btn_GC_CTD_compute_intersection.Location = new System.Drawing.Point(817, 421);
+            this.btn_GC_CTD_compute_intersection.Location = new System.Drawing.Point(735, 417);
             this.btn_GC_CTD_compute_intersection.Name = "btn_GC_CTD_compute_intersection";
             this.btn_GC_CTD_compute_intersection.Size = new System.Drawing.Size(121, 61);
             this.btn_GC_CTD_compute_intersection.TabIndex = 24;
@@ -1683,675 +1736,687 @@ namespace GlobalData
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.comboBox3);
-            this.groupBox7.Controls.Add(this.label17);
-            this.groupBox7.Controls.Add(this.radioButton7);
-            this.groupBox7.Controls.Add(this.radioButton8);
-            this.groupBox7.Controls.Add(this.label18);
-            this.groupBox7.Controls.Add(this.textBox13);
-            this.groupBox7.Controls.Add(this.label19);
-            this.groupBox7.Controls.Add(this.textBox14);
-            this.groupBox7.Controls.Add(this.textBox15);
-            this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Controls.Add(this.textBox16);
+            this.groupBox7.Controls.Add(this.cmbobx_GC_CTD_longitude2_DSM_cardinal);
+            this.groupBox7.Controls.Add(this.lbl_GC_CTD_longitude2_decimal);
+            this.groupBox7.Controls.Add(this.rdobtn_GC_CTD_longitude2_decimal);
+            this.groupBox7.Controls.Add(this.rdobtn_GC_CTD_longitude2_DMS);
+            this.groupBox7.Controls.Add(this.lbl_GC_CTD_longitude2_seconds);
+            this.groupBox7.Controls.Add(this.txtbx_GC_CTD_longitude2_seconds);
+            this.groupBox7.Controls.Add(this.lbl_GC_CTD_longitude2_minutes);
+            this.groupBox7.Controls.Add(this.txtbx_GC_CTD_longitude2_minutes);
+            this.groupBox7.Controls.Add(this.lbl_GC_CTD_longitude2_degrees);
+            this.groupBox7.Controls.Add(this.txtbx_GC_CTD_longitude2_degrees);
+            this.groupBox7.Controls.Add(this.txtbx_GC_CTD_longitude2_decimal);
             this.groupBox7.Location = new System.Drawing.Point(549, 21);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(475, 103);
             this.groupBox7.TabIndex = 23;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Origin Longitude";
+            this.groupBox7.Text = "Longitude 2";
             // 
-            // comboBox3
+            // cmbobx_GC_CTD_longitude2_DSM_cardinal
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Items.AddRange(new object[] {
             "E",
             "W"});
-            this.comboBox3.Location = new System.Drawing.Point(395, 34);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(52, 28);
-            this.comboBox3.TabIndex = 17;
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Name = "cmbobx_GC_CTD_longitude2_DSM_cardinal";
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.TabIndex = 17;
             // 
-            // label17
+            // lbl_GC_CTD_longitude2_decimal
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(285, 37);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 20);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "°";
+            this.lbl_GC_CTD_longitude2_decimal.AutoSize = true;
+            this.lbl_GC_CTD_longitude2_decimal.Location = new System.Drawing.Point(285, 37);
+            this.lbl_GC_CTD_longitude2_decimal.Name = "lbl_GC_CTD_longitude2_decimal";
+            this.lbl_GC_CTD_longitude2_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_longitude2_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_longitude2_decimal.Text = "°";
             // 
-            // radioButton7
+            // rdobtn_GC_CTD_longitude2_decimal
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(9, 66);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(156, 24);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.Text = "Decimal Degrees";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude2_decimal.AutoSize = true;
+            this.rdobtn_GC_CTD_longitude2_decimal.Location = new System.Drawing.Point(9, 66);
+            this.rdobtn_GC_CTD_longitude2_decimal.Name = "rdobtn_GC_CTD_longitude2_decimal";
+            this.rdobtn_GC_CTD_longitude2_decimal.Size = new System.Drawing.Size(156, 24);
+            this.rdobtn_GC_CTD_longitude2_decimal.TabIndex = 1;
+            this.rdobtn_GC_CTD_longitude2_decimal.Text = "Decimal Degrees";
+            this.rdobtn_GC_CTD_longitude2_decimal.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude2_decimal.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_longitude2_rdobtn_changed);
             // 
-            // radioButton8
+            // rdobtn_GC_CTD_longitude2_DMS
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(185, 66);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(230, 24);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.Text = "Degrees, Minutes, Seconds";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude2_DMS.AutoSize = true;
+            this.rdobtn_GC_CTD_longitude2_DMS.Location = new System.Drawing.Point(185, 66);
+            this.rdobtn_GC_CTD_longitude2_DMS.Name = "rdobtn_GC_CTD_longitude2_DMS";
+            this.rdobtn_GC_CTD_longitude2_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdobtn_GC_CTD_longitude2_DMS.TabIndex = 0;
+            this.rdobtn_GC_CTD_longitude2_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdobtn_GC_CTD_longitude2_DMS.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude2_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_longitude2_rdobtn_changed);
             // 
-            // label18
+            // lbl_GC_CTD_longitude2_seconds
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(374, 37);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(15, 20);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "\"";
+            this.lbl_GC_CTD_longitude2_seconds.AutoSize = true;
+            this.lbl_GC_CTD_longitude2_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_longitude2_seconds.Name = "lbl_GC_CTD_longitude2_seconds";
+            this.lbl_GC_CTD_longitude2_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_longitude2_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_longitude2_seconds.Text = "\"";
             // 
-            // textBox13
+            // txtbx_GC_CTD_longitude2_seconds
             // 
-            this.textBox13.Location = new System.Drawing.Point(268, 34);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 26);
-            this.textBox13.TabIndex = 13;
+            this.txtbx_GC_CTD_longitude2_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_longitude2_seconds.Name = "txtbx_GC_CTD_longitude2_seconds";
+            this.txtbx_GC_CTD_longitude2_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude2_seconds.TabIndex = 13;
             // 
-            // label19
+            // lbl_GC_CTD_longitude2_minutes
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(248, 37);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(12, 20);
-            this.label19.TabIndex = 12;
-            this.label19.Text = "\'";
+            this.lbl_GC_CTD_longitude2_minutes.AutoSize = true;
+            this.lbl_GC_CTD_longitude2_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_longitude2_minutes.Name = "lbl_GC_CTD_longitude2_minutes";
+            this.lbl_GC_CTD_longitude2_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_longitude2_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_longitude2_minutes.Text = "\'";
             // 
-            // textBox14
+            // txtbx_GC_CTD_longitude2_minutes
             // 
-            this.textBox14.Location = new System.Drawing.Point(142, 34);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 26);
-            this.textBox14.TabIndex = 11;
+            this.txtbx_GC_CTD_longitude2_minutes.Location = new System.Drawing.Point(142, 34);
+            this.txtbx_GC_CTD_longitude2_minutes.Name = "txtbx_GC_CTD_longitude2_minutes";
+            this.txtbx_GC_CTD_longitude2_minutes.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude2_minutes.TabIndex = 11;
             // 
-            // textBox15
+            // lbl_GC_CTD_longitude2_degrees
             // 
-            this.textBox15.Location = new System.Drawing.Point(98, 34);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(184, 26);
-            this.textBox15.TabIndex = 3;
-            this.textBox15.Text = "-1.72972222";
+            this.lbl_GC_CTD_longitude2_degrees.AutoSize = true;
+            this.lbl_GC_CTD_longitude2_degrees.Location = new System.Drawing.Point(121, 37);
+            this.lbl_GC_CTD_longitude2_degrees.Name = "lbl_GC_CTD_longitude2_degrees";
+            this.lbl_GC_CTD_longitude2_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_longitude2_degrees.TabIndex = 10;
+            this.lbl_GC_CTD_longitude2_degrees.Text = "°";
             // 
-            // label20
+            // txtbx_GC_CTD_longitude2_degrees
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(121, 37);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(14, 20);
-            this.label20.TabIndex = 10;
-            this.label20.Text = "°";
+            this.txtbx_GC_CTD_longitude2_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_longitude2_degrees.Name = "txtbx_GC_CTD_longitude2_degrees";
+            this.txtbx_GC_CTD_longitude2_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude2_degrees.TabIndex = 9;
             // 
-            // textBox16
+            // txtbx_GC_CTD_longitude2_decimal
             // 
-            this.textBox16.Location = new System.Drawing.Point(15, 34);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 26);
-            this.textBox16.TabIndex = 9;
+            this.txtbx_GC_CTD_longitude2_decimal.Location = new System.Drawing.Point(98, 34);
+            this.txtbx_GC_CTD_longitude2_decimal.Name = "txtbx_GC_CTD_longitude2_decimal";
+            this.txtbx_GC_CTD_longitude2_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_longitude2_decimal.TabIndex = 3;
+            this.txtbx_GC_CTD_longitude2_decimal.Text = "-1.72972222";
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.comboBox4);
-            this.groupBox8.Controls.Add(this.radioButton9);
-            this.groupBox8.Controls.Add(this.radioButton10);
-            this.groupBox8.Controls.Add(this.label21);
-            this.groupBox8.Controls.Add(this.textBox17);
-            this.groupBox8.Controls.Add(this.textBox18);
-            this.groupBox8.Controls.Add(this.label22);
-            this.groupBox8.Controls.Add(this.textBox19);
-            this.groupBox8.Controls.Add(this.label23);
-            this.groupBox8.Controls.Add(this.label24);
-            this.groupBox8.Controls.Add(this.textBox20);
+            this.groupBox8.Controls.Add(this.cmbobx_GC_CTD_latitude2_DSM_cardinal);
+            this.groupBox8.Controls.Add(this.rdobtn_GC_CTD_latitude2_decimal);
+            this.groupBox8.Controls.Add(this.rdobtn_GC_CTD_latitude2_DMS);
+            this.groupBox8.Controls.Add(this.lbl_GC_CTD_latitude2_seconds);
+            this.groupBox8.Controls.Add(this.txtbx_GC_CTD_latitude2_minutes);
+            this.groupBox8.Controls.Add(this.lbl_GC_CTD_latitude2_degrees);
+            this.groupBox8.Controls.Add(this.txtbx_GC_CTD_latitude2_degrees);
+            this.groupBox8.Controls.Add(this.lbl_GC_CTD_latitude2_minutes);
+            this.groupBox8.Controls.Add(this.lbl_GC_CTD_latitude2_decimal);
+            this.groupBox8.Controls.Add(this.txtbx_GC_CTD_latitude2_decimal);
+            this.groupBox8.Controls.Add(this.txtbx_GC_CTD_latitude2_seconds);
             this.groupBox8.Location = new System.Drawing.Point(549, 130);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(475, 106);
             this.groupBox8.TabIndex = 22;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Origin Latitude";
+            this.groupBox8.Text = "Latitude 2";
             // 
-            // comboBox4
+            // cmbobx_GC_CTD_latitude2_DSM_cardinal
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Items.AddRange(new object[] {
             "N",
             "S"});
-            this.comboBox4.Location = new System.Drawing.Point(395, 34);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(52, 28);
-            this.comboBox4.TabIndex = 18;
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Name = "cmbobx_GC_CTD_latitude2_DSM_cardinal";
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.TabIndex = 18;
             // 
-            // radioButton9
+            // rdobtn_GC_CTD_latitude2_decimal
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(9, 66);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(156, 24);
-            this.radioButton9.TabIndex = 1;
-            this.radioButton9.Text = "Decimal Degrees";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude2_decimal.AutoSize = true;
+            this.rdobtn_GC_CTD_latitude2_decimal.Location = new System.Drawing.Point(9, 66);
+            this.rdobtn_GC_CTD_latitude2_decimal.Name = "rdobtn_GC_CTD_latitude2_decimal";
+            this.rdobtn_GC_CTD_latitude2_decimal.Size = new System.Drawing.Size(156, 24);
+            this.rdobtn_GC_CTD_latitude2_decimal.TabIndex = 1;
+            this.rdobtn_GC_CTD_latitude2_decimal.Text = "Decimal Degrees";
+            this.rdobtn_GC_CTD_latitude2_decimal.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude2_decimal.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_latitude2_rdobtn_changed);
             // 
-            // radioButton10
+            // rdobtn_GC_CTD_latitude2_DMS
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(185, 66);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(230, 24);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.Text = "Degrees, Minutes, Seconds";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude2_DMS.AutoSize = true;
+            this.rdobtn_GC_CTD_latitude2_DMS.Location = new System.Drawing.Point(185, 66);
+            this.rdobtn_GC_CTD_latitude2_DMS.Name = "rdobtn_GC_CTD_latitude2_DMS";
+            this.rdobtn_GC_CTD_latitude2_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdobtn_GC_CTD_latitude2_DMS.TabIndex = 0;
+            this.rdobtn_GC_CTD_latitude2_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdobtn_GC_CTD_latitude2_DMS.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude2_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_latitude2_rdobtn_changed);
             // 
-            // label21
+            // lbl_GC_CTD_latitude2_seconds
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(374, 37);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(15, 20);
-            this.label21.TabIndex = 14;
-            this.label21.Text = "\"";
+            this.lbl_GC_CTD_latitude2_seconds.AutoSize = true;
+            this.lbl_GC_CTD_latitude2_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_latitude2_seconds.Name = "lbl_GC_CTD_latitude2_seconds";
+            this.lbl_GC_CTD_latitude2_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_latitude2_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_latitude2_seconds.Text = "\"";
             // 
-            // textBox17
+            // txtbx_GC_CTD_latitude2_minutes
             // 
-            this.textBox17.Location = new System.Drawing.Point(268, 34);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 26);
-            this.textBox17.TabIndex = 13;
+            this.txtbx_GC_CTD_latitude2_minutes.Location = new System.Drawing.Point(142, 34);
+            this.txtbx_GC_CTD_latitude2_minutes.Name = "txtbx_GC_CTD_latitude2_minutes";
+            this.txtbx_GC_CTD_latitude2_minutes.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_latitude2_minutes.TabIndex = 11;
             // 
-            // textBox18
+            // lbl_GC_CTD_latitude2_degrees
             // 
-            this.textBox18.Location = new System.Drawing.Point(142, 34);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 26);
-            this.textBox18.TabIndex = 11;
+            this.lbl_GC_CTD_latitude2_degrees.AutoSize = true;
+            this.lbl_GC_CTD_latitude2_degrees.Location = new System.Drawing.Point(121, 37);
+            this.lbl_GC_CTD_latitude2_degrees.Name = "lbl_GC_CTD_latitude2_degrees";
+            this.lbl_GC_CTD_latitude2_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_latitude2_degrees.TabIndex = 10;
+            this.lbl_GC_CTD_latitude2_degrees.Text = "°";
             // 
-            // label22
+            // txtbx_GC_CTD_latitude2_degrees
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(121, 37);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(14, 20);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "°";
+            this.txtbx_GC_CTD_latitude2_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_latitude2_degrees.Name = "txtbx_GC_CTD_latitude2_degrees";
+            this.txtbx_GC_CTD_latitude2_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_latitude2_degrees.TabIndex = 9;
             // 
-            // textBox19
+            // lbl_GC_CTD_latitude2_minutes
             // 
-            this.textBox19.Location = new System.Drawing.Point(15, 34);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 26);
-            this.textBox19.TabIndex = 9;
+            this.lbl_GC_CTD_latitude2_minutes.AutoSize = true;
+            this.lbl_GC_CTD_latitude2_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_latitude2_minutes.Name = "lbl_GC_CTD_latitude2_minutes";
+            this.lbl_GC_CTD_latitude2_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_latitude2_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_latitude2_minutes.Text = "\'";
             // 
-            // label23
+            // lbl_GC_CTD_latitude2_decimal
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(248, 37);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(12, 20);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "\'";
+            this.lbl_GC_CTD_latitude2_decimal.AutoSize = true;
+            this.lbl_GC_CTD_latitude2_decimal.Location = new System.Drawing.Point(285, 37);
+            this.lbl_GC_CTD_latitude2_decimal.Name = "lbl_GC_CTD_latitude2_decimal";
+            this.lbl_GC_CTD_latitude2_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_latitude2_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_latitude2_decimal.Text = "°";
             // 
-            // label24
+            // txtbx_GC_CTD_latitude2_decimal
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(285, 37);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(14, 20);
-            this.label24.TabIndex = 8;
-            this.label24.Text = "°";
+            this.txtbx_GC_CTD_latitude2_decimal.Location = new System.Drawing.Point(96, 34);
+            this.txtbx_GC_CTD_latitude2_decimal.Name = "txtbx_GC_CTD_latitude2_decimal";
+            this.txtbx_GC_CTD_latitude2_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_latitude2_decimal.TabIndex = 5;
+            this.txtbx_GC_CTD_latitude2_decimal.Text = "53.32055556";
             // 
-            // textBox20
+            // txtbx_GC_CTD_latitude2_seconds
             // 
-            this.textBox20.Location = new System.Drawing.Point(96, 34);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(184, 26);
-            this.textBox20.TabIndex = 5;
-            this.textBox20.Text = "53.32055556";
+            this.txtbx_GC_CTD_latitude2_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_latitude2_seconds.Name = "txtbx_GC_CTD_latitude2_seconds";
+            this.txtbx_GC_CTD_latitude2_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_latitude2_seconds.TabIndex = 13;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.radioButton1);
-            this.groupBox4.Controls.Add(this.radioButton2);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.cmbobx_GC_CTD_longitude1_DSM_cardinal);
+            this.groupBox4.Controls.Add(this.lbl_GC_CTD_longitude1_decimal);
+            this.groupBox4.Controls.Add(this.rdobtn_GC_CTD_longitude1_decimal);
+            this.groupBox4.Controls.Add(this.rdobtn_GC_CTD_longitude1_DMS);
+            this.groupBox4.Controls.Add(this.txtbx_GC_CTD_longitude1_decimal);
+            this.groupBox4.Controls.Add(this.txtbx_GC_CTD_longitude1_minutes);
+            this.groupBox4.Controls.Add(this.lbl_GC_CTD_longitude1_degrees);
+            this.groupBox4.Controls.Add(this.txtbx_GC_CTD_longitude1_degrees);
+            this.groupBox4.Controls.Add(this.txtbx_GC_CTD_longitude1_seconds);
+            this.groupBox4.Controls.Add(this.lbl_GC_CTD_longitude1_seconds);
+            this.groupBox4.Controls.Add(this.lbl_GC_CTD_longitude1_minutes);
             this.groupBox4.Location = new System.Drawing.Point(17, 21);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(475, 103);
             this.groupBox4.TabIndex = 23;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Origin Longitude";
+            this.groupBox4.Text = "Longitude 1";
             // 
-            // comboBox1
+            // cmbobx_GC_CTD_longitude1_DSM_cardinal
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Items.AddRange(new object[] {
             "E",
             "W"});
-            this.comboBox1.Location = new System.Drawing.Point(395, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(52, 28);
-            this.comboBox1.TabIndex = 17;
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Name = "cmbobx_GC_CTD_longitude1_DSM_cardinal";
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.TabIndex = 17;
             // 
-            // label5
+            // lbl_GC_CTD_longitude1_decimal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "°";
+            this.lbl_GC_CTD_longitude1_decimal.AutoSize = true;
+            this.lbl_GC_CTD_longitude1_decimal.Location = new System.Drawing.Point(285, 37);
+            this.lbl_GC_CTD_longitude1_decimal.Name = "lbl_GC_CTD_longitude1_decimal";
+            this.lbl_GC_CTD_longitude1_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_longitude1_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_longitude1_decimal.Text = "°";
             // 
-            // radioButton1
+            // rdobtn_GC_CTD_longitude1_decimal
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(9, 66);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(156, 24);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.Text = "Decimal Degrees";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude1_decimal.AutoSize = true;
+            this.rdobtn_GC_CTD_longitude1_decimal.Location = new System.Drawing.Point(9, 66);
+            this.rdobtn_GC_CTD_longitude1_decimal.Name = "rdobtn_GC_CTD_longitude1_decimal";
+            this.rdobtn_GC_CTD_longitude1_decimal.Size = new System.Drawing.Size(156, 24);
+            this.rdobtn_GC_CTD_longitude1_decimal.TabIndex = 1;
+            this.rdobtn_GC_CTD_longitude1_decimal.Text = "Decimal Degrees";
+            this.rdobtn_GC_CTD_longitude1_decimal.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude1_decimal.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_longitude1_rdobtn_changed);
             // 
-            // radioButton2
+            // rdobtn_GC_CTD_longitude1_DMS
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(185, 66);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(230, 24);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.Text = "Degrees, Minutes, Seconds";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude1_DMS.AutoSize = true;
+            this.rdobtn_GC_CTD_longitude1_DMS.Location = new System.Drawing.Point(185, 66);
+            this.rdobtn_GC_CTD_longitude1_DMS.Name = "rdobtn_GC_CTD_longitude1_DMS";
+            this.rdobtn_GC_CTD_longitude1_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdobtn_GC_CTD_longitude1_DMS.TabIndex = 0;
+            this.rdobtn_GC_CTD_longitude1_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdobtn_GC_CTD_longitude1_DMS.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_longitude1_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_longitude1_rdobtn_changed);
             // 
-            // label6
+            // lbl_GC_CTD_longitude1_seconds
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(374, 37);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(15, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "\"";
+            this.lbl_GC_CTD_longitude1_seconds.AutoSize = true;
+            this.lbl_GC_CTD_longitude1_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_longitude1_seconds.Name = "lbl_GC_CTD_longitude1_seconds";
+            this.lbl_GC_CTD_longitude1_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_longitude1_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_longitude1_seconds.Text = "\"";
             // 
-            // textBox1
+            // txtbx_GC_CTD_longitude1_seconds
             // 
-            this.textBox1.Location = new System.Drawing.Point(268, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 13;
+            this.txtbx_GC_CTD_longitude1_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_longitude1_seconds.Name = "txtbx_GC_CTD_longitude1_seconds";
+            this.txtbx_GC_CTD_longitude1_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude1_seconds.TabIndex = 13;
             // 
-            // label7
+            // lbl_GC_CTD_longitude1_minutes
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(248, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 20);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "\'";
+            this.lbl_GC_CTD_longitude1_minutes.AutoSize = true;
+            this.lbl_GC_CTD_longitude1_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_longitude1_minutes.Name = "lbl_GC_CTD_longitude1_minutes";
+            this.lbl_GC_CTD_longitude1_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_longitude1_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_longitude1_minutes.Text = "\'";
             // 
-            // textBox2
+            // txtbx_GC_CTD_longitude1_minutes
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 11;
+            this.txtbx_GC_CTD_longitude1_minutes.Location = new System.Drawing.Point(142, 34);
+            this.txtbx_GC_CTD_longitude1_minutes.Name = "txtbx_GC_CTD_longitude1_minutes";
+            this.txtbx_GC_CTD_longitude1_minutes.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude1_minutes.TabIndex = 11;
             // 
-            // textBox3
+            // lbl_GC_CTD_longitude1_degrees
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 26);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "-1.72972222";
+            this.lbl_GC_CTD_longitude1_degrees.AutoSize = true;
+            this.lbl_GC_CTD_longitude1_degrees.Location = new System.Drawing.Point(121, 37);
+            this.lbl_GC_CTD_longitude1_degrees.Name = "lbl_GC_CTD_longitude1_degrees";
+            this.lbl_GC_CTD_longitude1_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_longitude1_degrees.TabIndex = 10;
+            this.lbl_GC_CTD_longitude1_degrees.Text = "°";
             // 
-            // label8
+            // txtbx_GC_CTD_longitude1_degrees
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(121, 37);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(14, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "°";
+            this.txtbx_GC_CTD_longitude1_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_longitude1_degrees.Name = "txtbx_GC_CTD_longitude1_degrees";
+            this.txtbx_GC_CTD_longitude1_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude1_degrees.TabIndex = 9;
             // 
-            // textBox4
+            // txtbx_GC_CTD_longitude1_decimal
             // 
-            this.textBox4.Location = new System.Drawing.Point(15, 34);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
-            this.textBox4.TabIndex = 9;
+            this.txtbx_GC_CTD_longitude1_decimal.Location = new System.Drawing.Point(98, 34);
+            this.txtbx_GC_CTD_longitude1_decimal.Name = "txtbx_GC_CTD_longitude1_decimal";
+            this.txtbx_GC_CTD_longitude1_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_longitude1_decimal.TabIndex = 3;
+            this.txtbx_GC_CTD_longitude1_decimal.Text = "-1.72972222";
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.label25);
-            this.groupBox9.Controls.Add(this.radioButton11);
-            this.groupBox9.Controls.Add(this.radioButton12);
-            this.groupBox9.Controls.Add(this.textBox21);
-            this.groupBox9.Controls.Add(this.label26);
-            this.groupBox9.Controls.Add(this.textBox22);
-            this.groupBox9.Controls.Add(this.label27);
-            this.groupBox9.Controls.Add(this.textBox23);
-            this.groupBox9.Controls.Add(this.label28);
-            this.groupBox9.Controls.Add(this.textBox24);
+            this.groupBox9.Controls.Add(this.rdobtn_GC_CTD_bearing2_decimal);
+            this.groupBox9.Controls.Add(this.rdobtn_GC_CTD_bearing2_DMS);
+            this.groupBox9.Controls.Add(this.txtbx_GC_CTD_bearing2_degrees);
+            this.groupBox9.Controls.Add(this.txtbx_GC_CTD_bearing2_minutes);
+            this.groupBox9.Controls.Add(this.lbl_GC_CTD_bearing2_degrees);
+            this.groupBox9.Controls.Add(this.lbl_GC_CTD_bearing2_minutes);
+            this.groupBox9.Controls.Add(this.txtbx_GC_CTD_bearing2_seconds);
+            this.groupBox9.Controls.Add(this.lbl_GC_CTD_bearing2_seconds);
+            this.groupBox9.Controls.Add(this.txtbx_GC_CTD_bearing2_decimal);
+            this.groupBox9.Controls.Add(this.lbl_GC_CTD_bearing2_decimal);
             this.groupBox9.Location = new System.Drawing.Point(549, 242);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(426, 127);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Bearing";
+            this.groupBox9.Text = "Bearing 2";
             // 
-            // label25
+            // lbl_GC_CTD_bearing2_decimal
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(287, 37);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(14, 20);
-            this.label25.TabIndex = 8;
-            this.label25.Text = "°";
+            this.lbl_GC_CTD_bearing2_decimal.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_decimal.Location = new System.Drawing.Point(287, 37);
+            this.lbl_GC_CTD_bearing2_decimal.Name = "lbl_GC_CTD_bearing2_decimal";
+            this.lbl_GC_CTD_bearing2_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_bearing2_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_bearing2_decimal.Text = "°";
             // 
-            // radioButton11
+            // rdobtn_GC_CTD_bearing2_decimal
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(10, 77);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(156, 24);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.Text = "Decimal Degrees";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing2_decimal.AutoSize = true;
+            this.rdobtn_GC_CTD_bearing2_decimal.Location = new System.Drawing.Point(10, 77);
+            this.rdobtn_GC_CTD_bearing2_decimal.Name = "rdobtn_GC_CTD_bearing2_decimal";
+            this.rdobtn_GC_CTD_bearing2_decimal.Size = new System.Drawing.Size(156, 24);
+            this.rdobtn_GC_CTD_bearing2_decimal.TabIndex = 1;
+            this.rdobtn_GC_CTD_bearing2_decimal.Text = "Decimal Degrees";
+            this.rdobtn_GC_CTD_bearing2_decimal.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing2_decimal.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_bearing2_rdobtn_changed);
             // 
-            // radioButton12
+            // rdobtn_GC_CTD_bearing2_DMS
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(186, 77);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(230, 24);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.Text = "Degrees, Minutes, Seconds";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing2_DMS.AutoSize = true;
+            this.rdobtn_GC_CTD_bearing2_DMS.Location = new System.Drawing.Point(186, 77);
+            this.rdobtn_GC_CTD_bearing2_DMS.Name = "rdobtn_GC_CTD_bearing2_DMS";
+            this.rdobtn_GC_CTD_bearing2_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdobtn_GC_CTD_bearing2_DMS.TabIndex = 0;
+            this.rdobtn_GC_CTD_bearing2_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdobtn_GC_CTD_bearing2_DMS.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing2_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_bearing2_rdobtn_changed);
             // 
-            // textBox21
+            // lbl_GC_CTD_bearing2_seconds
             // 
-            this.textBox21.Location = new System.Drawing.Point(97, 34);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(184, 26);
-            this.textBox21.TabIndex = 7;
-            this.textBox21.Text = "96.02166667";
+            this.lbl_GC_CTD_bearing2_seconds.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_bearing2_seconds.Name = "lbl_GC_CTD_bearing2_seconds";
+            this.lbl_GC_CTD_bearing2_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_bearing2_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_bearing2_seconds.Text = "\"";
             // 
-            // label26
+            // txtbx_GC_CTD_bearing2_seconds
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(374, 37);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(15, 20);
-            this.label26.TabIndex = 14;
-            this.label26.Text = "\"";
+            this.txtbx_GC_CTD_bearing2_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_bearing2_seconds.Name = "txtbx_GC_CTD_bearing2_seconds";
+            this.txtbx_GC_CTD_bearing2_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing2_seconds.TabIndex = 13;
             // 
-            // textBox22
+            // lbl_GC_CTD_bearing2_minutes
             // 
-            this.textBox22.Location = new System.Drawing.Point(268, 34);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 26);
-            this.textBox22.TabIndex = 13;
+            this.lbl_GC_CTD_bearing2_minutes.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_bearing2_minutes.Name = "lbl_GC_CTD_bearing2_minutes";
+            this.lbl_GC_CTD_bearing2_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_bearing2_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_bearing2_minutes.Text = "\'";
             // 
-            // label27
+            // txtbx_GC_CTD_bearing2_minutes
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(248, 37);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(12, 20);
-            this.label27.TabIndex = 12;
-            this.label27.Text = "\'";
+            this.txtbx_GC_CTD_bearing2_minutes.Location = new System.Drawing.Point(142, 34);
+            this.txtbx_GC_CTD_bearing2_minutes.Name = "txtbx_GC_CTD_bearing2_minutes";
+            this.txtbx_GC_CTD_bearing2_minutes.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing2_minutes.TabIndex = 11;
             // 
-            // textBox23
+            // lbl_GC_CTD_bearing2_degrees
             // 
-            this.textBox23.Location = new System.Drawing.Point(142, 34);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 26);
-            this.textBox23.TabIndex = 11;
+            this.lbl_GC_CTD_bearing2_degrees.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_degrees.Location = new System.Drawing.Point(121, 37);
+            this.lbl_GC_CTD_bearing2_degrees.Name = "lbl_GC_CTD_bearing2_degrees";
+            this.lbl_GC_CTD_bearing2_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_bearing2_degrees.TabIndex = 10;
+            this.lbl_GC_CTD_bearing2_degrees.Text = "°";
             // 
-            // label28
+            // txtbx_GC_CTD_bearing2_degrees
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(121, 37);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(14, 20);
-            this.label28.TabIndex = 10;
-            this.label28.Text = "°";
+            this.txtbx_GC_CTD_bearing2_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_bearing2_degrees.Name = "txtbx_GC_CTD_bearing2_degrees";
+            this.txtbx_GC_CTD_bearing2_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing2_degrees.TabIndex = 9;
             // 
-            // textBox24
+            // txtbx_GC_CTD_bearing2_decimal
             // 
-            this.textBox24.Location = new System.Drawing.Point(15, 34);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 26);
-            this.textBox24.TabIndex = 9;
+            this.txtbx_GC_CTD_bearing2_decimal.Location = new System.Drawing.Point(97, 34);
+            this.txtbx_GC_CTD_bearing2_decimal.Name = "txtbx_GC_CTD_bearing2_decimal";
+            this.txtbx_GC_CTD_bearing2_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_bearing2_decimal.TabIndex = 7;
+            this.txtbx_GC_CTD_bearing2_decimal.Text = "96.02166667";
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.radioButton3);
-            this.groupBox5.Controls.Add(this.radioButton4);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox6);
-            this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.textBox7);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.textBox8);
+            this.groupBox5.Controls.Add(this.cmbobx_GC_CTD_latitude1_DSM_cardinal);
+            this.groupBox5.Controls.Add(this.rdobtn_GC_CTD_latitude1_decimal);
+            this.groupBox5.Controls.Add(this.rdobtn_GC_CTD_latitude1_DMS);
+            this.groupBox5.Controls.Add(this.lbl_GC_CTD_latitude1_seconds);
+            this.groupBox5.Controls.Add(this.txtbx_GC_CTD_latitude1_minutes);
+            this.groupBox5.Controls.Add(this.lbl_GC_CTD_latitude1_degrees);
+            this.groupBox5.Controls.Add(this.txtbx_GC_CTD_latitude1_degrees);
+            this.groupBox5.Controls.Add(this.lbl_GC_CTD_latitude1_minutes);
+            this.groupBox5.Controls.Add(this.lbl_GC_CTD_latitude1_decimal);
+            this.groupBox5.Controls.Add(this.txtbx_GC_CTD_latitude1_decimal);
+            this.groupBox5.Controls.Add(this.txtbx_GC_CTD_latitude1_seconds);
             this.groupBox5.Location = new System.Drawing.Point(17, 130);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(475, 106);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Origin Latitude";
+            this.groupBox5.Text = "Latitude 1";
             // 
-            // comboBox2
+            // cmbobx_GC_CTD_latitude1_DSM_cardinal
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Items.AddRange(new object[] {
             "N",
             "S"});
-            this.comboBox2.Location = new System.Drawing.Point(395, 34);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(52, 28);
-            this.comboBox2.TabIndex = 18;
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Name = "cmbobx_GC_CTD_latitude1_DSM_cardinal";
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.TabIndex = 18;
             // 
-            // radioButton3
+            // rdobtn_GC_CTD_latitude1_decimal
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(9, 66);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(156, 24);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.Text = "Decimal Degrees";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude1_decimal.AutoSize = true;
+            this.rdobtn_GC_CTD_latitude1_decimal.Location = new System.Drawing.Point(9, 66);
+            this.rdobtn_GC_CTD_latitude1_decimal.Name = "rdobtn_GC_CTD_latitude1_decimal";
+            this.rdobtn_GC_CTD_latitude1_decimal.Size = new System.Drawing.Size(156, 24);
+            this.rdobtn_GC_CTD_latitude1_decimal.TabIndex = 1;
+            this.rdobtn_GC_CTD_latitude1_decimal.Text = "Decimal Degrees";
+            this.rdobtn_GC_CTD_latitude1_decimal.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude1_decimal.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_latitude1_rdobtn_changed);
             // 
-            // radioButton4
+            // rdobtn_GC_CTD_latitude1_DMS
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(185, 66);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(230, 24);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.Text = "Degrees, Minutes, Seconds";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude1_DMS.AutoSize = true;
+            this.rdobtn_GC_CTD_latitude1_DMS.Location = new System.Drawing.Point(185, 66);
+            this.rdobtn_GC_CTD_latitude1_DMS.Name = "rdobtn_GC_CTD_latitude1_DMS";
+            this.rdobtn_GC_CTD_latitude1_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdobtn_GC_CTD_latitude1_DMS.TabIndex = 0;
+            this.rdobtn_GC_CTD_latitude1_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdobtn_GC_CTD_latitude1_DMS.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_latitude1_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_latitude1_rdobtn_changed);
             // 
-            // label9
+            // lbl_GC_CTD_latitude1_seconds
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(374, 37);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 20);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "\"";
+            this.lbl_GC_CTD_latitude1_seconds.AutoSize = true;
+            this.lbl_GC_CTD_latitude1_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_latitude1_seconds.Name = "lbl_GC_CTD_latitude1_seconds";
+            this.lbl_GC_CTD_latitude1_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_latitude1_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_latitude1_seconds.Text = "\"";
             // 
-            // textBox5
+            // txtbx_GC_CTD_latitude1_minutes
             // 
-            this.textBox5.Location = new System.Drawing.Point(268, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 13;
+            this.txtbx_GC_CTD_latitude1_minutes.Location = new System.Drawing.Point(142, 34);
+            this.txtbx_GC_CTD_latitude1_minutes.Name = "txtbx_GC_CTD_latitude1_minutes";
+            this.txtbx_GC_CTD_latitude1_minutes.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_latitude1_minutes.TabIndex = 11;
             // 
-            // textBox6
+            // lbl_GC_CTD_latitude1_degrees
             // 
-            this.textBox6.Location = new System.Drawing.Point(142, 34);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 26);
-            this.textBox6.TabIndex = 11;
+            this.lbl_GC_CTD_latitude1_degrees.AutoSize = true;
+            this.lbl_GC_CTD_latitude1_degrees.Location = new System.Drawing.Point(121, 37);
+            this.lbl_GC_CTD_latitude1_degrees.Name = "lbl_GC_CTD_latitude1_degrees";
+            this.lbl_GC_CTD_latitude1_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_latitude1_degrees.TabIndex = 10;
+            this.lbl_GC_CTD_latitude1_degrees.Text = "°";
             // 
-            // label10
+            // txtbx_GC_CTD_latitude1_degrees
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(121, 37);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(14, 20);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "°";
+            this.txtbx_GC_CTD_latitude1_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_latitude1_degrees.Name = "txtbx_GC_CTD_latitude1_degrees";
+            this.txtbx_GC_CTD_latitude1_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_latitude1_degrees.TabIndex = 9;
             // 
-            // textBox7
+            // lbl_GC_CTD_latitude1_minutes
             // 
-            this.textBox7.Location = new System.Drawing.Point(15, 34);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 26);
-            this.textBox7.TabIndex = 9;
+            this.lbl_GC_CTD_latitude1_minutes.AutoSize = true;
+            this.lbl_GC_CTD_latitude1_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_latitude1_minutes.Name = "lbl_GC_CTD_latitude1_minutes";
+            this.lbl_GC_CTD_latitude1_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_latitude1_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_latitude1_minutes.Text = "\'";
             // 
-            // label11
+            // lbl_GC_CTD_latitude1_decimal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(248, 37);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 20);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "\'";
+            this.lbl_GC_CTD_latitude1_decimal.AutoSize = true;
+            this.lbl_GC_CTD_latitude1_decimal.Location = new System.Drawing.Point(285, 37);
+            this.lbl_GC_CTD_latitude1_decimal.Name = "lbl_GC_CTD_latitude1_decimal";
+            this.lbl_GC_CTD_latitude1_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_latitude1_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_latitude1_decimal.Text = "°";
             // 
-            // label12
+            // txtbx_GC_CTD_latitude1_decimal
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(285, 37);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(14, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "°";
+            this.txtbx_GC_CTD_latitude1_decimal.Location = new System.Drawing.Point(96, 34);
+            this.txtbx_GC_CTD_latitude1_decimal.Name = "txtbx_GC_CTD_latitude1_decimal";
+            this.txtbx_GC_CTD_latitude1_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_latitude1_decimal.TabIndex = 5;
+            this.txtbx_GC_CTD_latitude1_decimal.Text = "53.32055556";
             // 
-            // textBox8
+            // txtbx_GC_CTD_latitude1_seconds
             // 
-            this.textBox8.Location = new System.Drawing.Point(96, 34);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(184, 26);
-            this.textBox8.TabIndex = 5;
-            this.textBox8.Text = "53.32055556";
+            this.txtbx_GC_CTD_latitude1_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_latitude1_seconds.Name = "txtbx_GC_CTD_latitude1_seconds";
+            this.txtbx_GC_CTD_latitude1_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_latitude1_seconds.TabIndex = 13;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label13);
-            this.groupBox6.Controls.Add(this.radioButton5);
-            this.groupBox6.Controls.Add(this.radioButton6);
-            this.groupBox6.Controls.Add(this.textBox9);
-            this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.textBox10);
-            this.groupBox6.Controls.Add(this.label15);
-            this.groupBox6.Controls.Add(this.textBox11);
-            this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.textBox12);
+            this.groupBox6.Controls.Add(this.lbl_GC_CTD_bearing1_decimal);
+            this.groupBox6.Controls.Add(this.rdobtn_GC_CTD_bearing1_decimal);
+            this.groupBox6.Controls.Add(this.rdobtn_GC_CTD_bearing1_DMS);
+            this.groupBox6.Controls.Add(this.lbl_GC_CTD_bearing1_seconds);
+            this.groupBox6.Controls.Add(this.txtbx_GC_CTD_bearing1_seconds);
+            this.groupBox6.Controls.Add(this.lbl_GC_CTD_bearing1_minutes);
+            this.groupBox6.Controls.Add(this.txtbx_GC_CTD_bearing1_minutes);
+            this.groupBox6.Controls.Add(this.lbl_GC_CTD_bearing1_degrees);
+            this.groupBox6.Controls.Add(this.txtbx_GC_CTD_bearing1_degrees);
+            this.groupBox6.Controls.Add(this.txtbx_GC_CTD_bearing1_decimal);
             this.groupBox6.Location = new System.Drawing.Point(17, 242);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(426, 127);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Bearing";
+            this.groupBox6.Text = "Bearing 1";
             // 
-            // label13
+            // lbl_GC_CTD_bearing1_decimal
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(287, 37);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(14, 20);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "°";
+            this.lbl_GC_CTD_bearing1_decimal.AutoSize = true;
+            this.lbl_GC_CTD_bearing1_decimal.Location = new System.Drawing.Point(287, 37);
+            this.lbl_GC_CTD_bearing1_decimal.Name = "lbl_GC_CTD_bearing1_decimal";
+            this.lbl_GC_CTD_bearing1_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_bearing1_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_bearing1_decimal.Text = "°";
             // 
-            // radioButton5
+            // rdobtn_GC_CTD_bearing1_decimal
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(10, 77);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(156, 24);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.Text = "Decimal Degrees";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing1_decimal.AutoSize = true;
+            this.rdobtn_GC_CTD_bearing1_decimal.Location = new System.Drawing.Point(10, 77);
+            this.rdobtn_GC_CTD_bearing1_decimal.Name = "rdobtn_GC_CTD_bearing1_decimal";
+            this.rdobtn_GC_CTD_bearing1_decimal.Size = new System.Drawing.Size(156, 24);
+            this.rdobtn_GC_CTD_bearing1_decimal.TabIndex = 1;
+            this.rdobtn_GC_CTD_bearing1_decimal.Text = "Decimal Degrees";
+            this.rdobtn_GC_CTD_bearing1_decimal.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing1_decimal.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_bearing1_rdobtn_changed);
             // 
-            // radioButton6
+            // rdobtn_GC_CTD_bearing1_DMS
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(186, 77);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(230, 24);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.Text = "Degrees, Minutes, Seconds";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing1_DMS.AutoSize = true;
+            this.rdobtn_GC_CTD_bearing1_DMS.Location = new System.Drawing.Point(186, 77);
+            this.rdobtn_GC_CTD_bearing1_DMS.Name = "rdobtn_GC_CTD_bearing1_DMS";
+            this.rdobtn_GC_CTD_bearing1_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdobtn_GC_CTD_bearing1_DMS.TabIndex = 0;
+            this.rdobtn_GC_CTD_bearing1_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdobtn_GC_CTD_bearing1_DMS.UseVisualStyleBackColor = true;
+            this.rdobtn_GC_CTD_bearing1_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_bearing1_rdobtn_changed);
             // 
-            // textBox9
+            // lbl_GC_CTD_bearing1_seconds
             // 
-            this.textBox9.Location = new System.Drawing.Point(97, 34);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(184, 26);
-            this.textBox9.TabIndex = 7;
-            this.textBox9.Text = "96.02166667";
+            this.lbl_GC_CTD_bearing1_seconds.AutoSize = true;
+            this.lbl_GC_CTD_bearing1_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_bearing1_seconds.Name = "lbl_GC_CTD_bearing1_seconds";
+            this.lbl_GC_CTD_bearing1_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_bearing1_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_bearing1_seconds.Text = "\"";
             // 
-            // label14
+            // txtbx_GC_CTD_bearing1_seconds
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(374, 37);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(15, 20);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "\"";
+            this.txtbx_GC_CTD_bearing1_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_bearing1_seconds.Name = "txtbx_GC_CTD_bearing1_seconds";
+            this.txtbx_GC_CTD_bearing1_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing1_seconds.TabIndex = 13;
             // 
-            // textBox10
+            // lbl_GC_CTD_bearing1_minutes
             // 
-            this.textBox10.Location = new System.Drawing.Point(268, 34);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 26);
-            this.textBox10.TabIndex = 13;
+            this.lbl_GC_CTD_bearing1_minutes.AutoSize = true;
+            this.lbl_GC_CTD_bearing1_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_bearing1_minutes.Name = "lbl_GC_CTD_bearing1_minutes";
+            this.lbl_GC_CTD_bearing1_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_bearing1_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_bearing1_minutes.Text = "\'";
             // 
-            // label15
+            // txtbx_GC_CTD_bearing1_minutes
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(248, 37);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 20);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "\'";
+            this.txtbx_GC_CTD_bearing1_minutes.Location = new System.Drawing.Point(142, 34);
+            this.txtbx_GC_CTD_bearing1_minutes.Name = "txtbx_GC_CTD_bearing1_minutes";
+            this.txtbx_GC_CTD_bearing1_minutes.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing1_minutes.TabIndex = 11;
             // 
-            // textBox11
+            // lbl_GC_CTD_bearing1_degrees
             // 
-            this.textBox11.Location = new System.Drawing.Point(142, 34);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 26);
-            this.textBox11.TabIndex = 11;
+            this.lbl_GC_CTD_bearing1_degrees.AutoSize = true;
+            this.lbl_GC_CTD_bearing1_degrees.Location = new System.Drawing.Point(121, 37);
+            this.lbl_GC_CTD_bearing1_degrees.Name = "lbl_GC_CTD_bearing1_degrees";
+            this.lbl_GC_CTD_bearing1_degrees.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_bearing1_degrees.TabIndex = 10;
+            this.lbl_GC_CTD_bearing1_degrees.Text = "°";
             // 
-            // label16
+            // txtbx_GC_CTD_bearing1_degrees
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(121, 37);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 20);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "°";
+            this.txtbx_GC_CTD_bearing1_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_bearing1_degrees.Name = "txtbx_GC_CTD_bearing1_degrees";
+            this.txtbx_GC_CTD_bearing1_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing1_degrees.TabIndex = 9;
             // 
-            // textBox12
+            // txtbx_GC_CTD_bearing1_decimal
             // 
-            this.textBox12.Location = new System.Drawing.Point(15, 34);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 26);
-            this.textBox12.TabIndex = 9;
+            this.txtbx_GC_CTD_bearing1_decimal.Location = new System.Drawing.Point(97, 34);
+            this.txtbx_GC_CTD_bearing1_decimal.Name = "txtbx_GC_CTD_bearing1_decimal";
+            this.txtbx_GC_CTD_bearing1_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_bearing1_decimal.TabIndex = 7;
+            this.txtbx_GC_CTD_bearing1_decimal.Text = "96.02166667";
             // 
             // tabPage2
             // 
@@ -2392,48 +2457,6 @@ namespace GlobalData
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // btn_GC_find_destination
-            // 
-            this.btn_GC_find_destination.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_GC_find_destination.Location = new System.Drawing.Point(20, 8);
-            this.btn_GC_find_destination.Name = "btn_GC_find_destination";
-            this.btn_GC_find_destination.Size = new System.Drawing.Size(114, 114);
-            this.btn_GC_find_destination.TabIndex = 10;
-            this.btn_GC_find_destination.Text = "Find Destination";
-            this.btn_GC_find_destination.UseVisualStyleBackColor = true;
-            this.btn_GC_find_destination.Click += new System.EventHandler(this.btn_GC_find_destination_Click);
-            // 
-            // btn_clear_findDestination_output
-            // 
-            this.btn_clear_findDestination_output.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_clear_findDestination_output.Location = new System.Drawing.Point(145, 8);
-            this.btn_clear_findDestination_output.Name = "btn_clear_findDestination_output";
-            this.btn_clear_findDestination_output.Size = new System.Drawing.Size(114, 114);
-            this.btn_clear_findDestination_output.TabIndex = 17;
-            this.btn_clear_findDestination_output.Text = "Clear";
-            this.btn_clear_findDestination_output.UseVisualStyleBackColor = true;
-            this.btn_clear_findDestination_output.Click += new System.EventHandler(this.btn_GC_clear_findDestination_output_Click);
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 5;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btn_GC_find_destination, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.btn_clear_findDestination_output, 3, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(783, 398);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 3;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(280, 119);
-            this.tableLayoutPanel6.TabIndex = 7;
             // 
             // Form1
             // 
@@ -2497,6 +2520,7 @@ namespace GlobalData
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel20.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tab_CTD.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -2511,7 +2535,6 @@ namespace GlobalData
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2558,7 +2581,7 @@ namespace GlobalData
         private System.Windows.Forms.TextBox txtbx_FD_origin_latitude_decimal_degrees;
         private System.Windows.Forms.TextBox txtbx_FD_origin_longitude_decimal_degrees;
         private System.Windows.Forms.Button btn_GC_find_destination;
-        private System.Windows.Forms.RichTextBox rchtxbx_findDestination_output;
+        private System.Windows.Forms.RichTextBox rchtxbx_GC_findDestination_output;
         private System.Windows.Forms.GroupBox grpbx_FD_distance;
         private System.Windows.Forms.Label lbl_FD_distance_type;
         private System.Windows.Forms.RadioButton rdobtn_FD_nauticalmiles;
@@ -2644,78 +2667,78 @@ namespace GlobalData
         private System.Windows.Forms.ComboBox cmbobx_GC_DBM_destination_latitude_cardinal;
         private System.Windows.Forms.ComboBox cmbobx_FD_origin_longitude_cardinal;
         private System.Windows.Forms.ComboBox cmbobx_FD_origin_latitude_cardinal;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rchtxbx_GC_CTD_output;
         private System.Windows.Forms.Button btn_GC_CTD_compute_intersection;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_longitude2_DSM_cardinal;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude2_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude2_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude2_DMS;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude2_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude2_seconds;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude2_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude2_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude2_decimal;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude2_degrees;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude2_degrees;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_latitude2_DSM_cardinal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude2_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude2_DMS;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude2_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude2_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude2_minutes;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude2_degrees;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude2_degrees;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude2_minutes;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude2_decimal;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude2_decimal;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_longitude1_DSM_cardinal;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude1_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude1_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude1_DMS;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude1_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude1_seconds;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude1_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude1_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude1_decimal;
+        private System.Windows.Forms.Label lbl_GC_CTD_longitude1_degrees;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude1_degrees;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing2_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_bearing2_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_bearing2_DMS;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing2_decimal;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing2_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing2_seconds;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing2_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing2_minutes;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing2_degrees;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing2_degrees;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_latitude1_DSM_cardinal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude1_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude1_DMS;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude1_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude1_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude1_minutes;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude1_degrees;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude1_degrees;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude1_minutes;
+        private System.Windows.Forms.Label lbl_GC_CTD_latitude1_decimal;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude1_decimal;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing1_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_bearing1_decimal;
+        private System.Windows.Forms.RadioButton rdobtn_GC_CTD_bearing1_DMS;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing1_decimal;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing1_seconds;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing1_seconds;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing1_minutes;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing1_minutes;
+        private System.Windows.Forms.Label lbl_GC_CTD_bearing1_degrees;
+        private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing1_degrees;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
@@ -2724,6 +2747,7 @@ namespace GlobalData
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button btn_GC_CTD_clear_output;
     }
 }
 
