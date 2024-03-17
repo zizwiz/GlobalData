@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Forms;
+using CenteredMessagebox;
 using GlobalData.Properties;
 using GlobalData.Utils;
 
@@ -196,8 +198,61 @@ namespace GlobalData.libraries
             return (φ2, λ2);
         }
 
+        /// <summary>
+        /// Intersection of two paths given start points and bearings
+        /// </summary>
+        /// <param name="Longitude1"></param>
+        /// <param name="Latitude1"></param>
+        /// <param name="bearing1"></param>
+        /// <param name="Longitude2"></param>
+        /// <param name="Latitude2"></param>
+        /// <param name="bearing2"></param>
+        /// <returns>returns latitude and longitude as doubles</returns>
+        public static (double, double) FindIntersectionOfTwoPaths(double Longitude1, double Latitude1, double bearing1,
+            double Longitude2, double Latitude2, double bearing2)
+        {
+            double φ1 = Latitude1;
+            double λ1 = Longitude1;
+            double θ13 = bearing1;
 
+            double φ2 = Latitude2;
+            double λ2 = Longitude2;
+            double θ23 = bearing2;
 
+            double Δφ = φ2 - φ1;
+            double Δλ = λ2 - λ1;
+
+            // angular distance p1-p2
+            double δ12 = 2 * Math.Asin(Math.Sqrt(Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2)
+                + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2)));
+            if (Math.Abs(δ12) < Double.Epsilon) return (997, 997); // coincident points
+
+            // initial/final bearings between points
+            double cosθa = (Math.Sin(φ2) - Math.Sin(φ1) * Math.Cos(δ12)) / (Math.Sin(δ12) * Math.Cos(φ1));
+            double cosθb = (Math.Sin(φ1) - Math.Sin(φ2) * Math.Cos(δ12)) / (Math.Sin(δ12) * Math.Cos(φ2));
+            double θa = Math.Acos(Math.Min(Math.Max(cosθa, -1), 1)); // protect against rounding errors
+            double θb = Math.Acos(Math.Min(Math.Max(cosθb, -1), 1)); // protect against rounding errors
+
+            double θ12 = Math.Sin(λ2 - λ1) > 0 ? θa : 2 * Math.PI - θa;
+            double θ21 = Math.Sin(λ2 - λ1) > 0 ? 2 * Math.PI - θb : θb;
+
+            double α1 = θ13 - θ12; // angle 2-1-3
+            double α2 = θ21 - θ23; // angle 1-2-3
+
+            if (Math.Sin(α1) == 0 && Math.Sin(α2) == 0) return (999,999); // infinite intersections
+            if (Math.Sin(α1) * Math.Sin(α2) < 0) return (998,998);        // ambiguous intersection (antipodal/360°)
+
+            double cosα3 = -Math.Cos(α1) * Math.Cos(α2) + Math.Sin(α1) * Math.Sin(α2) * Math.Cos(δ12);
+
+            double δ13 = Math.Atan2(Math.Sin(δ12) * Math.Sin(α1) * Math.Sin(α2), Math.Cos(α2) + Math.Cos(α1) * cosα3);
+
+            double φ3 = Math.Asin(Math.Min(Math.Max(Math.Sin(φ1) * Math.Cos(δ13) + Math.Cos(φ1) * Math.Sin(δ13) * Math.Cos(θ13), -1), 1));
+
+            double Δλ13 = Math.Atan2(Math.Sin(θ13) * Math.Sin(δ13) * Math.Cos(φ1), Math.Cos(δ13) - Math.Sin(φ1) * Math.Sin(φ3));
+            double λ3 = λ1 + Δλ13;
+
+            return (φ3, λ3);
+        }
 
 
         //Calculate settings for altitude at destination

@@ -43,10 +43,11 @@ namespace GlobalData
             rdobtn_GC_CTD_longitude2_decimal.Checked = true;
             rdobtn_GC_CTD_latitude2_decimal.Checked = true;
             rdobtn_GC_CTD_bearing2_decimal.Checked = true;
-            cmbobx_GC_CTD_longitude1_DSM_cardinal.SelectedIndex = 0;
-            cmbobx_GC_CTD_latitude1_DSM_cardinal.SelectedIndex = 0;
-            cmbobx_GC_CTD_longitude2_DSM_cardinal.SelectedIndex = 0;
-            cmbobx_GC_CTD_latitude2_DSM_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_longitude1_DMS_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_latitude1_DMS_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_longitude2_DMS_cardinal.SelectedIndex = 0;
+            cmbobx_GC_CTD_latitude2_DMS_cardinal.SelectedIndex = 0;
+            rdo_GC_CTD_results_format_decimal_degrees.Checked = true;
         }
 
         private void btn_close_Click(object sender, EventArgs e)

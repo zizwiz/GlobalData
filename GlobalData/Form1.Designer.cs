@@ -164,7 +164,7 @@ namespace GlobalData
             this.rchtxbx_GC_CTD_output = new System.Windows.Forms.RichTextBox();
             this.btn_GC_CTD_compute_intersection = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_GC_CTD_longitude2_decimal = new System.Windows.Forms.Label();
             this.rdobtn_GC_CTD_longitude2_decimal = new System.Windows.Forms.RadioButton();
             this.rdobtn_GC_CTD_longitude2_DMS = new System.Windows.Forms.RadioButton();
@@ -176,7 +176,7 @@ namespace GlobalData
             this.txtbx_GC_CTD_longitude2_degrees = new System.Windows.Forms.TextBox();
             this.txtbx_GC_CTD_longitude2_decimal = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal = new System.Windows.Forms.ComboBox();
             this.rdobtn_GC_CTD_latitude2_decimal = new System.Windows.Forms.RadioButton();
             this.rdobtn_GC_CTD_latitude2_DMS = new System.Windows.Forms.RadioButton();
             this.lbl_GC_CTD_latitude2_seconds = new System.Windows.Forms.Label();
@@ -188,30 +188,30 @@ namespace GlobalData
             this.txtbx_GC_CTD_latitude2_decimal = new System.Windows.Forms.TextBox();
             this.txtbx_GC_CTD_latitude2_seconds = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal = new System.Windows.Forms.ComboBox();
             this.lbl_GC_CTD_longitude1_decimal = new System.Windows.Forms.Label();
             this.rdobtn_GC_CTD_longitude1_decimal = new System.Windows.Forms.RadioButton();
             this.rdobtn_GC_CTD_longitude1_DMS = new System.Windows.Forms.RadioButton();
-            this.lbl_GC_CTD_longitude1_seconds = new System.Windows.Forms.Label();
-            this.txtbx_GC_CTD_longitude1_seconds = new System.Windows.Forms.TextBox();
-            this.lbl_GC_CTD_longitude1_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_longitude1_decimal = new System.Windows.Forms.TextBox();
             this.txtbx_GC_CTD_longitude1_minutes = new System.Windows.Forms.TextBox();
             this.lbl_GC_CTD_longitude1_degrees = new System.Windows.Forms.Label();
             this.txtbx_GC_CTD_longitude1_degrees = new System.Windows.Forms.TextBox();
-            this.txtbx_GC_CTD_longitude1_decimal = new System.Windows.Forms.TextBox();
+            this.txtbx_GC_CTD_longitude1_seconds = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_longitude1_seconds = new System.Windows.Forms.Label();
+            this.lbl_GC_CTD_longitude1_minutes = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.lbl_GC_CTD_bearing2_decimal = new System.Windows.Forms.Label();
             this.rdobtn_GC_CTD_bearing2_decimal = new System.Windows.Forms.RadioButton();
             this.rdobtn_GC_CTD_bearing2_DMS = new System.Windows.Forms.RadioButton();
-            this.lbl_GC_CTD_bearing2_seconds = new System.Windows.Forms.Label();
-            this.txtbx_GC_CTD_bearing2_seconds = new System.Windows.Forms.TextBox();
-            this.lbl_GC_CTD_bearing2_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing2_degrees = new System.Windows.Forms.TextBox();
             this.txtbx_GC_CTD_bearing2_minutes = new System.Windows.Forms.TextBox();
             this.lbl_GC_CTD_bearing2_degrees = new System.Windows.Forms.Label();
-            this.txtbx_GC_CTD_bearing2_degrees = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing2_minutes = new System.Windows.Forms.Label();
+            this.txtbx_GC_CTD_bearing2_seconds = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing2_seconds = new System.Windows.Forms.Label();
             this.txtbx_GC_CTD_bearing2_decimal = new System.Windows.Forms.TextBox();
+            this.lbl_GC_CTD_bearing2_decimal = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal = new System.Windows.Forms.ComboBox();
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal = new System.Windows.Forms.ComboBox();
             this.rdobtn_GC_CTD_latitude1_decimal = new System.Windows.Forms.RadioButton();
             this.rdobtn_GC_CTD_latitude1_DMS = new System.Windows.Forms.RadioButton();
             this.lbl_GC_CTD_latitude1_seconds = new System.Windows.Forms.Label();
@@ -237,6 +237,9 @@ namespace GlobalData
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_help_about = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.rdo_CG_CTD_results_format_DMS = new System.Windows.Forms.RadioButton();
+            this.rdo_GC_CTD_results_format_decimal_degrees = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabctrl_main.SuspendLayout();
             this.tab_great_circle.SuspendLayout();
@@ -282,6 +285,7 @@ namespace GlobalData
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1065,7 +1069,7 @@ namespace GlobalData
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.21089F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.21089F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 11F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel5.Controls.Add(this.panel15, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.panel16, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.panel17, 1, 5);
@@ -1095,7 +1099,7 @@ namespace GlobalData
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(8, 8);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(472, 119);
+            this.panel15.Size = new System.Drawing.Size(471, 119);
             this.panel15.TabIndex = 0;
             // 
             // grpbx_FD_longitude
@@ -1114,7 +1118,7 @@ namespace GlobalData
             this.grpbx_FD_longitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_longitude.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_longitude.Name = "grpbx_FD_longitude";
-            this.grpbx_FD_longitude.Size = new System.Drawing.Size(472, 119);
+            this.grpbx_FD_longitude.Size = new System.Drawing.Size(471, 119);
             this.grpbx_FD_longitude.TabIndex = 20;
             this.grpbx_FD_longitude.TabStop = false;
             this.grpbx_FD_longitude.Text = "Origin Longitude";
@@ -1126,7 +1130,7 @@ namespace GlobalData
             this.cmbobx_FD_origin_longitude_cardinal.Items.AddRange(new object[] {
             "E",
             "W"});
-            this.cmbobx_FD_origin_longitude_cardinal.Location = new System.Drawing.Point(403, 31);
+            this.cmbobx_FD_origin_longitude_cardinal.Location = new System.Drawing.Point(402, 31);
             this.cmbobx_FD_origin_longitude_cardinal.Name = "cmbobx_FD_origin_longitude_cardinal";
             this.cmbobx_FD_origin_longitude_cardinal.Size = new System.Drawing.Size(52, 28);
             this.cmbobx_FD_origin_longitude_cardinal.TabIndex = 17;
@@ -1135,7 +1139,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_longitude_decimaldegree.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_longitude_decimaldegree.AutoSize = true;
-            this.lbl_FD_origin_longitude_decimaldegree.Location = new System.Drawing.Point(293, 34);
+            this.lbl_FD_origin_longitude_decimaldegree.Location = new System.Drawing.Point(292, 34);
             this.lbl_FD_origin_longitude_decimaldegree.Name = "lbl_FD_origin_longitude_decimaldegree";
             this.lbl_FD_origin_longitude_decimaldegree.Size = new System.Drawing.Size(14, 20);
             this.lbl_FD_origin_longitude_decimaldegree.TabIndex = 8;
@@ -1145,7 +1149,7 @@ namespace GlobalData
             // 
             this.rdo_FD_origin_longitude_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_origin_longitude_decimal_degrees.AutoSize = true;
-            this.rdo_FD_origin_longitude_decimal_degrees.Location = new System.Drawing.Point(17, 63);
+            this.rdo_FD_origin_longitude_decimal_degrees.Location = new System.Drawing.Point(16, 63);
             this.rdo_FD_origin_longitude_decimal_degrees.Name = "rdo_FD_origin_longitude_decimal_degrees";
             this.rdo_FD_origin_longitude_decimal_degrees.Size = new System.Drawing.Size(156, 24);
             this.rdo_FD_origin_longitude_decimal_degrees.TabIndex = 1;
@@ -1157,7 +1161,7 @@ namespace GlobalData
             // 
             this.rdo_FD_origin_longitude_DMS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_origin_longitude_DMS.AutoSize = true;
-            this.rdo_FD_origin_longitude_DMS.Location = new System.Drawing.Point(193, 63);
+            this.rdo_FD_origin_longitude_DMS.Location = new System.Drawing.Point(192, 63);
             this.rdo_FD_origin_longitude_DMS.Name = "rdo_FD_origin_longitude_DMS";
             this.rdo_FD_origin_longitude_DMS.Size = new System.Drawing.Size(230, 24);
             this.rdo_FD_origin_longitude_DMS.TabIndex = 0;
@@ -1169,7 +1173,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_longitude_seconds.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_longitude_seconds.AutoSize = true;
-            this.lbl_FD_origin_longitude_seconds.Location = new System.Drawing.Point(382, 34);
+            this.lbl_FD_origin_longitude_seconds.Location = new System.Drawing.Point(381, 34);
             this.lbl_FD_origin_longitude_seconds.Name = "lbl_FD_origin_longitude_seconds";
             this.lbl_FD_origin_longitude_seconds.Size = new System.Drawing.Size(15, 20);
             this.lbl_FD_origin_longitude_seconds.TabIndex = 14;
@@ -1178,7 +1182,7 @@ namespace GlobalData
             // txtbx_FD_origin_longitude_seconds
             // 
             this.txtbx_FD_origin_longitude_seconds.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_longitude_seconds.Location = new System.Drawing.Point(276, 31);
+            this.txtbx_FD_origin_longitude_seconds.Location = new System.Drawing.Point(275, 31);
             this.txtbx_FD_origin_longitude_seconds.Name = "txtbx_FD_origin_longitude_seconds";
             this.txtbx_FD_origin_longitude_seconds.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_origin_longitude_seconds.TabIndex = 13;
@@ -1187,7 +1191,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_longitude_minutes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_longitude_minutes.AutoSize = true;
-            this.lbl_FD_origin_longitude_minutes.Location = new System.Drawing.Point(256, 34);
+            this.lbl_FD_origin_longitude_minutes.Location = new System.Drawing.Point(255, 34);
             this.lbl_FD_origin_longitude_minutes.Name = "lbl_FD_origin_longitude_minutes";
             this.lbl_FD_origin_longitude_minutes.Size = new System.Drawing.Size(12, 20);
             this.lbl_FD_origin_longitude_minutes.TabIndex = 12;
@@ -1196,7 +1200,7 @@ namespace GlobalData
             // txtbx_FD_origin_longitude_minutes
             // 
             this.txtbx_FD_origin_longitude_minutes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_longitude_minutes.Location = new System.Drawing.Point(150, 31);
+            this.txtbx_FD_origin_longitude_minutes.Location = new System.Drawing.Point(149, 31);
             this.txtbx_FD_origin_longitude_minutes.Name = "txtbx_FD_origin_longitude_minutes";
             this.txtbx_FD_origin_longitude_minutes.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_origin_longitude_minutes.TabIndex = 11;
@@ -1204,7 +1208,7 @@ namespace GlobalData
             // txtbx_FD_origin_longitude_decimal_degrees
             // 
             this.txtbx_FD_origin_longitude_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_longitude_decimal_degrees.Location = new System.Drawing.Point(106, 31);
+            this.txtbx_FD_origin_longitude_decimal_degrees.Location = new System.Drawing.Point(105, 31);
             this.txtbx_FD_origin_longitude_decimal_degrees.Name = "txtbx_FD_origin_longitude_decimal_degrees";
             this.txtbx_FD_origin_longitude_decimal_degrees.Size = new System.Drawing.Size(184, 26);
             this.txtbx_FD_origin_longitude_decimal_degrees.TabIndex = 3;
@@ -1214,7 +1218,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_longitude_degree.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_longitude_degree.AutoSize = true;
-            this.lbl_FD_origin_longitude_degree.Location = new System.Drawing.Point(129, 34);
+            this.lbl_FD_origin_longitude_degree.Location = new System.Drawing.Point(128, 34);
             this.lbl_FD_origin_longitude_degree.Name = "lbl_FD_origin_longitude_degree";
             this.lbl_FD_origin_longitude_degree.Size = new System.Drawing.Size(14, 20);
             this.lbl_FD_origin_longitude_degree.TabIndex = 10;
@@ -1223,7 +1227,7 @@ namespace GlobalData
             // txtbx_FD_origin_longitude_degrees
             // 
             this.txtbx_FD_origin_longitude_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_longitude_degrees.Location = new System.Drawing.Point(23, 31);
+            this.txtbx_FD_origin_longitude_degrees.Location = new System.Drawing.Point(22, 31);
             this.txtbx_FD_origin_longitude_degrees.Name = "txtbx_FD_origin_longitude_degrees";
             this.txtbx_FD_origin_longitude_degrees.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_origin_longitude_degrees.TabIndex = 9;
@@ -1234,7 +1238,7 @@ namespace GlobalData
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(8, 138);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(472, 119);
+            this.panel16.Size = new System.Drawing.Size(471, 119);
             this.panel16.TabIndex = 1;
             // 
             // grpbx_FD_latitude
@@ -1253,7 +1257,7 @@ namespace GlobalData
             this.grpbx_FD_latitude.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_latitude.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_latitude.Name = "grpbx_FD_latitude";
-            this.grpbx_FD_latitude.Size = new System.Drawing.Size(472, 119);
+            this.grpbx_FD_latitude.Size = new System.Drawing.Size(471, 119);
             this.grpbx_FD_latitude.TabIndex = 19;
             this.grpbx_FD_latitude.TabStop = false;
             this.grpbx_FD_latitude.Text = "Origin Latitude";
@@ -1265,7 +1269,7 @@ namespace GlobalData
             this.cmbobx_FD_origin_latitude_cardinal.Items.AddRange(new object[] {
             "N",
             "S"});
-            this.cmbobx_FD_origin_latitude_cardinal.Location = new System.Drawing.Point(403, 31);
+            this.cmbobx_FD_origin_latitude_cardinal.Location = new System.Drawing.Point(402, 31);
             this.cmbobx_FD_origin_latitude_cardinal.Name = "cmbobx_FD_origin_latitude_cardinal";
             this.cmbobx_FD_origin_latitude_cardinal.Size = new System.Drawing.Size(52, 28);
             this.cmbobx_FD_origin_latitude_cardinal.TabIndex = 18;
@@ -1274,7 +1278,7 @@ namespace GlobalData
             // 
             this.rdo_FD_origin_latitude_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_origin_latitude_decimal_degrees.AutoSize = true;
-            this.rdo_FD_origin_latitude_decimal_degrees.Location = new System.Drawing.Point(17, 63);
+            this.rdo_FD_origin_latitude_decimal_degrees.Location = new System.Drawing.Point(16, 63);
             this.rdo_FD_origin_latitude_decimal_degrees.Name = "rdo_FD_origin_latitude_decimal_degrees";
             this.rdo_FD_origin_latitude_decimal_degrees.Size = new System.Drawing.Size(156, 24);
             this.rdo_FD_origin_latitude_decimal_degrees.TabIndex = 1;
@@ -1286,7 +1290,7 @@ namespace GlobalData
             // 
             this.rdo_FD_origin_latitude_DMS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_origin_latitude_DMS.AutoSize = true;
-            this.rdo_FD_origin_latitude_DMS.Location = new System.Drawing.Point(193, 63);
+            this.rdo_FD_origin_latitude_DMS.Location = new System.Drawing.Point(192, 63);
             this.rdo_FD_origin_latitude_DMS.Name = "rdo_FD_origin_latitude_DMS";
             this.rdo_FD_origin_latitude_DMS.Size = new System.Drawing.Size(230, 24);
             this.rdo_FD_origin_latitude_DMS.TabIndex = 0;
@@ -1298,7 +1302,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_latitude_seconds.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_latitude_seconds.AutoSize = true;
-            this.lbl_FD_origin_latitude_seconds.Location = new System.Drawing.Point(382, 34);
+            this.lbl_FD_origin_latitude_seconds.Location = new System.Drawing.Point(381, 34);
             this.lbl_FD_origin_latitude_seconds.Name = "lbl_FD_origin_latitude_seconds";
             this.lbl_FD_origin_latitude_seconds.Size = new System.Drawing.Size(15, 20);
             this.lbl_FD_origin_latitude_seconds.TabIndex = 14;
@@ -1307,7 +1311,7 @@ namespace GlobalData
             // txtbx_FD_origin_latitude_seconds
             // 
             this.txtbx_FD_origin_latitude_seconds.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_latitude_seconds.Location = new System.Drawing.Point(276, 31);
+            this.txtbx_FD_origin_latitude_seconds.Location = new System.Drawing.Point(275, 31);
             this.txtbx_FD_origin_latitude_seconds.Name = "txtbx_FD_origin_latitude_seconds";
             this.txtbx_FD_origin_latitude_seconds.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_origin_latitude_seconds.TabIndex = 13;
@@ -1315,7 +1319,7 @@ namespace GlobalData
             // txtbx_FD_origin_latitude_minutes
             // 
             this.txtbx_FD_origin_latitude_minutes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_latitude_minutes.Location = new System.Drawing.Point(150, 31);
+            this.txtbx_FD_origin_latitude_minutes.Location = new System.Drawing.Point(149, 31);
             this.txtbx_FD_origin_latitude_minutes.Name = "txtbx_FD_origin_latitude_minutes";
             this.txtbx_FD_origin_latitude_minutes.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_origin_latitude_minutes.TabIndex = 11;
@@ -1324,7 +1328,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_latitude_degree.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_latitude_degree.AutoSize = true;
-            this.lbl_FD_origin_latitude_degree.Location = new System.Drawing.Point(129, 34);
+            this.lbl_FD_origin_latitude_degree.Location = new System.Drawing.Point(128, 34);
             this.lbl_FD_origin_latitude_degree.Name = "lbl_FD_origin_latitude_degree";
             this.lbl_FD_origin_latitude_degree.Size = new System.Drawing.Size(14, 20);
             this.lbl_FD_origin_latitude_degree.TabIndex = 10;
@@ -1333,7 +1337,7 @@ namespace GlobalData
             // txtbx_FD_origin_latitude_degrees
             // 
             this.txtbx_FD_origin_latitude_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_latitude_degrees.Location = new System.Drawing.Point(23, 31);
+            this.txtbx_FD_origin_latitude_degrees.Location = new System.Drawing.Point(22, 31);
             this.txtbx_FD_origin_latitude_degrees.Name = "txtbx_FD_origin_latitude_degrees";
             this.txtbx_FD_origin_latitude_degrees.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_origin_latitude_degrees.TabIndex = 9;
@@ -1342,7 +1346,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_latitude_minutes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_latitude_minutes.AutoSize = true;
-            this.lbl_FD_origin_latitude_minutes.Location = new System.Drawing.Point(256, 34);
+            this.lbl_FD_origin_latitude_minutes.Location = new System.Drawing.Point(255, 34);
             this.lbl_FD_origin_latitude_minutes.Name = "lbl_FD_origin_latitude_minutes";
             this.lbl_FD_origin_latitude_minutes.Size = new System.Drawing.Size(12, 20);
             this.lbl_FD_origin_latitude_minutes.TabIndex = 12;
@@ -1352,7 +1356,7 @@ namespace GlobalData
             // 
             this.lbl_FD_origin_latitude_decimaldegree.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_origin_latitude_decimaldegree.AutoSize = true;
-            this.lbl_FD_origin_latitude_decimaldegree.Location = new System.Drawing.Point(293, 34);
+            this.lbl_FD_origin_latitude_decimaldegree.Location = new System.Drawing.Point(292, 34);
             this.lbl_FD_origin_latitude_decimaldegree.Name = "lbl_FD_origin_latitude_decimaldegree";
             this.lbl_FD_origin_latitude_decimaldegree.Size = new System.Drawing.Size(14, 20);
             this.lbl_FD_origin_latitude_decimaldegree.TabIndex = 8;
@@ -1361,7 +1365,7 @@ namespace GlobalData
             // txtbx_FD_origin_latitude_decimal_degrees
             // 
             this.txtbx_FD_origin_latitude_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_origin_latitude_decimal_degrees.Location = new System.Drawing.Point(104, 31);
+            this.txtbx_FD_origin_latitude_decimal_degrees.Location = new System.Drawing.Point(103, 31);
             this.txtbx_FD_origin_latitude_decimal_degrees.Name = "txtbx_FD_origin_latitude_decimal_degrees";
             this.txtbx_FD_origin_latitude_decimal_degrees.Size = new System.Drawing.Size(184, 26);
             this.txtbx_FD_origin_latitude_decimal_degrees.TabIndex = 5;
@@ -1373,7 +1377,7 @@ namespace GlobalData
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(8, 268);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(472, 119);
+            this.panel17.Size = new System.Drawing.Size(471, 119);
             this.panel17.TabIndex = 2;
             // 
             // grpbx_FD_bearing
@@ -1391,7 +1395,7 @@ namespace GlobalData
             this.grpbx_FD_bearing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_bearing.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_bearing.Name = "grpbx_FD_bearing";
-            this.grpbx_FD_bearing.Size = new System.Drawing.Size(472, 119);
+            this.grpbx_FD_bearing.Size = new System.Drawing.Size(471, 119);
             this.grpbx_FD_bearing.TabIndex = 18;
             this.grpbx_FD_bearing.TabStop = false;
             this.grpbx_FD_bearing.Text = "Bearing";
@@ -1400,7 +1404,7 @@ namespace GlobalData
             // 
             this.lbl_FD_bearing_decimaldegree.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_bearing_decimaldegree.AutoSize = true;
-            this.lbl_FD_bearing_decimaldegree.Location = new System.Drawing.Point(310, 29);
+            this.lbl_FD_bearing_decimaldegree.Location = new System.Drawing.Point(309, 29);
             this.lbl_FD_bearing_decimaldegree.Name = "lbl_FD_bearing_decimaldegree";
             this.lbl_FD_bearing_decimaldegree.Size = new System.Drawing.Size(14, 20);
             this.lbl_FD_bearing_decimaldegree.TabIndex = 8;
@@ -1410,7 +1414,7 @@ namespace GlobalData
             // 
             this.rdo_FD_bearing_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_bearing_decimal_degrees.AutoSize = true;
-            this.rdo_FD_bearing_decimal_degrees.Location = new System.Drawing.Point(33, 69);
+            this.rdo_FD_bearing_decimal_degrees.Location = new System.Drawing.Point(32, 69);
             this.rdo_FD_bearing_decimal_degrees.Name = "rdo_FD_bearing_decimal_degrees";
             this.rdo_FD_bearing_decimal_degrees.Size = new System.Drawing.Size(156, 24);
             this.rdo_FD_bearing_decimal_degrees.TabIndex = 1;
@@ -1422,7 +1426,7 @@ namespace GlobalData
             // 
             this.rdo_FD_bearing_DMS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdo_FD_bearing_DMS.AutoSize = true;
-            this.rdo_FD_bearing_DMS.Location = new System.Drawing.Point(209, 69);
+            this.rdo_FD_bearing_DMS.Location = new System.Drawing.Point(208, 69);
             this.rdo_FD_bearing_DMS.Name = "rdo_FD_bearing_DMS";
             this.rdo_FD_bearing_DMS.Size = new System.Drawing.Size(230, 24);
             this.rdo_FD_bearing_DMS.TabIndex = 0;
@@ -1433,7 +1437,7 @@ namespace GlobalData
             // txtbx_FD_bearing_decimal_degrees
             // 
             this.txtbx_FD_bearing_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_bearing_decimal_degrees.Location = new System.Drawing.Point(120, 26);
+            this.txtbx_FD_bearing_decimal_degrees.Location = new System.Drawing.Point(119, 26);
             this.txtbx_FD_bearing_decimal_degrees.Name = "txtbx_FD_bearing_decimal_degrees";
             this.txtbx_FD_bearing_decimal_degrees.Size = new System.Drawing.Size(184, 26);
             this.txtbx_FD_bearing_decimal_degrees.TabIndex = 7;
@@ -1443,7 +1447,7 @@ namespace GlobalData
             // 
             this.lbl_FD_bearing_seconds.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_bearing_seconds.AutoSize = true;
-            this.lbl_FD_bearing_seconds.Location = new System.Drawing.Point(397, 29);
+            this.lbl_FD_bearing_seconds.Location = new System.Drawing.Point(396, 29);
             this.lbl_FD_bearing_seconds.Name = "lbl_FD_bearing_seconds";
             this.lbl_FD_bearing_seconds.Size = new System.Drawing.Size(15, 20);
             this.lbl_FD_bearing_seconds.TabIndex = 14;
@@ -1452,7 +1456,7 @@ namespace GlobalData
             // txtbx_FD_bearing_seconds
             // 
             this.txtbx_FD_bearing_seconds.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_bearing_seconds.Location = new System.Drawing.Point(291, 26);
+            this.txtbx_FD_bearing_seconds.Location = new System.Drawing.Point(290, 26);
             this.txtbx_FD_bearing_seconds.Name = "txtbx_FD_bearing_seconds";
             this.txtbx_FD_bearing_seconds.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_bearing_seconds.TabIndex = 13;
@@ -1461,7 +1465,7 @@ namespace GlobalData
             // 
             this.lbl_FD_bearing_minutes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_bearing_minutes.AutoSize = true;
-            this.lbl_FD_bearing_minutes.Location = new System.Drawing.Point(271, 29);
+            this.lbl_FD_bearing_minutes.Location = new System.Drawing.Point(270, 29);
             this.lbl_FD_bearing_minutes.Name = "lbl_FD_bearing_minutes";
             this.lbl_FD_bearing_minutes.Size = new System.Drawing.Size(12, 20);
             this.lbl_FD_bearing_minutes.TabIndex = 12;
@@ -1470,7 +1474,7 @@ namespace GlobalData
             // txtbx_FD_bearing_minutes
             // 
             this.txtbx_FD_bearing_minutes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_bearing_minutes.Location = new System.Drawing.Point(165, 26);
+            this.txtbx_FD_bearing_minutes.Location = new System.Drawing.Point(164, 26);
             this.txtbx_FD_bearing_minutes.Name = "txtbx_FD_bearing_minutes";
             this.txtbx_FD_bearing_minutes.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_bearing_minutes.TabIndex = 11;
@@ -1479,7 +1483,7 @@ namespace GlobalData
             // 
             this.lbl_FD_bearing_degree.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_bearing_degree.AutoSize = true;
-            this.lbl_FD_bearing_degree.Location = new System.Drawing.Point(144, 29);
+            this.lbl_FD_bearing_degree.Location = new System.Drawing.Point(143, 29);
             this.lbl_FD_bearing_degree.Name = "lbl_FD_bearing_degree";
             this.lbl_FD_bearing_degree.Size = new System.Drawing.Size(14, 20);
             this.lbl_FD_bearing_degree.TabIndex = 10;
@@ -1488,7 +1492,7 @@ namespace GlobalData
             // txtbx_FD_bearing_degrees
             // 
             this.txtbx_FD_bearing_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_FD_bearing_degrees.Location = new System.Drawing.Point(38, 26);
+            this.txtbx_FD_bearing_degrees.Location = new System.Drawing.Point(37, 26);
             this.txtbx_FD_bearing_degrees.Name = "txtbx_FD_bearing_degrees";
             this.txtbx_FD_bearing_degrees.Size = new System.Drawing.Size(100, 26);
             this.txtbx_FD_bearing_degrees.TabIndex = 9;
@@ -1499,7 +1503,7 @@ namespace GlobalData
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(8, 398);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(472, 119);
+            this.panel18.Size = new System.Drawing.Size(471, 119);
             this.panel18.TabIndex = 3;
             // 
             // grpbx_FD_distance
@@ -1513,7 +1517,7 @@ namespace GlobalData
             this.grpbx_FD_distance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbx_FD_distance.Location = new System.Drawing.Point(0, 0);
             this.grpbx_FD_distance.Name = "grpbx_FD_distance";
-            this.grpbx_FD_distance.Size = new System.Drawing.Size(472, 119);
+            this.grpbx_FD_distance.Size = new System.Drawing.Size(471, 119);
             this.grpbx_FD_distance.TabIndex = 16;
             this.grpbx_FD_distance.TabStop = false;
             this.grpbx_FD_distance.Text = "Distance";
@@ -1522,7 +1526,7 @@ namespace GlobalData
             // 
             this.lbl_FD_distance_type.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_FD_distance_type.AutoSize = true;
-            this.lbl_FD_distance_type.Location = new System.Drawing.Point(337, 34);
+            this.lbl_FD_distance_type.Location = new System.Drawing.Point(336, 34);
             this.lbl_FD_distance_type.Name = "lbl_FD_distance_type";
             this.lbl_FD_distance_type.Size = new System.Drawing.Size(22, 20);
             this.lbl_FD_distance_type.TabIndex = 16;
@@ -1532,7 +1536,7 @@ namespace GlobalData
             // 
             this.rdobtn_FD_nauticalmiles.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdobtn_FD_nauticalmiles.AutoSize = true;
-            this.rdobtn_FD_nauticalmiles.Location = new System.Drawing.Point(310, 67);
+            this.rdobtn_FD_nauticalmiles.Location = new System.Drawing.Point(309, 67);
             this.rdobtn_FD_nauticalmiles.Name = "rdobtn_FD_nauticalmiles";
             this.rdobtn_FD_nauticalmiles.Size = new System.Drawing.Size(129, 24);
             this.rdobtn_FD_nauticalmiles.TabIndex = 15;
@@ -1544,7 +1548,7 @@ namespace GlobalData
             // 
             this.rdobtn_FD_miles.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdobtn_FD_miles.AutoSize = true;
-            this.rdobtn_FD_miles.Location = new System.Drawing.Point(234, 67);
+            this.rdobtn_FD_miles.Location = new System.Drawing.Point(233, 67);
             this.rdobtn_FD_miles.Name = "rdobtn_FD_miles";
             this.rdobtn_FD_miles.Size = new System.Drawing.Size(70, 24);
             this.rdobtn_FD_miles.TabIndex = 14;
@@ -1556,7 +1560,7 @@ namespace GlobalData
             // 
             this.rdobtn_FD_kilometres.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdobtn_FD_kilometres.AutoSize = true;
-            this.rdobtn_FD_kilometres.Location = new System.Drawing.Point(122, 67);
+            this.rdobtn_FD_kilometres.Location = new System.Drawing.Point(121, 67);
             this.rdobtn_FD_kilometres.Name = "rdobtn_FD_kilometres";
             this.rdobtn_FD_kilometres.Size = new System.Drawing.Size(106, 24);
             this.rdobtn_FD_kilometres.TabIndex = 13;
@@ -1568,7 +1572,7 @@ namespace GlobalData
             // 
             this.rdobtn_FD_metres.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rdobtn_FD_metres.AutoSize = true;
-            this.rdobtn_FD_metres.Location = new System.Drawing.Point(33, 67);
+            this.rdobtn_FD_metres.Location = new System.Drawing.Point(32, 67);
             this.rdobtn_FD_metres.Name = "rdobtn_FD_metres";
             this.rdobtn_FD_metres.Size = new System.Drawing.Size(83, 24);
             this.rdobtn_FD_metres.TabIndex = 12;
@@ -1579,7 +1583,7 @@ namespace GlobalData
             // txtbx_distance
             // 
             this.txtbx_distance.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtbx_distance.Location = new System.Drawing.Point(147, 28);
+            this.txtbx_distance.Location = new System.Drawing.Point(146, 28);
             this.txtbx_distance.Name = "txtbx_distance";
             this.txtbx_distance.Size = new System.Drawing.Size(184, 26);
             this.txtbx_distance.TabIndex = 9;
@@ -1589,7 +1593,7 @@ namespace GlobalData
             // 
             this.panel19.Controls.Add(this.groupBox1);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(491, 398);
+            this.panel19.Location = new System.Drawing.Point(490, 398);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(279, 119);
             this.panel19.TabIndex = 4;
@@ -1633,7 +1637,7 @@ namespace GlobalData
             this.tableLayoutPanel5.SetColumnSpan(this.panel20, 3);
             this.panel20.Controls.Add(this.rchtxbx_GC_findDestination_output);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(491, 8);
+            this.panel20.Location = new System.Drawing.Point(490, 8);
             this.panel20.Name = "panel20";
             this.tableLayoutPanel5.SetRowSpan(this.panel20, 5);
             this.panel20.Size = new System.Drawing.Size(569, 379);
@@ -1659,7 +1663,7 @@ namespace GlobalData
             this.tableLayoutPanel6.Controls.Add(this.btn_GC_find_destination, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.btn_clear_findDestination_output, 3, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(781, 398);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(780, 398);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
@@ -1692,6 +1696,7 @@ namespace GlobalData
             // 
             // tab_CTD
             // 
+            this.tab_CTD.Controls.Add(this.groupBox10);
             this.tab_CTD.Controls.Add(this.btn_GC_CTD_clear_output);
             this.tab_CTD.Controls.Add(this.rchtxbx_GC_CTD_output);
             this.tab_CTD.Controls.Add(this.btn_GC_CTD_compute_intersection);
@@ -1710,33 +1715,35 @@ namespace GlobalData
             // 
             // btn_GC_CTD_clear_output
             // 
-            this.btn_GC_CTD_clear_output.Location = new System.Drawing.Point(890, 417);
+            this.btn_GC_CTD_clear_output.Location = new System.Drawing.Point(913, 453);
             this.btn_GC_CTD_clear_output.Name = "btn_GC_CTD_clear_output";
             this.btn_GC_CTD_clear_output.Size = new System.Drawing.Size(121, 61);
             this.btn_GC_CTD_clear_output.TabIndex = 26;
             this.btn_GC_CTD_clear_output.Text = "Clear";
             this.btn_GC_CTD_clear_output.UseVisualStyleBackColor = true;
+            this.btn_GC_CTD_clear_output.Click += new System.EventHandler(this.btn_GC_CTD_clear_output_Click);
             // 
             // rchtxbx_GC_CTD_output
             // 
             this.rchtxbx_GC_CTD_output.Location = new System.Drawing.Point(21, 382);
             this.rchtxbx_GC_CTD_output.Name = "rchtxbx_GC_CTD_output";
-            this.rchtxbx_GC_CTD_output.Size = new System.Drawing.Size(692, 132);
+            this.rchtxbx_GC_CTD_output.Size = new System.Drawing.Size(527, 132);
             this.rchtxbx_GC_CTD_output.TabIndex = 25;
             this.rchtxbx_GC_CTD_output.Text = "";
             // 
             // btn_GC_CTD_compute_intersection
             // 
-            this.btn_GC_CTD_compute_intersection.Location = new System.Drawing.Point(735, 417);
+            this.btn_GC_CTD_compute_intersection.Location = new System.Drawing.Point(913, 386);
             this.btn_GC_CTD_compute_intersection.Name = "btn_GC_CTD_compute_intersection";
             this.btn_GC_CTD_compute_intersection.Size = new System.Drawing.Size(121, 61);
             this.btn_GC_CTD_compute_intersection.TabIndex = 24;
             this.btn_GC_CTD_compute_intersection.Text = "Compute Intersection";
             this.btn_GC_CTD_compute_intersection.UseVisualStyleBackColor = true;
+            this.btn_GC_CTD_compute_intersection.Click += new System.EventHandler(this.btn_GC_CTD_compute_intersection_Click);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.cmbobx_GC_CTD_longitude2_DSM_cardinal);
+            this.groupBox7.Controls.Add(this.cmbobx_GC_CTD_longitude2_DMS_cardinal);
             this.groupBox7.Controls.Add(this.lbl_GC_CTD_longitude2_decimal);
             this.groupBox7.Controls.Add(this.rdobtn_GC_CTD_longitude2_decimal);
             this.groupBox7.Controls.Add(this.rdobtn_GC_CTD_longitude2_DMS);
@@ -1754,16 +1761,16 @@ namespace GlobalData
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Longitude 2";
             // 
-            // cmbobx_GC_CTD_longitude2_DSM_cardinal
+            // cmbobx_GC_CTD_longitude2_DMS_cardinal
             // 
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.FormattingEnabled = true;
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal.Items.AddRange(new object[] {
             "E",
             "W"});
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Name = "cmbobx_GC_CTD_longitude2_DSM_cardinal";
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
-            this.cmbobx_GC_CTD_longitude2_DSM_cardinal.TabIndex = 17;
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal.Name = "cmbobx_GC_CTD_longitude2_DMS_cardinal";
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_longitude2_DMS_cardinal.TabIndex = 17;
             // 
             // lbl_GC_CTD_longitude2_decimal
             // 
@@ -1854,7 +1861,7 @@ namespace GlobalData
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.cmbobx_GC_CTD_latitude2_DSM_cardinal);
+            this.groupBox8.Controls.Add(this.cmbobx_GC_CTD_latitude2_DMS_cardinal);
             this.groupBox8.Controls.Add(this.rdobtn_GC_CTD_latitude2_decimal);
             this.groupBox8.Controls.Add(this.rdobtn_GC_CTD_latitude2_DMS);
             this.groupBox8.Controls.Add(this.lbl_GC_CTD_latitude2_seconds);
@@ -1872,16 +1879,16 @@ namespace GlobalData
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Latitude 2";
             // 
-            // cmbobx_GC_CTD_latitude2_DSM_cardinal
+            // cmbobx_GC_CTD_latitude2_DMS_cardinal
             // 
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.FormattingEnabled = true;
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal.Items.AddRange(new object[] {
             "N",
             "S"});
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Name = "cmbobx_GC_CTD_latitude2_DSM_cardinal";
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
-            this.cmbobx_GC_CTD_latitude2_DSM_cardinal.TabIndex = 18;
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal.Name = "cmbobx_GC_CTD_latitude2_DMS_cardinal";
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_latitude2_DMS_cardinal.TabIndex = 18;
             // 
             // rdobtn_GC_CTD_latitude2_decimal
             // 
@@ -1972,7 +1979,7 @@ namespace GlobalData
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cmbobx_GC_CTD_longitude1_DSM_cardinal);
+            this.groupBox4.Controls.Add(this.cmbobx_GC_CTD_longitude1_DMS_cardinal);
             this.groupBox4.Controls.Add(this.lbl_GC_CTD_longitude1_decimal);
             this.groupBox4.Controls.Add(this.rdobtn_GC_CTD_longitude1_decimal);
             this.groupBox4.Controls.Add(this.rdobtn_GC_CTD_longitude1_DMS);
@@ -1990,16 +1997,16 @@ namespace GlobalData
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Longitude 1";
             // 
-            // cmbobx_GC_CTD_longitude1_DSM_cardinal
+            // cmbobx_GC_CTD_longitude1_DMS_cardinal
             // 
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.FormattingEnabled = true;
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal.Items.AddRange(new object[] {
             "E",
             "W"});
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Name = "cmbobx_GC_CTD_longitude1_DSM_cardinal";
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
-            this.cmbobx_GC_CTD_longitude1_DSM_cardinal.TabIndex = 17;
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal.Name = "cmbobx_GC_CTD_longitude1_DMS_cardinal";
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_longitude1_DMS_cardinal.TabIndex = 17;
             // 
             // lbl_GC_CTD_longitude1_decimal
             // 
@@ -2032,30 +2039,13 @@ namespace GlobalData
             this.rdobtn_GC_CTD_longitude1_DMS.UseVisualStyleBackColor = true;
             this.rdobtn_GC_CTD_longitude1_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_longitude1_rdobtn_changed);
             // 
-            // lbl_GC_CTD_longitude1_seconds
+            // txtbx_GC_CTD_longitude1_decimal
             // 
-            this.lbl_GC_CTD_longitude1_seconds.AutoSize = true;
-            this.lbl_GC_CTD_longitude1_seconds.Location = new System.Drawing.Point(374, 37);
-            this.lbl_GC_CTD_longitude1_seconds.Name = "lbl_GC_CTD_longitude1_seconds";
-            this.lbl_GC_CTD_longitude1_seconds.Size = new System.Drawing.Size(15, 20);
-            this.lbl_GC_CTD_longitude1_seconds.TabIndex = 14;
-            this.lbl_GC_CTD_longitude1_seconds.Text = "\"";
-            // 
-            // txtbx_GC_CTD_longitude1_seconds
-            // 
-            this.txtbx_GC_CTD_longitude1_seconds.Location = new System.Drawing.Point(268, 34);
-            this.txtbx_GC_CTD_longitude1_seconds.Name = "txtbx_GC_CTD_longitude1_seconds";
-            this.txtbx_GC_CTD_longitude1_seconds.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_GC_CTD_longitude1_seconds.TabIndex = 13;
-            // 
-            // lbl_GC_CTD_longitude1_minutes
-            // 
-            this.lbl_GC_CTD_longitude1_minutes.AutoSize = true;
-            this.lbl_GC_CTD_longitude1_minutes.Location = new System.Drawing.Point(248, 37);
-            this.lbl_GC_CTD_longitude1_minutes.Name = "lbl_GC_CTD_longitude1_minutes";
-            this.lbl_GC_CTD_longitude1_minutes.Size = new System.Drawing.Size(12, 20);
-            this.lbl_GC_CTD_longitude1_minutes.TabIndex = 12;
-            this.lbl_GC_CTD_longitude1_minutes.Text = "\'";
+            this.txtbx_GC_CTD_longitude1_decimal.Location = new System.Drawing.Point(98, 34);
+            this.txtbx_GC_CTD_longitude1_decimal.Name = "txtbx_GC_CTD_longitude1_decimal";
+            this.txtbx_GC_CTD_longitude1_decimal.Size = new System.Drawing.Size(184, 26);
+            this.txtbx_GC_CTD_longitude1_decimal.TabIndex = 3;
+            this.txtbx_GC_CTD_longitude1_decimal.Text = "-1.72972222";
             // 
             // txtbx_GC_CTD_longitude1_minutes
             // 
@@ -2080,13 +2070,30 @@ namespace GlobalData
             this.txtbx_GC_CTD_longitude1_degrees.Size = new System.Drawing.Size(100, 26);
             this.txtbx_GC_CTD_longitude1_degrees.TabIndex = 9;
             // 
-            // txtbx_GC_CTD_longitude1_decimal
+            // txtbx_GC_CTD_longitude1_seconds
             // 
-            this.txtbx_GC_CTD_longitude1_decimal.Location = new System.Drawing.Point(98, 34);
-            this.txtbx_GC_CTD_longitude1_decimal.Name = "txtbx_GC_CTD_longitude1_decimal";
-            this.txtbx_GC_CTD_longitude1_decimal.Size = new System.Drawing.Size(184, 26);
-            this.txtbx_GC_CTD_longitude1_decimal.TabIndex = 3;
-            this.txtbx_GC_CTD_longitude1_decimal.Text = "-1.72972222";
+            this.txtbx_GC_CTD_longitude1_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_longitude1_seconds.Name = "txtbx_GC_CTD_longitude1_seconds";
+            this.txtbx_GC_CTD_longitude1_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_longitude1_seconds.TabIndex = 13;
+            // 
+            // lbl_GC_CTD_longitude1_seconds
+            // 
+            this.lbl_GC_CTD_longitude1_seconds.AutoSize = true;
+            this.lbl_GC_CTD_longitude1_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_longitude1_seconds.Name = "lbl_GC_CTD_longitude1_seconds";
+            this.lbl_GC_CTD_longitude1_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_longitude1_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_longitude1_seconds.Text = "\"";
+            // 
+            // lbl_GC_CTD_longitude1_minutes
+            // 
+            this.lbl_GC_CTD_longitude1_minutes.AutoSize = true;
+            this.lbl_GC_CTD_longitude1_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_longitude1_minutes.Name = "lbl_GC_CTD_longitude1_minutes";
+            this.lbl_GC_CTD_longitude1_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_longitude1_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_longitude1_minutes.Text = "\'";
             // 
             // groupBox9
             // 
@@ -2106,15 +2113,6 @@ namespace GlobalData
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Bearing 2";
-            // 
-            // lbl_GC_CTD_bearing2_decimal
-            // 
-            this.lbl_GC_CTD_bearing2_decimal.AutoSize = true;
-            this.lbl_GC_CTD_bearing2_decimal.Location = new System.Drawing.Point(287, 37);
-            this.lbl_GC_CTD_bearing2_decimal.Name = "lbl_GC_CTD_bearing2_decimal";
-            this.lbl_GC_CTD_bearing2_decimal.Size = new System.Drawing.Size(14, 20);
-            this.lbl_GC_CTD_bearing2_decimal.TabIndex = 8;
-            this.lbl_GC_CTD_bearing2_decimal.Text = "°";
             // 
             // rdobtn_GC_CTD_bearing2_decimal
             // 
@@ -2138,30 +2136,12 @@ namespace GlobalData
             this.rdobtn_GC_CTD_bearing2_DMS.UseVisualStyleBackColor = true;
             this.rdobtn_GC_CTD_bearing2_DMS.CheckedChanged += new System.EventHandler(this.GC_CTD_origin_bearing2_rdobtn_changed);
             // 
-            // lbl_GC_CTD_bearing2_seconds
+            // txtbx_GC_CTD_bearing2_degrees
             // 
-            this.lbl_GC_CTD_bearing2_seconds.AutoSize = true;
-            this.lbl_GC_CTD_bearing2_seconds.Location = new System.Drawing.Point(374, 37);
-            this.lbl_GC_CTD_bearing2_seconds.Name = "lbl_GC_CTD_bearing2_seconds";
-            this.lbl_GC_CTD_bearing2_seconds.Size = new System.Drawing.Size(15, 20);
-            this.lbl_GC_CTD_bearing2_seconds.TabIndex = 14;
-            this.lbl_GC_CTD_bearing2_seconds.Text = "\"";
-            // 
-            // txtbx_GC_CTD_bearing2_seconds
-            // 
-            this.txtbx_GC_CTD_bearing2_seconds.Location = new System.Drawing.Point(268, 34);
-            this.txtbx_GC_CTD_bearing2_seconds.Name = "txtbx_GC_CTD_bearing2_seconds";
-            this.txtbx_GC_CTD_bearing2_seconds.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_GC_CTD_bearing2_seconds.TabIndex = 13;
-            // 
-            // lbl_GC_CTD_bearing2_minutes
-            // 
-            this.lbl_GC_CTD_bearing2_minutes.AutoSize = true;
-            this.lbl_GC_CTD_bearing2_minutes.Location = new System.Drawing.Point(248, 37);
-            this.lbl_GC_CTD_bearing2_minutes.Name = "lbl_GC_CTD_bearing2_minutes";
-            this.lbl_GC_CTD_bearing2_minutes.Size = new System.Drawing.Size(12, 20);
-            this.lbl_GC_CTD_bearing2_minutes.TabIndex = 12;
-            this.lbl_GC_CTD_bearing2_minutes.Text = "\'";
+            this.txtbx_GC_CTD_bearing2_degrees.Location = new System.Drawing.Point(15, 34);
+            this.txtbx_GC_CTD_bearing2_degrees.Name = "txtbx_GC_CTD_bearing2_degrees";
+            this.txtbx_GC_CTD_bearing2_degrees.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing2_degrees.TabIndex = 9;
             // 
             // txtbx_GC_CTD_bearing2_minutes
             // 
@@ -2179,12 +2159,30 @@ namespace GlobalData
             this.lbl_GC_CTD_bearing2_degrees.TabIndex = 10;
             this.lbl_GC_CTD_bearing2_degrees.Text = "°";
             // 
-            // txtbx_GC_CTD_bearing2_degrees
+            // lbl_GC_CTD_bearing2_minutes
             // 
-            this.txtbx_GC_CTD_bearing2_degrees.Location = new System.Drawing.Point(15, 34);
-            this.txtbx_GC_CTD_bearing2_degrees.Name = "txtbx_GC_CTD_bearing2_degrees";
-            this.txtbx_GC_CTD_bearing2_degrees.Size = new System.Drawing.Size(100, 26);
-            this.txtbx_GC_CTD_bearing2_degrees.TabIndex = 9;
+            this.lbl_GC_CTD_bearing2_minutes.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_minutes.Location = new System.Drawing.Point(248, 37);
+            this.lbl_GC_CTD_bearing2_minutes.Name = "lbl_GC_CTD_bearing2_minutes";
+            this.lbl_GC_CTD_bearing2_minutes.Size = new System.Drawing.Size(12, 20);
+            this.lbl_GC_CTD_bearing2_minutes.TabIndex = 12;
+            this.lbl_GC_CTD_bearing2_minutes.Text = "\'";
+            // 
+            // txtbx_GC_CTD_bearing2_seconds
+            // 
+            this.txtbx_GC_CTD_bearing2_seconds.Location = new System.Drawing.Point(268, 34);
+            this.txtbx_GC_CTD_bearing2_seconds.Name = "txtbx_GC_CTD_bearing2_seconds";
+            this.txtbx_GC_CTD_bearing2_seconds.Size = new System.Drawing.Size(100, 26);
+            this.txtbx_GC_CTD_bearing2_seconds.TabIndex = 13;
+            // 
+            // lbl_GC_CTD_bearing2_seconds
+            // 
+            this.lbl_GC_CTD_bearing2_seconds.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_seconds.Location = new System.Drawing.Point(374, 37);
+            this.lbl_GC_CTD_bearing2_seconds.Name = "lbl_GC_CTD_bearing2_seconds";
+            this.lbl_GC_CTD_bearing2_seconds.Size = new System.Drawing.Size(15, 20);
+            this.lbl_GC_CTD_bearing2_seconds.TabIndex = 14;
+            this.lbl_GC_CTD_bearing2_seconds.Text = "\"";
             // 
             // txtbx_GC_CTD_bearing2_decimal
             // 
@@ -2194,9 +2192,18 @@ namespace GlobalData
             this.txtbx_GC_CTD_bearing2_decimal.TabIndex = 7;
             this.txtbx_GC_CTD_bearing2_decimal.Text = "96.02166667";
             // 
+            // lbl_GC_CTD_bearing2_decimal
+            // 
+            this.lbl_GC_CTD_bearing2_decimal.AutoSize = true;
+            this.lbl_GC_CTD_bearing2_decimal.Location = new System.Drawing.Point(287, 37);
+            this.lbl_GC_CTD_bearing2_decimal.Name = "lbl_GC_CTD_bearing2_decimal";
+            this.lbl_GC_CTD_bearing2_decimal.Size = new System.Drawing.Size(14, 20);
+            this.lbl_GC_CTD_bearing2_decimal.TabIndex = 8;
+            this.lbl_GC_CTD_bearing2_decimal.Text = "°";
+            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.cmbobx_GC_CTD_latitude1_DSM_cardinal);
+            this.groupBox5.Controls.Add(this.cmbobx_GC_CTD_latitude1_DMS_cardinal);
             this.groupBox5.Controls.Add(this.rdobtn_GC_CTD_latitude1_decimal);
             this.groupBox5.Controls.Add(this.rdobtn_GC_CTD_latitude1_DMS);
             this.groupBox5.Controls.Add(this.lbl_GC_CTD_latitude1_seconds);
@@ -2214,16 +2221,16 @@ namespace GlobalData
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Latitude 1";
             // 
-            // cmbobx_GC_CTD_latitude1_DSM_cardinal
+            // cmbobx_GC_CTD_latitude1_DMS_cardinal
             // 
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.FormattingEnabled = true;
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Items.AddRange(new object[] {
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal.FormattingEnabled = true;
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal.Items.AddRange(new object[] {
             "N",
             "S"});
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Location = new System.Drawing.Point(395, 34);
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Name = "cmbobx_GC_CTD_latitude1_DSM_cardinal";
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.Size = new System.Drawing.Size(52, 28);
-            this.cmbobx_GC_CTD_latitude1_DSM_cardinal.TabIndex = 18;
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal.Location = new System.Drawing.Point(395, 34);
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal.Name = "cmbobx_GC_CTD_latitude1_DMS_cardinal";
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal.Size = new System.Drawing.Size(52, 28);
+            this.cmbobx_GC_CTD_latitude1_DMS_cardinal.TabIndex = 18;
             // 
             // rdobtn_GC_CTD_latitude1_decimal
             // 
@@ -2458,6 +2465,39 @@ namespace GlobalData
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.rdo_CG_CTD_results_format_DMS);
+            this.groupBox10.Controls.Add(this.rdo_GC_CTD_results_format_decimal_degrees);
+            this.groupBox10.Location = new System.Drawing.Point(591, 386);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(279, 119);
+            this.groupBox10.TabIndex = 27;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Display Results Format";
+            // 
+            // rdo_CG_CTD_results_format_DMS
+            // 
+            this.rdo_CG_CTD_results_format_DMS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdo_CG_CTD_results_format_DMS.AutoSize = true;
+            this.rdo_CG_CTD_results_format_DMS.Location = new System.Drawing.Point(24, 66);
+            this.rdo_CG_CTD_results_format_DMS.Name = "rdo_CG_CTD_results_format_DMS";
+            this.rdo_CG_CTD_results_format_DMS.Size = new System.Drawing.Size(230, 24);
+            this.rdo_CG_CTD_results_format_DMS.TabIndex = 3;
+            this.rdo_CG_CTD_results_format_DMS.Text = "Degrees, Minutes, Seconds";
+            this.rdo_CG_CTD_results_format_DMS.UseVisualStyleBackColor = true;
+            // 
+            // rdo_GC_CTD_results_format_decimal_degrees
+            // 
+            this.rdo_GC_CTD_results_format_decimal_degrees.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdo_GC_CTD_results_format_decimal_degrees.AutoSize = true;
+            this.rdo_GC_CTD_results_format_decimal_degrees.Location = new System.Drawing.Point(24, 28);
+            this.rdo_GC_CTD_results_format_decimal_degrees.Name = "rdo_GC_CTD_results_format_decimal_degrees";
+            this.rdo_GC_CTD_results_format_decimal_degrees.Size = new System.Drawing.Size(156, 24);
+            this.rdo_GC_CTD_results_format_decimal_degrees.TabIndex = 2;
+            this.rdo_GC_CTD_results_format_decimal_degrees.Text = "Decimal Degrees";
+            this.rdo_GC_CTD_results_format_decimal_degrees.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2535,6 +2575,8 @@ namespace GlobalData
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2670,7 +2712,7 @@ namespace GlobalData
         private System.Windows.Forms.RichTextBox rchtxbx_GC_CTD_output;
         private System.Windows.Forms.Button btn_GC_CTD_compute_intersection;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_longitude2_DSM_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_longitude2_DMS_cardinal;
         private System.Windows.Forms.Label lbl_GC_CTD_longitude2_decimal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude2_decimal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude2_DMS;
@@ -2682,7 +2724,7 @@ namespace GlobalData
         private System.Windows.Forms.Label lbl_GC_CTD_longitude2_degrees;
         private System.Windows.Forms.TextBox txtbx_GC_CTD_longitude2_degrees;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_latitude2_DSM_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_latitude2_DMS_cardinal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude2_decimal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude2_DMS;
         private System.Windows.Forms.Label lbl_GC_CTD_latitude2_seconds;
@@ -2694,7 +2736,7 @@ namespace GlobalData
         private System.Windows.Forms.Label lbl_GC_CTD_latitude2_decimal;
         private System.Windows.Forms.TextBox txtbx_GC_CTD_latitude2_decimal;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_longitude1_DSM_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_longitude1_DMS_cardinal;
         private System.Windows.Forms.Label lbl_GC_CTD_longitude1_decimal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude1_decimal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_longitude1_DMS;
@@ -2717,7 +2759,7 @@ namespace GlobalData
         private System.Windows.Forms.Label lbl_GC_CTD_bearing2_degrees;
         private System.Windows.Forms.TextBox txtbx_GC_CTD_bearing2_degrees;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_latitude1_DSM_cardinal;
+        private System.Windows.Forms.ComboBox cmbobx_GC_CTD_latitude1_DMS_cardinal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude1_decimal;
         private System.Windows.Forms.RadioButton rdobtn_GC_CTD_latitude1_DMS;
         private System.Windows.Forms.Label lbl_GC_CTD_latitude1_seconds;
@@ -2748,6 +2790,9 @@ namespace GlobalData
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btn_GC_CTD_clear_output;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.RadioButton rdo_CG_CTD_results_format_DMS;
+        private System.Windows.Forms.RadioButton rdo_GC_CTD_results_format_decimal_degrees;
     }
 }
 
