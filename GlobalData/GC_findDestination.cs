@@ -104,8 +104,10 @@ namespace GlobalData
             double distance = double.Parse(txtbx_distance.Text);
             double longCardinal = 1;
             double latCardinal = 1;
-            string lat = "0";
-            string lon = "0";
+            string latDestination = "0";
+            string lonDestination = "0";
+            string latMidpoint = "0";
+            string lonMidpoint = "0";
 
             //check to see if it is in metres and if not apply multiplier
             if (rdobtn_FD_kilometres.Checked)
@@ -167,20 +169,30 @@ namespace GlobalData
                         longCardinal).ToString());
             }
 
-            var result = GreatCircle.FindDestination(λ1, φ1, θ, distance);
+            var resultDestination = GreatCircle.FindDestination(λ1, φ1, θ, distance);
+            double φ2 = resultDestination.Item1;
+            double λ2 = resultDestination.Item2;
 
-            double φ2 = result.Item1;
-            double λ2 = result.Item2;
+            var resultMidpoint = GreatCircle.MidPoint(λ1.ToString(), φ1.ToString(), λ2.ToString(), φ2.ToString());
+            double φ3 = resultMidpoint.Item1;
+            double λ3 = resultMidpoint.Item2;
 
             if (rdo_FD_results_format_decimal_degrees.Checked)
             {
-                lat = Convertion.toDegreesFromRadians(φ2).ToString();
-                lon = Convertion.toDegreesFromRadians(λ2).ToString();
+                latDestination = Convertion.toDegreesFromRadians(φ2).ToString();
+                lonDestination = Convertion.toDegreesFromRadians(λ2).ToString();
+
+                latMidpoint = Convertion.toDegreesFromRadians(φ3).ToString();
+                lonMidpoint = Convertion.toDegreesFromRadians(λ3).ToString();
             }
             else if (rdo_FD_results_format_DMS.Checked)
             {
-                lat = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(φ2).ToString());
-                lon = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(λ2).ToString());
+                latDestination = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(φ2).ToString());
+                lonDestination = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(λ2).ToString());
+
+                latMidpoint = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(φ3).ToString());
+                lonMidpoint = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(λ3).ToString());
+
             }
             else
             {
@@ -188,8 +200,14 @@ namespace GlobalData
             }
 
             rchtxbx_GC_findDestination_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
-            rchtxbx_GC_findDestination_output.AppendText("\rDestination Co-Ordinates\r");
-            rchtxbx_GC_findDestination_output.AppendText("Destination Latitude = " + lat + "\rDestination Longitude = " + lon + "\r");
+            rchtxbx_GC_findDestination_output.AppendText("Destination Co-Ordinates\r");
+            rchtxbx_GC_findDestination_output.AppendText("Latitude = " + latDestination + "\rLongitude = " + lonDestination + "\r");
+
+            rchtxbx_GC_findDestination_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_findDestination_output.AppendText("\rMidpoint Co-Ordinates\r");
+            rchtxbx_GC_findDestination_output.AppendText("Latitude = " + latMidpoint + "\rLongitude = " + lonMidpoint + "\r");
+
+
         }
 
 

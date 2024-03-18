@@ -8,8 +8,8 @@ namespace GlobalData.libraries
 {
     /* ===============================================================================================*/
     /* This is my c# WinForms implementation of the work done by Chris Veness under MIT license       */
-    /* and Ed Williams see links below                                                                */
-    /* For fuller explanations please do visit his websites shown below                               */
+    /* and Ed Williams see links below.                                                                */
+    /* For fuller explanations please do visit his websites shown below.                               */
     /*                                                                                                */
     /*   Chris Veness                                                                                 */
     /*   https://www.movable-type.co.uk/scripts/latlong.html                                          */
@@ -36,18 +36,6 @@ namespace GlobalData.libraries
         /// This uses the ‘Haversine’ formula to calculate the great-circle distance between two points
         /// That is, the shortest distance over the earth’s surface – giving an ‘as-the-crow-flies’ distance
         /// between the points (ignoring any vertical obstructions like hills that they may need to fly over).
-        /// 
-        /// Haversine formula:
-        /// a = sin²(Δφ/2) + cos φ1 * cos φ2 * sin²(Δλ/2) 
-        /// d = R * (2 * atan2( √a, √(1−a)))
-        ///
-        /// Where:
-        /// φ is latitude,
-        /// λ is longitude,
-        /// R is earth’s radius (mean radius = 6371m),
-        /// d is resulting distance,
-        /// All angles need to be in radians
-        /// 
         /// </summary>
         /// <param name="origin_longitude"></param>
         /// <param name="origin_latitude"></param>
@@ -80,13 +68,6 @@ namespace GlobalData.libraries
         /// This formula is for the initial bearing (sometimes referred to as forward azimuth) which if
         /// followed in a straight line along a great-circle arc will take you from the start point to the
         /// end point.
-        /// 
-        /// Formula:	θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
-        ///
-        /// where:
-        /// φ1,λ1 is the start point,
-        /// φ2,λ2 the end point,
-        /// Δλ is the difference in longitude
         /// </summary>
         /// <param name="origin_longitude"></param>
         /// <param name="origin_latitude"></param>
@@ -117,13 +98,6 @@ namespace GlobalData.libraries
 
         /// <summary>
         /// This is the half-way point along a great circle path between the two points.
-        /// 
-        /// Formula:
-        /// Bx = cos φ2 ⋅ cos Δλ
-        /// By = cos φ2 ⋅ sin Δλ
-        /// φm = atan2( sin φ1 + sin φ2, √(cos φ1 + Bx)² + By² )
-        /// λm = λ1 + atan2(By, cos(φ1)+Bx)
-        ///
         /// The midpoint may not be located half-way between latitudes/longitudes
         /// </summary>
         /// <param name="origin_longitude"></param>
@@ -163,16 +137,6 @@ namespace GlobalData.libraries
 
         /// <summary>
         /// Find a destination co-ordinates from start co-ordinates, bearing and distance.
-        /// Formula:	φ2 = asin( sin φ1 ⋅ cos δ + cos φ1 ⋅ sin δ ⋅ cos θ )
-        ///             λ2 = λ1 + atan2( sin θ ⋅ sin δ ⋅ cos φ1, cos δ − sin φ1 ⋅ sin φ2 )
-        /// where
-        /// φ is latitude,
-        /// λ is longitude,
-        /// θ is the bearing (clockwise from north), 
-        /// d being the distance traveled,
-        /// R the earth’s radius
-        /// δ is the angular distance d/R,
-        /// 
         /// </summary>
         /// <param name="originLongitude"></param>
         /// <param name="originLatitude"></param>
@@ -239,8 +203,8 @@ namespace GlobalData.libraries
             double α1 = θ13 - θ12; // angle 2-1-3
             double α2 = θ21 - θ23; // angle 1-2-3
 
-            if (Math.Sin(α1) == 0 && Math.Sin(α2) == 0) return (999,999); // infinite intersections
-            if (Math.Sin(α1) * Math.Sin(α2) < 0) return (998,998);        // ambiguous intersection (antipodal/360°)
+            if (Math.Sin(α1) == 0 && Math.Sin(α2) == 0) return (999, 999); // infinite intersections
+            if (Math.Sin(α1) * Math.Sin(α2) < 0) return (998, 998);        // ambiguous intersection (antipodal/360°)
 
             double cosα3 = -Math.Cos(α1) * Math.Cos(α2) + Math.Sin(α1) * Math.Sin(α2) * Math.Cos(δ12);
 
@@ -253,6 +217,39 @@ namespace GlobalData.libraries
 
             return (φ3, λ3);
         }
+
+
+        public static (double, double) FindintermediatePoint(double Longitude1, double Latitude1,
+            double Longitude2, double Latitude2, double fraction)
+        {
+            //if (!(point instanceof LatLonSpherical)) point = LatLonSpherical.parse(point); // allow literal forms
+            //if (this.equals(point)) return new LatLonSpherical(this.lat, this.lon); // coincident points
+
+            double φ1 = Latitude1;
+            double λ1 = Longitude1;
+            double φ2 = Latitude2;
+            double λ2 = Longitude2;
+
+            // distance between points
+            double Δφ = φ2 - φ1;
+            double Δλ = λ2 - λ1;
+            double a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2)
+                       + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
+            double δ = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+
+            double A = Math.Sin((1 - fraction) * δ) / Math.Sin(δ);
+            double B = Math.Sin(fraction * δ) / Math.Sin(δ);
+
+            double x = A * Math.Cos(φ1) * Math.Cos(λ1) + B * Math.Cos(φ2) * Math.Cos(λ2);
+            double y = A * Math.Cos(φ1) * Math.Sin(λ1) + B * Math.Cos(φ2) * Math.Sin(λ2);
+            double z = A * Math.Sin(φ1) + B * Math.Sin(φ2);
+
+            double φ3 = Math.Atan2(z, Math.Sqrt(x * x + y * y));
+            double λ3 = Math.Atan2(y, x);
+
+            return (φ3, λ3);
+        }
+
 
 
         //Calculate settings for altitude at destination
