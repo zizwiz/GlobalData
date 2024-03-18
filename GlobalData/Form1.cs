@@ -61,6 +61,5 @@ namespace GlobalData
             f1.ShowDialog();
         }
 
-       
     }
 }
