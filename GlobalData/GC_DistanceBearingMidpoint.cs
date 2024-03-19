@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
+using CenteredMessagebox;
 using GlobalData.libraries;
 using GlobalData.Utils;
 
@@ -255,6 +257,55 @@ namespace GlobalData
             rchtxbx_GC_DBM_output.AppendText("\rLongitude = " + Math.Round(results.Item2, 4) + "°\r");
         }
 
+        private void btn_GC_compute_co_ordinate_Click(object sender, EventArgs e)
+        {
+            string originLongitude = "0";
+            string originLatitude = "0";
+            string destinationLongitude = " 0";
+            string destinationLatitude = "0";
+            double longCardinal = 1;
+            double latCardinal = 1;
 
+            if (rdo_GC_DBM_origin_decimal_degrees.Checked)
+            {
+                originLongitude = txtbx_GC_DBM_origin_longitude_decimal.Text;
+                originLatitude = txtbx_GC_DBM_origin_latitude_decimal.Text;
+            }
+            else
+            {
+                if (cmbobx_GC_DBM_origin_latitude_cardinal.Text == "S") longCardinal = -1;
+                originLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_latitude_degrees.Text, txtbx_GC_DBM_origin_latitude_minutes.Text, txtbx_GC_DBM_origin_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_origin_longitude_cardinal.Text == "W") longCardinal = -1;
+                originLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_origin_longitude_degrees.Text, txtbx_GC_DBM_origin_longitude_minutes.Text, txtbx_GC_DBM_origin_longitude_seconds.Text, longCardinal).ToString();
+            }
+
+            if (rdo_GC_DBM_destination_decimal_degrees.Checked)
+            {
+                destinationLongitude = txtbx_GC_DBM_destination_longitude_decimal.Text;
+                destinationLatitude = txtbx_GC_DBM_destination_latitude_decimal.Text;
+            }
+            else
+            {
+                if (cmbobx_GC_DBM_destination_latitude_cardinal.Text == "S") longCardinal = -1;
+                destinationLatitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_latitude_degrees.Text, txtbx_GC_DBM_destination_latitude_minutes.Text, txtbx_GC_DBM_destination_latitude_seconds.Text, longCardinal).ToString();
+
+                if (cmbobx_GC_DBM_destination_longitude_cardinal.Text == "W") longCardinal = -1;
+                destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_GC_DBM_destination_longitude_degrees.Text, txtbx_GC_DBM_destination_longitude_minutes.Text, txtbx_GC_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
+            }
+            
+            double percentageOfTrack = trkbr_GC_percentage_of_track.Value;
+            percentageOfTrack /= 100;
+            
+            var results = GreatCircle.FindintermediatePoint(originLongitude, originLatitude,
+                destinationLongitude, destinationLatitude, percentageOfTrack);
+
+            rchtxbx_GC_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
+            rchtxbx_GC_DBM_output.AppendText("\rCo-Ordinates at " + trkbr_GC_percentage_of_track.Value + "% along track\r");
+
+            rchtxbx_GC_DBM_output.AppendText("Latitude = " + Math.Round(Convertion.toDegreesFromRadians(results.Item1), 4) + "°");
+            rchtxbx_GC_DBM_output.AppendText("\rLongitude = " + Math.Round(results.Item2, 4) + "°\r");
+
+        }
     }
 }

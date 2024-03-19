@@ -61,5 +61,9 @@ namespace GlobalData
             f1.ShowDialog();
         }
 
+        private void trkbr_GC_percentage_of_track_Scroll(object sender, EventArgs e)
+        {
+            lbl_GC_percentage_along_track.Text = trkbr_GC_percentage_of_track.Value + "%";
+        }
     }
 }

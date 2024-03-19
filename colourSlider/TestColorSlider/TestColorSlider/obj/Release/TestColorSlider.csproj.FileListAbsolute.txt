@@ -1,0 +1,12 @@
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\bin\Release\TestColorSlider.exe.config
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\bin\Release\TestColorSlider.exe
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\bin\Release\TestColorSlider.pdb
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\bin\Release\ColorSlider.dll
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\bin\Release\ColorSlider.pdb
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.csprojAssemblyReference.cache
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.Form1.resources
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.Properties.Resources.resources
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.csproj.GenerateResource.cache
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.csproj.CopyComplete
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.exe
+C:\Users\Fabrice\Documents\GitHub\TestColorSlider\TestColorSlider\obj\Release\TestColorSlider.pdb

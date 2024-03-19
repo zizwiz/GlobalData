@@ -175,6 +175,15 @@ namespace GlobalData.libraries
         public static (double, double) FindIntersectionOfTwoPaths(double Longitude1, double Latitude1, double bearing1,
             double Longitude2, double Latitude2, double bearing2)
         {
+
+            /*
+             * We use some error codes here to tell the GUI of error cases.
+             * We send back error as long and lat and decipher in GUI.
+             * 999 = infinite intersections.
+             * 998 = ambiguous intersection. On opposite sides of globe.
+             * 997 = coincident (same) points.
+             * You can add more if you need.
+             */
             double φ1 = Latitude1;
             double λ1 = Longitude1;
             double θ13 = bearing1;
@@ -219,22 +228,21 @@ namespace GlobalData.libraries
         }
 
 
-        public static (double, double) FindintermediatePoint(double Longitude1, double Latitude1,
-            double Longitude2, double Latitude2, double fraction)
+        public static (double, double) FindintermediatePoint(string Longitude1, string Latitude1,
+            string Longitude2, string Latitude2, double fraction)
         {
             //if (!(point instanceof LatLonSpherical)) point = LatLonSpherical.parse(point); // allow literal forms
             //if (this.equals(point)) return new LatLonSpherical(this.lat, this.lon); // coincident points
 
-            double φ1 = Latitude1;
-            double λ1 = Longitude1;
-            double φ2 = Latitude2;
-            double λ2 = Longitude2;
+            double φ1 = double.Parse(Latitude1);
+            double λ1 = double.Parse(Longitude1);
+            double φ2 = double.Parse(Latitude2);
+            double λ2 = double.Parse(Longitude2);
 
             // distance between points
             double Δφ = φ2 - φ1;
             double Δλ = λ2 - λ1;
-            double a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2)
-                       + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
+            double a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2) + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
             double δ = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
             double A = Math.Sin((1 - fraction) * δ) / Math.Sin(δ);
@@ -244,10 +252,12 @@ namespace GlobalData.libraries
             double y = A * Math.Cos(φ1) * Math.Sin(λ1) + B * Math.Cos(φ2) * Math.Sin(λ2);
             double z = A * Math.Sin(φ1) + B * Math.Sin(φ2);
 
-            double φ3 = Math.Atan2(z, Math.Sqrt(x * x + y * y));
+            double φ3 = Math.Atan2(z, Math.Sqrt((x * x) + (y * y)));
             double λ3 = Math.Atan2(y, x);
 
             return (φ3, λ3);
+
+
         }
 
 
