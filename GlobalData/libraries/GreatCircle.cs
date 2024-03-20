@@ -227,7 +227,15 @@ namespace GlobalData.libraries
             return (φ3, λ3);
         }
 
-
+        /// <summary>
+        /// Returns co-ordinates of a % of track completed.
+        /// </summary>
+        /// <param name="Longitude1"></param>
+        /// <param name="Latitude1"></param>
+        /// <param name="Longitude2"></param>
+        /// <param name="Latitude2"></param>
+        /// <param name="fraction"></param>
+        /// <returns>Doubles for Longitude, Latitude and Distance along</returns>
         public static (double, double, double) FindintermediatePoint(string Longitude1, string Latitude1,
             string Longitude2, string Latitude2, double fraction)
         {
@@ -238,6 +246,8 @@ namespace GlobalData.libraries
             double λ1 = Convertion.toRadiansfromDecimalDegrees(Longitude1);
             double φ2 = Convertion.toRadiansfromDecimalDegrees(Latitude2);
             double λ2 = Convertion.toRadiansfromDecimalDegrees(Longitude2);
+
+            if ((φ1 == φ2) && (λ1 == λ2)) return (997, 997, 997);
 
 
             // angular distance between points

@@ -16,27 +16,27 @@ namespace GlobalData
         }
         private void GC_FD_dstance_rdobtn_changed(object sender, EventArgs e)
         {
-            if (rdobtn_FD_metres.Checked)
+            if (rdobtn_GC_FD_metres.Checked)
             {
-                lbl_FD_distance_type.Text = "m";
+                lbl_GC_FD_distance_type.Text = "m";
             }
-            else if (rdobtn_FD_kilometres.Checked)
+            else if (rdobtn_GC_FD_kilometres.Checked)
             {
-                lbl_FD_distance_type.Text = "km";
+                lbl_GC_FD_distance_type.Text = "km";
             }
-            else if (rdobtn_FD_miles.Checked)
+            else if (rdobtn_GC_FD_miles.Checked)
             {
-                lbl_FD_distance_type.Text = "miles";
+                lbl_GC_FD_distance_type.Text = "miles";
             }
-            else if (rdobtn_FD_nauticalmiles.Checked)
+            else if (rdobtn_GC_FD_nauticalmiles.Checked)
             {
-                lbl_FD_distance_type.Text = "nautical miles";
+                lbl_GC_FD_distance_type.Text = "nautical miles";
             }
         }
         
         private void GC_FD_bearing_rdobtn_changed(object sender, EventArgs e)
         {
-            if (rdo_FD_bearing_decimal_degrees.Checked)
+            if (rdo_GC_FD_bearing_decimal_degrees.Checked)
             {
                 txtbx_FD_bearing_degrees.Visible = lbl_FD_bearing_degree.Visible = txtbx_FD_bearing_minutes.Visible =
                     lbl_FD_bearing_minutes.Visible = txtbx_FD_bearing_seconds.Visible =
@@ -45,7 +45,7 @@ namespace GlobalData
                 txtbx_FD_bearing_decimal_degrees.Visible = lbl_FD_bearing_decimaldegree.Visible = true;
 
             }
-            else if (rdo_FD_bearing_DMS.Checked)
+            else if (rdo_GC_FD_bearing_DMS.Checked)
             {
                 txtbx_FD_bearing_degrees.Visible = lbl_FD_bearing_degree.Visible = txtbx_FD_bearing_minutes.Visible =
                     lbl_FD_bearing_minutes.Visible = txtbx_FD_bearing_seconds.Visible =
@@ -57,43 +57,43 @@ namespace GlobalData
 
         private void GC_FD_origin_latitude_rdobtn_changed(object sender, EventArgs e)
         {
-            if (rdo_FD_origin_latitude_decimal_degrees.Checked)
+            if (rdo_GC_FD_origin_latitude_decimal_degrees.Checked)
             {
-                txtbx_FD_origin_latitude_degrees.Visible = lbl_FD_origin_latitude_degree.Visible = txtbx_FD_origin_latitude_minutes.Visible =
-                    lbl_FD_origin_latitude_minutes.Visible = txtbx_FD_origin_latitude_seconds.Visible =
-                        lbl_FD_origin_latitude_seconds.Visible = cmbobx_FD_origin_latitude_cardinal.Visible = false;
+                txtbx_GC_FD_origin_latitude_degrees.Visible = lbl_GC_FD_origin_latitude_degree.Visible = txtbx_GC_FD_origin_latitude_minutes.Visible =
+                    lbl_GC_FD_origin_latitude_minutes.Visible = txtbx_GC_FD_origin_latitude_seconds.Visible =
+                        lbl_GC_FD_origin_latitude_seconds.Visible = cmbobx_GC_FD_origin_latitude_cardinal.Visible = false;
 
-                txtbx_FD_origin_latitude_decimal_degrees.Visible = lbl_FD_origin_latitude_decimaldegree.Visible = true;
+                txtbx_GC_FD_origin_latitude_decimal_degrees.Visible = lbl_GC_FD_origin_latitude_decimaldegree.Visible = true;
 
             }
-            else if (rdo_FD_origin_latitude_DMS.Checked)
+            else if (rdo_GC_FD_origin_latitude_DMS.Checked)
             {
-                txtbx_FD_origin_latitude_degrees.Visible = lbl_FD_origin_latitude_degree.Visible = txtbx_FD_origin_latitude_minutes.Visible =
-                    lbl_FD_origin_latitude_minutes.Visible = txtbx_FD_origin_latitude_seconds.Visible =
-                        lbl_FD_origin_latitude_seconds.Visible = cmbobx_FD_origin_latitude_cardinal.Visible = true;
+                txtbx_GC_FD_origin_latitude_degrees.Visible = lbl_GC_FD_origin_latitude_degree.Visible = txtbx_GC_FD_origin_latitude_minutes.Visible =
+                    lbl_GC_FD_origin_latitude_minutes.Visible = txtbx_GC_FD_origin_latitude_seconds.Visible =
+                        lbl_GC_FD_origin_latitude_seconds.Visible = cmbobx_GC_FD_origin_latitude_cardinal.Visible = true;
 
-                txtbx_FD_origin_latitude_decimal_degrees.Visible = lbl_FD_origin_latitude_decimaldegree.Visible = false;
+                txtbx_GC_FD_origin_latitude_decimal_degrees.Visible = lbl_GC_FD_origin_latitude_decimaldegree.Visible = false;
             }
         }
 
         private void GC_FD_origin_longitude_rdobtn_changed(object sender, EventArgs e)
         {
-            if (rdo_FD_origin_longitude_decimal_degrees.Checked)
+            if (rdo_GC_FD_origin_longitude_decimal_degrees.Checked)
             {
-                txtbx_FD_origin_longitude_degrees.Visible = lbl_FD_origin_longitude_degree.Visible = txtbx_FD_origin_longitude_minutes.Visible =
-                    lbl_FD_origin_longitude_minutes.Visible = txtbx_FD_origin_longitude_seconds.Visible =
-                        lbl_FD_origin_longitude_seconds.Visible = cmbobx_FD_origin_longitude_cardinal.Visible = false ;
+                txtbx_GC_FD_origin_longitude_degrees.Visible = lbl_GC_FD_origin_longitude_degree.Visible = txtbx_GC_FD_origin_longitude_minutes.Visible =
+                    lbl_GC_FD_origin_longitude_minutes.Visible = txtbx_GC_FD_origin_longitude_seconds.Visible =
+                        lbl_GC_FD_origin_longitude_seconds.Visible = cmbobx_GC_FD_origin_longitude_cardinal.Visible = false ;
 
-                txtbx_FD_origin_longitude_decimal_degrees.Visible = lbl_FD_origin_longitude_decimaldegree.Visible = true;
+                txtbx_GC_FD_origin_longitude_decimal_degrees.Visible = lbl_GC_FD_origin_longitude_decimaldegree.Visible = true;
 
             }
-            else if (rdo_FD_origin_longitude_DMS.Checked)
+            else if (rdo_GC_FD_origin_longitude_DMS.Checked)
             {
-                txtbx_FD_origin_longitude_degrees.Visible = lbl_FD_origin_longitude_degree.Visible = txtbx_FD_origin_longitude_minutes.Visible =
-                    lbl_FD_origin_longitude_minutes.Visible = txtbx_FD_origin_longitude_seconds.Visible =
-                        lbl_FD_origin_longitude_seconds.Visible = cmbobx_FD_origin_longitude_cardinal.Visible = true;
+                txtbx_GC_FD_origin_longitude_degrees.Visible = lbl_GC_FD_origin_longitude_degree.Visible = txtbx_GC_FD_origin_longitude_minutes.Visible =
+                    lbl_GC_FD_origin_longitude_minutes.Visible = txtbx_GC_FD_origin_longitude_seconds.Visible =
+                        lbl_GC_FD_origin_longitude_seconds.Visible = cmbobx_GC_FD_origin_longitude_cardinal.Visible = true;
 
-                txtbx_FD_origin_longitude_decimal_degrees.Visible = lbl_FD_origin_longitude_decimaldegree.Visible = false;
+                txtbx_GC_FD_origin_longitude_decimal_degrees.Visible = lbl_GC_FD_origin_longitude_decimaldegree.Visible = false;
             }
         }
 
@@ -101,7 +101,7 @@ namespace GlobalData
         private void btn_GC_find_destination_Click(object sender, EventArgs e)
         {
             //Get distance and assume at this stage it is in metres
-            double distance = double.Parse(txtbx_distance.Text);
+            double distance = double.Parse(txtbx_GC_FD_distance.Text);
             double longCardinal = 1;
             double latCardinal = 1;
             string latDestination = "0";
@@ -110,26 +110,26 @@ namespace GlobalData
             string lonMidpoint = "0";
 
             //check to see if it is in metres and if not apply multiplier
-            if (rdobtn_FD_kilometres.Checked)
+            if (rdobtn_GC_FD_kilometres.Checked)
             {
                 distance *= 1000;
             }
-            else if (rdobtn_FD_miles.Checked)
+            else if (rdobtn_GC_FD_miles.Checked)
             {
                 distance = Convertion.toMetresFromMiles(distance);
             }
-            else if (rdobtn_FD_nauticalmiles.Checked)
+            else if (rdobtn_GC_FD_nauticalmiles.Checked)
             {
                 distance = Convertion.toMetresFromNauticalMiles(distance);
             }
 
             // Get the bearing into radians
             double θ = 0;
-            if (rdo_FD_bearing_decimal_degrees.Checked)
+            if (rdo_GC_FD_bearing_decimal_degrees.Checked)
             {
                 θ = Convertion.toRadiansfromDecimalDegrees(txtbx_FD_bearing_decimal_degrees.Text);
             }
-            else if (rdo_FD_bearing_DMS.Checked)
+            else if (rdo_GC_FD_bearing_DMS.Checked)
             {
                 θ = Convertion.toRadiansfromDecimalDegrees(
                     Convertion.toDecimalDegreesFromDMS(txtbx_FD_bearing_degrees.Text,
@@ -138,34 +138,34 @@ namespace GlobalData
 
             // Get the origin latitude into radians
             double φ1 = 0;
-            if (rdo_FD_origin_latitude_decimal_degrees.Checked)
+            if (rdo_GC_FD_origin_latitude_decimal_degrees.Checked)
             {
-                φ1 = Convertion.toRadiansfromDecimalDegrees(txtbx_FD_origin_latitude_decimal_degrees.Text);
+                φ1 = Convertion.toRadiansfromDecimalDegrees(txtbx_GC_FD_origin_latitude_decimal_degrees.Text);
             }
-            else if (rdo_FD_origin_latitude_DMS.Checked)
+            else if (rdo_GC_FD_origin_latitude_DMS.Checked)
             {
 
-                if (cmbobx_FD_origin_latitude_cardinal.Text == "S") latCardinal = -1;
+                if (cmbobx_GC_FD_origin_latitude_cardinal.Text == "S") latCardinal = -1;
 
                 φ1 = Convertion.toRadiansfromDecimalDegrees(
-                    Convertion.toDecimalDegreesFromDMS(txtbx_FD_origin_latitude_degrees.Text,
-                        txtbx_FD_origin_latitude_minutes.Text, txtbx_FD_origin_latitude_seconds.Text,
+                    Convertion.toDecimalDegreesFromDMS(txtbx_GC_FD_origin_latitude_degrees.Text,
+                        txtbx_GC_FD_origin_latitude_minutes.Text, txtbx_GC_FD_origin_latitude_seconds.Text,
                         latCardinal).ToString());
             }
 
             // Get the origin longitude into radians
             double λ1 = 0;
-            if (rdo_FD_origin_longitude_decimal_degrees.Checked)
+            if (rdo_GC_FD_origin_longitude_decimal_degrees.Checked)
             {
-                λ1 = Convertion.toRadiansfromDecimalDegrees(txtbx_FD_origin_longitude_decimal_degrees.Text);
+                λ1 = Convertion.toRadiansfromDecimalDegrees(txtbx_GC_FD_origin_longitude_decimal_degrees.Text);
             }
-            else if (rdo_FD_origin_longitude_DMS.Checked)
+            else if (rdo_GC_FD_origin_longitude_DMS.Checked)
             {
-                if (cmbobx_FD_origin_longitude_cardinal.Text == "W") longCardinal = -1;
+                if (cmbobx_GC_FD_origin_longitude_cardinal.Text == "W") longCardinal = -1;
 
                 λ1 = Convertion.toRadiansfromDecimalDegrees(
-                    Convertion.toDecimalDegreesFromDMS(txtbx_FD_origin_longitude_degrees.Text,
-                        txtbx_FD_origin_longitude_minutes.Text, txtbx_FD_origin_longitude_seconds.Text,
+                    Convertion.toDecimalDegreesFromDMS(txtbx_GC_FD_origin_longitude_degrees.Text,
+                        txtbx_GC_FD_origin_longitude_minutes.Text, txtbx_GC_FD_origin_longitude_seconds.Text,
                         longCardinal).ToString());
             }
 
@@ -177,7 +177,7 @@ namespace GlobalData
             double φ3 = resultMidpoint.Item1;
             double λ3 = resultMidpoint.Item2;
 
-            if (rdo_FD_results_format_decimal_degrees.Checked)
+            if (rdo_GC_FD_results_format_decimal_degrees.Checked)
             {
                 latDestination = Convertion.toDegreesFromRadians(φ2).ToString();
                 lonDestination = Convertion.toDegreesFromRadians(λ2).ToString();
@@ -185,7 +185,7 @@ namespace GlobalData
                 latMidpoint = Convertion.toDegreesFromRadians(φ3).ToString();
                 lonMidpoint = Convertion.toDegreesFromRadians(λ3).ToString();
             }
-            else if (rdo_FD_results_format_DMS.Checked)
+            else if (rdo_GC_FD_results_format_DMS.Checked)
             {
                 latDestination = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(φ2).ToString());
                 lonDestination = Convertion.toDegreesMinutesSecondsFromDecimalDegrees(Convertion.toDegreesFromRadians(λ2).ToString());
