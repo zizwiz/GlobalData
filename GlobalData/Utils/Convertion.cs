@@ -22,7 +22,9 @@ namespace GlobalData.Utils
         /// <returns>Radians as a double</returns>
         public static double toRadiansfromDecimalDegrees(string myData1, string myData2)
         {
-            return (double.Parse(myData1) - double.Parse(myData2)) * Math.PI / 180; //in radians
+            return (toRadiansfromDecimalDegrees(myData1) - toRadiansfromDecimalDegrees(myData2)); //in radians
+            
+            // return (double.Parse(myData1) - double.Parse(myData2)) * Math.PI / 180; //in radians
         }
 
         

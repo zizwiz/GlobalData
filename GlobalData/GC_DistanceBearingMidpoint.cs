@@ -305,7 +305,13 @@ namespace GlobalData
 
             rchtxbx_GC_DBM_output.AppendText("Latitude = " + Math.Round(Convertion.toDegreesFromRadians(results.Item1), 4) + "°");
             rchtxbx_GC_DBM_output.AppendText("\rLongitude = " + Math.Round(results.Item2, 4) + "°\r");
-
+            
+            double result = results.Item3;
+            
+            rchtxbx_GC_DBM_output.AppendText("\rDistance traveled = " + Math.Round(result, 4) + " m\r");
+            rchtxbx_GC_DBM_output.AppendText("Distance traveled = " + Math.Round(result / 1000, 4) + " km\r");
+            rchtxbx_GC_DBM_output.AppendText("Distance traveled = " + Math.Round(Convertion.toMilesFromMetres(result), 4) + " miles\r");
+            rchtxbx_GC_DBM_output.AppendText("Distance traveled = " + Math.Round(Convertion.toNauticalMilesFromMetres(result), 4) + " nautical miles\r");
         }
     }
 }

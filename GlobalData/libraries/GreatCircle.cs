@@ -228,35 +228,36 @@ namespace GlobalData.libraries
         }
 
 
-        public static (double, double) FindintermediatePoint(string Longitude1, string Latitude1,
+        public static (double, double, double) FindintermediatePoint(string Longitude1, string Latitude1,
             string Longitude2, string Latitude2, double fraction)
         {
             //if (!(point instanceof LatLonSpherical)) point = LatLonSpherical.parse(point); // allow literal forms
             //if (this.equals(point)) return new LatLonSpherical(this.lat, this.lon); // coincident points
 
-            double φ1 = double.Parse(Latitude1);
-            double λ1 = double.Parse(Longitude1);
-            double φ2 = double.Parse(Latitude2);
-            double λ2 = double.Parse(Longitude2);
+            double φ1 = Convertion.toRadiansfromDecimalDegrees(Latitude1);
+            double λ1 = Convertion.toRadiansfromDecimalDegrees(Longitude1);
+            double φ2 = Convertion.toRadiansfromDecimalDegrees(Latitude2);
+            double λ2 = Convertion.toRadiansfromDecimalDegrees(Longitude2);
 
-            // distance between points
+
+            // angular distance between points
             double Δφ = φ2 - φ1;
             double Δλ = λ2 - λ1;
             double a = Math.Sin(Δφ / 2) * Math.Sin(Δφ / 2) + Math.Cos(φ1) * Math.Cos(φ2) * Math.Sin(Δλ / 2) * Math.Sin(Δλ / 2);
-            double δ = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            double δ = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a)); // angular distance
+            double d = (Settings.Default.EarthsRadius * δ)* fraction; //distance traveled along track
 
             double A = Math.Sin((1 - fraction) * δ) / Math.Sin(δ);
             double B = Math.Sin(fraction * δ) / Math.Sin(δ);
 
-            double x = A * Math.Cos(φ1) * Math.Cos(λ1) + B * Math.Cos(φ2) * Math.Cos(λ2);
-            double y = A * Math.Cos(φ1) * Math.Sin(λ1) + B * Math.Cos(φ2) * Math.Sin(λ2);
+            double x = (A * Math.Cos(φ1) * Math.Cos(λ1)) + (B * Math.Cos(φ2) * Math.Cos(λ2));
+            double y = (A * Math.Cos(φ1) * Math.Sin(λ1)) + (B * Math.Cos(φ2) * Math.Sin(λ2));
             double z = A * Math.Sin(φ1) + B * Math.Sin(φ2);
 
             double φ3 = Math.Atan2(z, Math.Sqrt((x * x) + (y * y)));
             double λ3 = Math.Atan2(y, x);
 
-            return (φ3, λ3);
-
+            return (φ3, λ3, d);
 
         }
 

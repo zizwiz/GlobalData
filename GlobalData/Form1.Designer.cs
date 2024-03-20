@@ -510,7 +510,7 @@ namespace GlobalData
             this.btn_GC_compute_initial_bearing.Name = "btn_GC_compute_initial_bearing";
             this.btn_GC_compute_initial_bearing.Size = new System.Drawing.Size(108, 54);
             this.btn_GC_compute_initial_bearing.TabIndex = 10;
-            this.btn_GC_compute_initial_bearing.Text = "Compute Initial Bearing";
+            this.btn_GC_compute_initial_bearing.Text = "Compute Bearing";
             this.btn_GC_compute_initial_bearing.UseVisualStyleBackColor = true;
             this.btn_GC_compute_initial_bearing.Click += new System.EventHandler(this.btn_GC_detrmine_initial_bearing_Click);
             // 
@@ -543,7 +543,7 @@ namespace GlobalData
             this.btn_GC_compute_co_ordinate.Name = "btn_GC_compute_co_ordinate";
             this.btn_GC_compute_co_ordinate.Size = new System.Drawing.Size(108, 54);
             this.btn_GC_compute_co_ordinate.TabIndex = 14;
-            this.btn_GC_compute_co_ordinate.Text = "Compute Co-Ordinate";
+            this.btn_GC_compute_co_ordinate.Text = "Compute % Co-Ordinate";
             this.btn_GC_compute_co_ordinate.UseVisualStyleBackColor = true;
             this.btn_GC_compute_co_ordinate.Click += new System.EventHandler(this.btn_GC_compute_co_ordinate_Click);
             // 

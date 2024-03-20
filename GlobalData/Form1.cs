@@ -65,5 +65,7 @@ namespace GlobalData
         {
             lbl_GC_percentage_along_track.Text = trkbr_GC_percentage_of_track.Value + "%";
         }
+
+        
     }
 }
