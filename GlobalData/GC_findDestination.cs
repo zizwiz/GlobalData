@@ -206,11 +206,6 @@ namespace GlobalData
             rchtxbx_GC_findDestination_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
             rchtxbx_GC_findDestination_output.AppendText("\rMidpoint Co-Ordinates\r");
             rchtxbx_GC_findDestination_output.AppendText("Latitude = " + latMidpoint + "\rLongitude = " + lonMidpoint + "\r");
-
-
         }
-
-       
-
     }
 }

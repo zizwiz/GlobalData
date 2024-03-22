@@ -4,7 +4,7 @@ using GlobalData.Utils;
 
 namespace GlobalData.libraries
 {
-    class RumbLines
+    class RhumbLines
     {
 
         public static double Distance(string origin_longitude, string origin_latitude,
@@ -97,5 +97,41 @@ namespace GlobalData.libraries
             return (lat, lon);
 
         }
+
+        /// <summary>
+        /// Find a destination co-ordinates from start co-ordinates, bearing and distance.
+        /// </summary>
+        /// <param name="originLongitude"></param>
+        /// <param name="originLatitude"></param>
+        /// <param name="bearing"></param>
+        /// <param name="distance"></param>
+        /// <returns>Destination as tuple double of latitude and longitude</returns>
+        public static (double, double) FindDestination(double originLongitude, double originLatitude, double bearing,
+            double distance)
+        {
+            double λ1 = originLongitude;
+            double φ1 = originLatitude;
+            double θ = bearing;
+            double π = Math.PI;
+
+            double δ = distance / Settings.Default.EarthsRadius; // angular distance in radians
+
+            double Δφ = δ * Math.Cos(θ);
+            double φ2 = φ1 + Δφ;
+
+            // check for some daft bugger going past the pole, normalise latitude if so
+            if (Math.Abs(φ2) > π / 2) φ2 = φ2 > 0 ? π - φ2 : -π - φ2;
+
+            double Δψ = Math.Log(Math.Tan(φ2 / 2 + π / 4) / Math.Tan(φ1 / 2 + π / 4));
+            double q = Math.Abs(Δψ) > 10e-12 ? Δφ / Δψ : Math.Cos(φ1); // E-W course becomes ill-conditioned with 0/0
+
+            double Δλ = δ * Math.Sin(θ) / q;
+            double λ2 = λ1 + Δλ;
+
+
+            return (φ2, λ2);
+        }
+
     }
 }
+

@@ -136,7 +136,7 @@ namespace GlobalData
                 destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_R_DBM_destination_longitude_degrees.Text, txtbx_R_DBM_destination_longitude_minutes.Text, txtbx_R_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
             }
             
-            double result = RumbLines.Distance(originLongitude, originLatitude,
+            double result = RhumbLines.Distance(originLongitude, originLatitude,
                 destinationLongitude, destinationLatitude);
 
             rchtxbx_R_DBM_output.SelectionFont = new Font(rchtxbx_R_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
@@ -191,7 +191,7 @@ namespace GlobalData
                 destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_R_DBM_destination_longitude_degrees.Text, txtbx_R_DBM_destination_longitude_minutes.Text, txtbx_R_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
             }
 
-            var results = RumbLines.InitialBearing(originLongitude, originLatitude,
+            var results = RhumbLines.InitialBearing(originLongitude, originLatitude,
                 destinationLongitude, destinationLatitude);
 
             rchtxbx_R_DBM_output.SelectionFont = new Font(rchtxbx_GC_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
@@ -246,7 +246,7 @@ namespace GlobalData
                     destinationLongitude = Convertion.toDecimalDegreesFromDMS(txtbx_R_DBM_destination_longitude_degrees.Text, txtbx_R_DBM_destination_longitude_minutes.Text, txtbx_R_DBM_destination_longitude_seconds.Text, longCardinal).ToString();
                 }
 
-                var results = GreatCircle.MidPoint(originLongitude, originLatitude,
+                var results = RhumbLines.MidPoint(originLongitude, originLatitude,
                     destinationLongitude, destinationLatitude);
 
                 rchtxbx_R_DBM_output.SelectionFont = new Font(rchtxbx_R_DBM_output.SelectionFont, FontStyle.Bold | FontStyle.Underline);
