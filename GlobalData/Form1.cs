@@ -65,19 +65,6 @@ namespace GlobalData
             rdo_R_FD_results_format_decimal_degrees.Checked = true;
             cmbobx_R_FD_origin_longitude_cardinal.SelectedIndex = 0;
             cmbobx_R_FD_origin_latitude_cardinal.SelectedIndex = 0;
-
-            //Set up the Rhumb Cross-Track Distance
-            rdobtn_R_CTD_longitude1_decimal.Checked = true;
-            rdobtn_R_CTD_latitude1_decimal.Checked = true;
-            rdobtn_R_CTD_bearing1_decimal.Checked = true;
-            rdobtn_R_CTD_longitude2_decimal.Checked = true;
-            rdobtn_R_CTD_latitude2_decimal.Checked = true;
-            rdobtn_R_CTD_bearing2_decimal.Checked = true;
-            cmbobx_R_CTD_longitude1_DMS_cardinal.SelectedIndex = 0;
-            cmbobx_R_CTD_latitude1_DMS_cardinal.SelectedIndex = 0;
-            cmbobx_R_CTD_longitude2_DMS_cardinal.SelectedIndex = 0;
-            cmbobx_R_CTD_latitude2_DMS_cardinal.SelectedIndex = 0;
-            rdo_R_CTD_results_format_decimal_degrees.Checked = true;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
